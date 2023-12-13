@@ -152,14 +152,44 @@
     <Compile Include="Clases\Empleado.cs" />
     <Compile Include="Clases\Facturas.cs" />
     <Compile Include="Clases\InicioSesion.cs" />
+    <Compile Include="Clases\Productos.cs" />
     <Compile Include="Clases\Proveedor.cs" />
-    <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Ventas.cs" />
     <Compile Include="Forms\Almacens.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Almacens.Designer.cs">
       <DependentUpon>Almacens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Catalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Catalogo.Designer.cs">
+      <DependentUpon>Catalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CatalogoAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CatalogoAdmin.Designer.cs">
+      <DependentUpon>CatalogoAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cotizacion.Designer.cs">
+      <DependentUpon>Cotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HomeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HomeAdmin.Designer.cs">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
@@ -173,6 +203,12 @@
     <Compile Include="Forms\Proveedores.Designer.cs">
       <DependentUpon>Proveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\VistaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VistaProducto.Designer.cs">
+      <DependentUpon>VistaProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Botones\RJTextBox.resx">
@@ -181,11 +217,29 @@
     <EmbeddedResource Include="Forms\Almacens.resx">
       <DependentUpon>Almacens.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Catalogo.resx">
+      <DependentUpon>Catalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CatalogoAdmin.resx">
+      <DependentUpon>CatalogoAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cotizacion.resx">
+      <DependentUpon>Cotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HomeAdmin.resx">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Proveedores.resx">
       <DependentUpon>Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VistaProducto.resx">
+      <DependentUpon>VistaProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -213,6 +267,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Base de Datos\Karpicentro Base.sql" />
+    <None Include="Resources\MesaComedor.png" />
+    <None Include="Resources\1.0.png" />
+    <None Include="Resources\2.0.png" />
+    <None Include="Resources\5.0.png" />
+    <None Include="Resources\6.0.png" />
+    <None Include="Resources\3.0.png" />
+    <None Include="Resources\TablonMInecraft.jpg" />
+    <None Include="Resources\LineaBlanca.png" />
+    <None Include="Resources\Logo K3.png" />
+    <None Include="Resources\331.jpg" />
     <None Include="Resources\NewCanvas2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

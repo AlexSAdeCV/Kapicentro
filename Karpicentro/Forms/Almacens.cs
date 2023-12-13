@@ -31,8 +31,6 @@ namespace Karpicentro.Forms
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             Mostrar(2, true, Color.White);
-            BtnModificar.Enabled = false;
-            BtnEliminar.Enabled = false;
 
 
             op = 1;
@@ -41,8 +39,6 @@ namespace Karpicentro.Forms
         private void BtnModificar_Click(object sender, EventArgs e)
         {
             Mostrar(2, true, Color.White);
-            BtnAgregar.Enabled = false;
-            BtnEliminar.Enabled = false;
 
             op = 2;
         }
@@ -101,6 +97,7 @@ namespace Karpicentro.Forms
                     id = DgvAlmacen.Rows[renglon].Cells[0].Value.ToString();
                     Al.Nombre = TxtNombre.Text;
                     Al.CantidadMaterial = Convert.ToInt32(TxtStock.Text);
+                    Al.Proveedor = TxtProveedor.Text;
                     Al.idalmacen = Convert.ToInt32(id);
 
                     if (ValidaCampos(2))

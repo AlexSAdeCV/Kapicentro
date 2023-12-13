@@ -10,7 +10,6 @@ namespace Karpicentro
     {
         public string TipodeMadera { get; set; }
         public int[] Medidas { get; set; }
-
         public bool Personalizado { get; set; }
 
         public void HacerCotizacion()

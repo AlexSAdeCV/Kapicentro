@@ -109,7 +109,7 @@ namespace Karpicentro.Forms
         //Metodos
         private void MostrarEmpleados()
         {
-            DgvAlmacen.AutoSize = true;
+            //DgvAlmacen.AutoSize = true;
             DgvAlmacen.DataSource = empleado.MostrarEmpleados();
         }
         private bool ValidarCamposBlanco()

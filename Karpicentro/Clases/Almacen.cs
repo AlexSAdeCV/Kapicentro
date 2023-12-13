@@ -64,10 +64,12 @@ namespace Karpicentro
                 int resultado;
                 string Sentencia;
 
-                Sentencia = @"update Almacen set Stock = @Stock where IDAlmacen = @IDAlmacen";
+                Sentencia = @"update Almacen set TipoMadera = @TipoMadera, Stock = @Stock,  idproveedor = @idproveedor where IDAlmacen = @IDAlmacen";
                 CMDSql = new SqlCommand(Sentencia, Con);
 
                 CMDSql.Parameters.AddWithValue("@Stock", CantidadMaterial);
+                CMDSql.Parameters.AddWithValue("@TipoMadera", Nombre);
+                CMDSql.Parameters.AddWithValue("@idproveedor", Proveedor);
                 CMDSql.Parameters.AddWithValue("@IDAlmacen", idalmacen);
 
 

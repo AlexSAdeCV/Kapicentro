@@ -33,8 +33,8 @@ namespace Karpicentro.Forms
 
                     if (InicioSesion.Nivel == 1)
                     {
-                        Almacens fr = new Almacens();
-                        fr.ShowDialog();
+                        HomeAdmin Ha = new HomeAdmin();
+                        Ha.ShowDialog();
                     }
                     if (InicioSesion.Nivel == 2)
                     {

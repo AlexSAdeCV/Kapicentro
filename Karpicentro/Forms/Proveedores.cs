@@ -120,7 +120,7 @@ namespace Karpicentro.Forms
         {
             Proveedor proveedor = new Proveedor();
 
-            DgvProveedor.AutoSize = true;
+            //DgvProveedor.AutoSize = true;
             DgvProveedor.DataSource = proveedor.MostrarProveedores();
         }
 

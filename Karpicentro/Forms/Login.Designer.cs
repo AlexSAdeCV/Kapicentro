@@ -41,10 +41,10 @@
             this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIngresar.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIngresar.ForeColor = System.Drawing.Color.White;
-            this.BtnIngresar.Location = new System.Drawing.Point(486, 266);
+            this.BtnIngresar.Location = new System.Drawing.Point(461, 268);
             this.BtnIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnIngresar.Name = "BtnIngresar";
-            this.BtnIngresar.Size = new System.Drawing.Size(82, 32);
+            this.BtnIngresar.Size = new System.Drawing.Size(102, 39);
             this.BtnIngresar.TabIndex = 20;
             this.BtnIngresar.Text = "Iniciar";
             this.BtnIngresar.UseVisualStyleBackColor = false;
@@ -67,7 +67,7 @@
             this.TxtContraseña.PasswordChar = true;
             this.TxtContraseña.PlaceholderColor = System.Drawing.Color.Black;
             this.TxtContraseña.PlaceholderText = "Contraseña";
-            this.TxtContraseña.Size = new System.Drawing.Size(298, 28);
+            this.TxtContraseña.Size = new System.Drawing.Size(298, 32);
             this.TxtContraseña.TabIndex = 19;
             this.TxtContraseña.UnderlinedStyle = true;
             // 
@@ -88,7 +88,7 @@
             this.TxtUsuario.PasswordChar = false;
             this.TxtUsuario.PlaceholderColor = System.Drawing.Color.Black;
             this.TxtUsuario.PlaceholderText = "Usuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(298, 28);
+            this.TxtUsuario.Size = new System.Drawing.Size(298, 32);
             this.TxtUsuario.TabIndex = 18;
             this.TxtUsuario.UnderlinedStyle = true;
             // 

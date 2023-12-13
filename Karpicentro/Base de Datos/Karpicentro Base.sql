@@ -45,23 +45,6 @@ insert into Empleados values
 ('AnaDiaz798', '3SbXC6w79', 2, 'Ana', 'Hernandez', 'Diaz', '7645891334', 'Calle Genova', '357', '97531', 53000.00)
 go
 
-Create table Producto 
-(
-	IDProducto int primary key identity (1,1) not null,
-	Nombre nvarchar(max),
-	TipoMadera nvarchar (50),
-	PrecioV money,
-	Existencia int
-)
-go
-
-insert into Producto values 
-('Sofa','Madera de Acaica',5390.00,5),
-('Escritorio','Madera de Mango',3299.04,2),
-('Comedor','Madera de Mindi',5990.00,3),
-('Cama Matrimonial','Madera de Teca',3599.00,4)
-go 
-
 Create Table Proveedor
 (
 	IDProveedor int primary key identity (1,1),
@@ -100,15 +83,39 @@ insert into Almacen values
 ('Madera de Roble','100', 2)
 go 
 
+Create table Producto 
+(
+	IDProducto int primary key identity (1,1) not null,
+	Nombre nvarchar(max),
+	Descripcion nvarchar (max),
+	idmadera int,
+	PrecioV money,
+	Alto float,
+	Largo float,
+	Ancho float,
+	Existencia int
+
+	foreign key (idmadera) references Almacen (IDAlmacen)
+)
+go
+
+insert into Producto values 
+('Silla Luisiana', 'Silla con diseño vanguardista, Ideal para complementar tu espacio.' ,1,5390.00,40,48,99,10),
+('Mesa Chicago', 'Mesa con el color ideal para tu hogar' ,2,4423.00,40,69,55,25),
+('Buro Renata', 'Buro Renata para complementar tu habitacion' ,3,3599.00,50,69,65,2),
+('Taburete Kim', 'Diseño vanguardista ideal para complementar tu sala' ,4,3990.00,60,25,55,15)
+go 
+
 create table Ventas 
 (
 	IDVentas int primary key identity (1,1),
-	NombreProducto nvarchar (50),
+	idproducto int,
 	PrecioProducto money,
 	idempleado int, 
 	Fecha Date
 
-	foreign key (IDEmpleado) references Empleados (IDEmpleado)
+	foreign key (idproducto) references Producto (IDProducto)
+	foreign key (idempleado) references Empleados (IDEmpleado)
 )
 go
 

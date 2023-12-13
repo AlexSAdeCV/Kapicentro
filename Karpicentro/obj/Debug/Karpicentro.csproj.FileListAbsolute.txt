@@ -131,3 +131,9 @@ C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.pdb
 C:\Github\Kapicentro\Karpicentro\bin\Debug\FontAwesome.Sharp.dll
 C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Almacens.resources
 C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Proveedores.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Empleados.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.CatalogoAdmin.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.HomeAdmin.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Catalogo.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.VistaProducto.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Cotizaciones.resources
