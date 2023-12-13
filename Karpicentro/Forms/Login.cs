@@ -33,7 +33,7 @@ namespace Karpicentro.Forms
 
                     if (InicioSesion.Nivel == 1)
                     {
-                        Form1 fr = new Form1();
+                        Almacens fr = new Almacens();
                         fr.ShowDialog();
                     }
                     if (InicioSesion.Nivel == 2)

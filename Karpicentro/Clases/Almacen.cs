@@ -18,7 +18,7 @@ namespace Karpicentro
         public string Mensaje { get; set; }
         public int idalmacen { get; set; }
 
-        public bool Entrada()
+        public bool Insertar()
         {
             bool Exito = false;
             using (SqlConnection Con = Conexion.Conectar())
@@ -42,7 +42,7 @@ namespace Karpicentro
                     resultado = CMDSql.ExecuteNonQuery();
                     if (resultado > 0)
                     {
-                        Mensaje = "Se agrego el nuevo tipo de madera";
+
                         Exito = true;
                     }
                 }
@@ -68,6 +68,41 @@ namespace Karpicentro
                 CMDSql = new SqlCommand(Sentencia, Con);
 
                 CMDSql.Parameters.AddWithValue("@Stock", CantidadMaterial);
+                CMDSql.Parameters.AddWithValue("@IDAlmacen", idalmacen);
+
+
+                try
+                {
+                    Con.Open();
+
+                    resultado = CMDSql.ExecuteNonQuery();
+                    if (resultado > 0)
+                    {
+                        Mensaje = "Se agrego el nuevo tipo de madera";
+                        Exito = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Mensaje = ex.Message;
+                }
+            }
+            return Exito;
+        }
+
+        public bool Eliminar()
+        {
+            bool Exito = false;
+            using (SqlConnection Con = Conexion.Conectar())
+            {
+                SqlCommand CMDSql;
+
+                int resultado;
+                string Sentencia;
+
+                Sentencia = @"delete from Almacen where IDAlmacen = @IDAlmacen";
+                CMDSql = new SqlCommand(Sentencia, Con);
+
                 CMDSql.Parameters.AddWithValue("@IDAlmacen", idalmacen);
 
 

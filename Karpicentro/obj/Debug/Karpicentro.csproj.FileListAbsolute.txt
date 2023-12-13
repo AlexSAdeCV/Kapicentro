@@ -121,7 +121,6 @@ C:\Github\Kapicentro\Karpicentro\bin\Debug\System.ValueTuple.xml
 C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.AssemblyReference.cache
 C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.SuggestedBindingRedirects.cache
 C:\Github\Kapicentro\Karpicentro\obj\Debug\CustomControls.RJControls.RJTextBox.resources
-C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Form1.resources
 C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Login.resources
 C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Properties.Resources.resources
 C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.GenerateResource.cache
@@ -129,3 +128,6 @@ C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.CoreCompileInputs.
 C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.CopyComplete
 C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.exe
 C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.pdb
+C:\Github\Kapicentro\Karpicentro\bin\Debug\FontAwesome.Sharp.dll
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Almacens.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Proveedores.resources

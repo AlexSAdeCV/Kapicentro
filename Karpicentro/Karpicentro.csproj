@@ -155,11 +155,11 @@
     <Compile Include="Clases\Proveedor.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Ventas.cs" />
-    <Compile Include="Forms\Almacen.cs">
+    <Compile Include="Forms\Almacens.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Almacen.Designer.cs">
-      <DependentUpon>Almacen.cs</DependentUpon>
+    <Compile Include="Forms\Almacens.Designer.cs">
+      <DependentUpon>Almacens.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
@@ -167,16 +167,25 @@
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Proveedores.Designer.cs">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Botones\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Almacen.resx">
-      <DependentUpon>Almacen.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Almacens.resx">
+      <DependentUpon>Almacens.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Proveedores.resx">
+      <DependentUpon>Proveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
