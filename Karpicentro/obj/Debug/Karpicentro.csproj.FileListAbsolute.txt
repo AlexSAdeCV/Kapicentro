@@ -1,0 +1,10 @@
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Karpicentro.exe.config
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Karpicentro.exe
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Karpicentro.pdb
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.AssemblyReference.cache
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.SuggestedBindingRedirects.cache
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Properties.Resources.resources
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.GenerateResource.cache
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.CoreCompileInputs.cache
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.exe
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.pdb
