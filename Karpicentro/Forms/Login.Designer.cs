@@ -41,7 +41,7 @@
             this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIngresar.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIngresar.ForeColor = System.Drawing.Color.White;
-            this.BtnIngresar.Location = new System.Drawing.Point(368, 260);
+            this.BtnIngresar.Location = new System.Drawing.Point(486, 266);
             this.BtnIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnIngresar.Name = "BtnIngresar";
             this.BtnIngresar.Size = new System.Drawing.Size(82, 32);
@@ -59,7 +59,8 @@
             this.TxtContraseña.BorderSize = 2;
             this.TxtContraseña.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContraseña.ForeColor = System.Drawing.Color.Black;
-            this.TxtContraseña.Location = new System.Drawing.Point(251, 211);
+            this.TxtContraseña.Location = new System.Drawing.Point(369, 217);
+            this.TxtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.TxtContraseña.Multiline = false;
             this.TxtContraseña.Name = "TxtContraseña";
             this.TxtContraseña.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -68,7 +69,6 @@
             this.TxtContraseña.PlaceholderText = "Contraseña";
             this.TxtContraseña.Size = new System.Drawing.Size(298, 28);
             this.TxtContraseña.TabIndex = 19;
-            this.TxtContraseña.Text = "";
             this.TxtContraseña.UnderlinedStyle = true;
             // 
             // TxtUsuario
@@ -80,7 +80,8 @@
             this.TxtUsuario.BorderSize = 2;
             this.TxtUsuario.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUsuario.ForeColor = System.Drawing.Color.Black;
-            this.TxtUsuario.Location = new System.Drawing.Point(251, 163);
+            this.TxtUsuario.Location = new System.Drawing.Point(369, 169);
+            this.TxtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUsuario.Multiline = false;
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -89,7 +90,6 @@
             this.TxtUsuario.PlaceholderText = "Usuario";
             this.TxtUsuario.Size = new System.Drawing.Size(298, 28);
             this.TxtUsuario.TabIndex = 18;
-            this.TxtUsuario.Text = "";
             this.TxtUsuario.UnderlinedStyle = true;
             // 
             // Login
@@ -97,7 +97,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::Karpicentro.Properties.Resources.Login;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(870, 448);
             this.Controls.Add(this.BtnIngresar);
             this.Controls.Add(this.TxtContraseña);
             this.Controls.Add(this.TxtUsuario);
