@@ -139,7 +139,7 @@ namespace CustomControls.RJControls
         }
 
         [Category("RJ Code Advance")]
-        public string Texts
+        public string Text
         {
             get
             {
@@ -148,9 +148,8 @@ namespace CustomControls.RJControls
             }
             set
             {
-                RemovePlaceholder();//If it is the case.
                 textBox1.Text = value;
-                SetPlaceholder();//If it is the case.
+                SetPlaceholder();
             }
         }
 
@@ -191,6 +190,9 @@ namespace CustomControls.RJControls
                 SetPlaceholder();
             }
         }
+
+
+
         #endregion
 
         #region -> Overridden methods
@@ -286,7 +288,7 @@ namespace CustomControls.RJControls
                 if (isPasswordChar)
                     textBox1.UseSystemPasswordChar = true;
             }
-        }
+        }        
         private GraphicsPath GetFigurePath(Rectangle rect, int radius)
         {
             GraphicsPath path = new GraphicsPath();

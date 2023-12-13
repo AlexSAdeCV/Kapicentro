@@ -125,25 +125,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Botones\MenuColorTable.cs" />
-    <Compile Include="Botones\MenuRenderer.cs" />
     <Compile Include="Botones\RJButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Botones\RJCircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Botones\RJComboBox.cs">
       <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Botones\RJDropdownMenu.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Botones\RJProgressBar.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Botones\RJRadioButton.cs">
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Botones\RJTextBox.cs">
       <SubType>UserControl</SubType>
@@ -151,9 +137,7 @@
     <Compile Include="Botones\RJTextBox.Designer.cs">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Botones\RJToggleButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Botones\RJTextBox1.Designer.cs" />
     <Compile Include="Clases\Almacen.cs" />
     <Compile Include="Clases\Clientes.cs" />
     <Compile Include="Clases\Conexion.cs" />
@@ -170,6 +154,12 @@
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Botones\RJTextBox.resx">
@@ -177,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
