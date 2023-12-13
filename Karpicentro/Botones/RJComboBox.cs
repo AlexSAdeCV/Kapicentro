@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,8 +13,9 @@ using System.Drawing.Design;
 namespace CustomControls.RJControls
 {
     [DefaultEvent("OnSelectedIndexChanged")]
-    public class RJComboBox : UserControl
+    class RJComboBox : UserControl
     {
+        #region -> Fields
         //Fields
         private Color backColor = Color.WhiteSmoke;
         private Color iconColor = Color.MediumSlateBlue;
@@ -30,8 +31,9 @@ namespace CustomControls.RJControls
 
         //Events
         public event EventHandler OnSelectedIndexChanged;//Default event
+        #endregion
 
-        //Constructor
+        #region -> Constructor
         public RJComboBox()
         {
             cmbList = new ComboBox();
@@ -78,12 +80,14 @@ namespace CustomControls.RJControls
             this.Padding = new Padding(borderSize);//Border Size
             this.Font = new Font(this.Font.Name, 10F);
             base.BackColor = borderColor; //Border Color
+            this.Load += new System.EventHandler(this.RJComboBox_Load);
             this.ResumeLayout();
             AdjustComboBoxDimensions();
         }
+        #endregion
 
         //Properties
-        //-> Appearance
+        #region -> Appearance properties
         [Category("RJ Code - Appearance")]
         public new Color BackColor
         {
@@ -172,11 +176,12 @@ namespace CustomControls.RJControls
                 base.Font = value;
                 lblText.Font = value;
                 cmbList.Font = value;//Optional
+                AdjustComboBoxDimensions();
             }
         }
 
         [Category("RJ Code - Appearance")]
-        public string Text
+        public string Texts
         {
             get { return lblText.Text; }
             set { lblText.Text = value; }
@@ -192,8 +197,10 @@ namespace CustomControls.RJControls
                     cmbList.DropDownStyle = value;
             }
         }
-        //Properties
-        //-> Data
+        #endregion
+
+        #region -> Data properties
+
         [Category("RJ Code - Data")]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
         [Editor("System.Windows.Forms.Design.ListControlStringCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]
@@ -282,10 +289,9 @@ namespace CustomControls.RJControls
             get { return cmbList.ValueMember; }
             set { cmbList.ValueMember = value; }
         }
+        #endregion
 
-        public object SelectedValue { get; internal set; }
-
-        //Private methods
+        #region -> Private methods
         private void AdjustComboBoxDimensions()
         {
             cmbList.Width = lblText.Width;
@@ -294,9 +300,14 @@ namespace CustomControls.RJControls
                 X = this.Width - this.Padding.Right - cmbList.Width,
                 Y = lblText.Bottom - cmbList.Height
             };
+            if (cmbList.Height >= this.Height)
+            {
+                this.Height = cmbList.Height + (this.borderSize*2);
+            }
         }
+        #endregion
 
-        //Event methods
+        #region -> Event methods
 
         //-> Default event
         private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -360,14 +371,20 @@ namespace CustomControls.RJControls
             this.OnMouseEnter(e);
         }
         //::::+
+        #endregion
 
-        //Overridden methods
+        #region -> Overridden methods
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
+            if (DesignMode)
+                AdjustComboBoxDimensions();
+        }
+        #endregion
+
+        private void RJComboBox_Load(object sender, EventArgs e)
+        {
             AdjustComboBoxDimensions();
         }
-
-
     }
 }

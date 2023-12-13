@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
-using Karpicentro.Forms;
+
 using System.Windows.Forms;
 
 namespace Karpicentro
