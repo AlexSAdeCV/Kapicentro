@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,7 +19,7 @@ namespace Karpicentro
         public string Fecha { get; set; }
         public string Mensaje { get; set; }
         public int CantidadFintal { get; set; }
-        public int CantidadInicial { get; set; }
+        public double preciofinal { get; set; }
 
         public bool VenderProducto()
         {
@@ -34,7 +35,7 @@ namespace Karpicentro
                 CMDSql = new SqlCommand(Sentencia, Con);
 
                 CMDSql.Parameters.AddWithValue("@idproducto", idproducto);
-                CMDSql.Parameters.AddWithValue("@PrecioProducto", PrecioProducto);
+                CMDSql.Parameters.AddWithValue("@PrecioProducto", preciofinal);
                 CMDSql.Parameters.AddWithValue("@idproveedor", idempleado);
                 CMDSql.Parameters.AddWithValue("@Fecha", Fecha);
 
@@ -57,9 +58,11 @@ namespace Karpicentro
             return Exito;
         }
 
+        
+
         public int Extraer_Catidad(int id)
         {
-            int cantidad;
+            int cantidad = 0;
             DataTable Productos = new DataTable();
 
             using (SqlConnection Conectar = Conexion.Conectar())
@@ -82,13 +85,50 @@ namespace Karpicentro
                     sqlDataAdapter.Fill(Productos);
 
                     if (Productos.Rows.Count > 0)
-                        cantidad = Convert.ToInt32(Productos.Rows[id]["Existencia"]);
+                    {
+                        cantidad = Convert.ToInt32(Productos.Rows[id]["Existencia"]); 
+                        return cantidad;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Mensaje = ex.Message;
+                }
+                
+            }
+            return cantidad;
+        }
+
+        public bool Mod_Ex_PRO(int Existencia, int id)
+        {
+            using (SqlConnection conexion = Conexion.Conectar())
+            {
+                SqlCommand cmdCreate;
+
+                int filasafectadas;
+                string sentencia = @"Update PRODUCTO set EXISTENCIA = @Existencia where IdPRODUCTO = @Id";
+                cmdCreate = new SqlCommand(sentencia, conexion);
+
+                cmdCreate.Parameters.AddWithValue("@Existencia", Existencia);
+                cmdCreate.Parameters.AddWithValue("@Id", id);
+
+                try
+                {
+                    conexion.Open();
+                    filasafectadas = cmdCreate.ExecuteNonQuery();
+                    if (filasafectadas > 0)
+                    {
+                        Mensaje = "Cantidad actualizada exitosamente";
+                        return true;
+                    }
+
                 }
                 catch (Exception ex)
                 {
                     Mensaje = ex.Message;
                 }
             }
+            return false;
         }
     }
 }

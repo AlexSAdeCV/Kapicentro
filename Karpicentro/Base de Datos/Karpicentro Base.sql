@@ -119,3 +119,4 @@ create table Ventas
 )
 go
 
+select * fro

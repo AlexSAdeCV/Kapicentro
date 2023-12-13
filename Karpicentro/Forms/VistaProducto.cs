@@ -20,12 +20,14 @@ using iText.Layout.Properties;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.CompilerServices;
 
 namespace Karpicentro.Forms
 {
     public partial class VistaProducto : Form
     {
         public int id;
+        public double precio, preciof;
         public VistaProducto()
         {
             InitializeComponent();
@@ -97,12 +99,26 @@ namespace Karpicentro.Forms
             Venta vt = new Venta();
             Productos pr = new Productos();
 
-            vt.idproducto = pr.IDProducto;
-
-            int cantidadinicial = 
             Habilitar();
 
-            LblTotal.Text = $"Total\n$ {LblPrecio.Text}";
+            vt.idproducto = pr.IDProducto;
+
+            int cantidadinicial = vt.Extraer_Catidad(id);
+            int cantidadcomprada = Convert.ToInt32(numericUpDown1.Value);
+            precio = Convert.ToDouble(LblPrecio.Text);
+
+            if (cantidadcomprada > 1)
+            {
+                preciof = cantidadcomprada * precio;
+                vt.preciofinal = preciof;
+                LblTotal.Text = $"Total\n$ {vt.preciofinal}";
+
+                int cantidadfinal = cantidadinicial - cantidadcomprada;
+                vt.CantidadFintal = cantidadfinal;
+
+            }
+            else
+                LblTotal.Text = $"Total\n$ {LblPrecio.Text}";
         }
 
         private void BtnTerminarVenta_Click(object sender, EventArgs e)
@@ -110,18 +126,20 @@ namespace Karpicentro.Forms
             Venta vt = new Venta();
             Productos pr = new Productos();
 
+            InicioSesion.UsuarioF = 1;
+
             DialogResult Resultado = MessageBox.Show("¿Desea terminar la venta?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (Resultado == DialogResult.Yes)
             {
-                vt.idproducto = pr.IDProducto;
+                vt.idproducto = id;
                 vt.idempleado = InicioSesion.UsuarioF;
-                vt.PrecioProducto = Convert.ToInt32(LblTotal.Text);
+                vt.preciofinal = preciof;
                 vt.Fecha = DateTime.Now.ToString("yyyy") + "/" + DateTime.Now.ToString("MM") + "/" + DateTime.Now.ToString("dd");
 
                 if (vt.VenderProducto())
                 {
-                    
+                    MessageBox.Show("Se realizo la venta adecuadamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);   
                 }
 
             }
