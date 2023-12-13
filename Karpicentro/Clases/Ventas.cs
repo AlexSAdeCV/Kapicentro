@@ -31,14 +31,14 @@ namespace Karpicentro
                 int resultado;
                 string Sentencia;
 
-                Sentencia = @"insert into Ventas values (@idproducto, @PrecioProducto, @idproveedor, @Fecha)";
+                Sentencia = @"insert into Ventas values (@PrecioProducto, @Fecha, @idproducto, @idempleado)";
                 CMDSql = new SqlCommand(Sentencia, Con);
 
-                CMDSql.Parameters.AddWithValue("@idproducto", idproducto);
                 CMDSql.Parameters.AddWithValue("@PrecioProducto", preciofinal);
-                CMDSql.Parameters.AddWithValue("@idproveedor", idempleado);
                 CMDSql.Parameters.AddWithValue("@Fecha", Fecha);
-
+                CMDSql.Parameters.AddWithValue("@idproducto", idproducto);
+                CMDSql.Parameters.AddWithValue("@idempleado", idempleado);
+                
                 try
                 {
                     Con.Open();

@@ -109,14 +109,9 @@ go
 create table Ventas 
 (
 	IDVentas int primary key identity (1,1),
-	idproducto int,
 	PrecioProducto money,
-	idempleado int, 
-	Fecha Date
-
-	foreign key (idproducto) references Producto (IDProducto)
-	foreign key (idempleado) references Empleados (IDEmpleado)
+	Fecha Date,
+	idproducto int, 
+	idempleado int,
 )
 go
-
-select * fro
