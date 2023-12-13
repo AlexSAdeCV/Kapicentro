@@ -67,6 +67,7 @@ Create Table Proveedor
 	IDProveedor int primary key identity (1,1),
 	NombreProv nvarchar (30),
 	Colonia nvarchar(30),
+	Delegacion nvarchar (30),
 	Calle nvarchar(30),
 	C_Postal nvarchar (5),
 	Telefono nvarchar (10),
@@ -75,10 +76,10 @@ Create Table Proveedor
 go
 
 insert into Proveedor values
-('Troncoso S.A','Col. Juarez','Calle Madero','09930','5652328247','Jesus'),
-('Muebles S.A.','Col. Alvarado','Calle San Fierro','09931','5584697136','Mateo'),
-('HomeDepot S.A.','Col Tepito','Calle Lucitania','09932','5541278159','Alejandro'),
-('Coppel S.A.','Col Pueblo Nuevo','Calle Mi palito', '09933' ,'5576959475', 'Andres')
+('Troncoso S.A','Col. Juarez','Benito Juarez','Calle Madero','09930','5652328247','Jesus'),
+('Muebles S.A.','Col. Alvarado','Iztapalapa','Calle San Fierro','09931','5584697136','Mateo'),
+('HomeDepot S.A.','Col Tepito', 'Iztacalco','Calle Lucitania','09932','5541278159','Alejandro'),
+('Coppel S.A.','Col Pueblo Nuevo', 'Iztapalapa' ,'Calle Mi palito', '09933' ,'5576959475', 'Andres')
 go 
 
 create table Almacen
@@ -111,4 +112,3 @@ create table Ventas
 )
 go
 
-select * from Empleados
