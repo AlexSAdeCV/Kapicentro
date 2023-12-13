@@ -9,7 +9,6 @@ C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csp
 C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.exe
 C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.pdb
 C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\CustomControls.RJControls.RJTextBox.resources
-C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Form1.resources
 C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.barcodes.dll
 C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.bouncy-castle-connector.dll
 C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.commons.dll
@@ -129,3 +128,6 @@ C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.CoreCompileInputs.
 C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.CopyComplete
 C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.exe
 C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.pdb
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Empleados.resources
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Login.resources
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\FontAwesome.Sharp.dll

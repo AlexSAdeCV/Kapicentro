@@ -111,3 +111,4 @@ create table Ventas
 )
 go
 
+select * from Empleados
