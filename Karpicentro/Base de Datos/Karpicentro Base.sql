@@ -1,4 +1,8 @@
 ﻿Create database Karpicentro
+On
+(Name = KarpicentroDat, Filename = 'E:\5to\Karpicentro\Karpicentro Base\KarpicentroMDF.mdf', SIZE = 10, MAXSIZE	= 50, FILEGROWTH = 5)
+Log on 
+(Name = KarpicentroLog, Filename = 'E:\5to\Karpicentro\Karpicentro Base\KarpicentroLDF.ldf', SIZE = 5MB, MAXSIZE = 25MB, FILEGROWTH = 5MB);
 go
 
 use Karpicentro
@@ -115,6 +119,10 @@ create table Ventas
 	idempleado int,
 )
 go
+
+select * from Ventas
+go
+
 
 create table Cotizacion
 (

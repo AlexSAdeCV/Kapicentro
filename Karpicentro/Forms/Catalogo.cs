@@ -40,6 +40,8 @@ namespace Karpicentro.Forms
         {
             VistaProducto vp = new VistaProducto();
 
+            vp.id = 3;
+
             vp.PicboxProducto.Image = pictureBox3.Image;
 
             vp.ShowDialog();
@@ -49,6 +51,8 @@ namespace Karpicentro.Forms
         {
             VistaProducto vp = new VistaProducto();
 
+            vp.id = 4;
+
             vp.PicboxProducto.Image = pictureBox4.Image;
 
             vp.ShowDialog();
@@ -57,6 +61,8 @@ namespace Karpicentro.Forms
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             VistaProducto vp = new VistaProducto();
+
+            vp.id = 5;
 
             vp.PicboxProducto.Image = pictureBox5.Image;
 

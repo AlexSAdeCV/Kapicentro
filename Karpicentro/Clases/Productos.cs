@@ -39,12 +39,16 @@ namespace Karpicentro.Clases
                 int resultado;
                 string Sentencia;
 
-                Sentencia = @"insert into Producto values (@Nombre, @TipoMadera, @PrecioV, @Existencia)";
+                Sentencia = @"insert into Producto values (@Nombre, @Descripcion, @TipoMadera, @PrecioV, @Alto,@Largo,@Ancho, @Existencia)";
                 CMDSql = new SqlCommand(Sentencia, Con);
 
                 CMDSql.Parameters.AddWithValue("@Nombre", Nombre);
+                CMDSql.Parameters.AddWithValue("@Descripcion", Descripcion);
                 CMDSql.Parameters.AddWithValue("@TipoMadera", TipoMadera);
                 CMDSql.Parameters.AddWithValue("@PrecioV", PrecioVenta);
+                CMDSql.Parameters.AddWithValue("@Alto", Medidas[0]);
+                CMDSql.Parameters.AddWithValue("@Largo", Medidas[1]);
+                CMDSql.Parameters.AddWithValue("@Ancho", Medidas[2]);
                 CMDSql.Parameters.AddWithValue("@Existencia", Existencia);
 
                 try

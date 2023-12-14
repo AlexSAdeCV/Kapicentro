@@ -118,7 +118,10 @@ namespace Karpicentro.Forms
 
             }
             else
+            {
                 LblTotal.Text = $"Total\n$ {LblPrecio.Text}";
+                preciof = Convert.ToDouble(LblPrecio.Text);
+            }
         }
 
         private void BtnTerminarVenta_Click(object sender, EventArgs e)

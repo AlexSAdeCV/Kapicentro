@@ -51,6 +51,10 @@ namespace Karpicentro.Forms
                     Pr.TipoMadera = Convert.ToInt32(CmbMadera.SelectedValue);
                     Pr.PrecioVenta = Convert.ToInt32(TxtPrecioVenta.Text);
                     Pr.Existencia = Convert.ToInt32(NupExistencia.Value);
+                    Pr.Descripcion = TxtDescripcion.Text;
+                    Pr.Medidas[0] = Convert.ToDouble(TxtAlto.Text);
+                    Pr.Medidas[1] = Convert.ToDouble(TxtLargo.Text);
+                    Pr.Medidas[2] = Convert.ToDouble(TxtAncho.Text);
 
                     if (ValidaCampos(1))
                     {
