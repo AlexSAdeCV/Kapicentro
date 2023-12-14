@@ -1,4 +1,5 @@
 ﻿using CustomControls.RJControls;
+using Karpicentro.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,17 +9,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Karpicentro;
 
 namespace Karpicentro.Forms
 {
     public partial class Empleados : Form
     {
+        Empleadoo empleado = new Empleadoo();
         public Empleados()
         {
             InitializeComponent();
         }
-        
-        Empleado empleado = new Empleado();
 
         private void Empleados_Load(object sender, EventArgs e)
         {
@@ -26,6 +27,7 @@ namespace Karpicentro.Forms
             Mostrar(1,false,Color.Gray);
         }
         
+
         public void Mostrar(int s,bool tf,Color color)
         {
             foreach(Control c in this.Pnlinserstar.Controls)

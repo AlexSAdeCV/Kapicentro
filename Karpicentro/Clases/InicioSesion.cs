@@ -14,6 +14,8 @@ namespace Karpicentro
     {
         public static int Nivel { get; set; }
         public static int UsuarioF { get; set; }
+        public static string Usuario { get; set; }
+
         public static bool IniciaSesion(string Usuario, string Contaseña)
         {
             DataTable UsuariosDT = new DataTable();
@@ -42,6 +44,7 @@ namespace Karpicentro
                     {
                         Nivel = Convert.ToInt32(UsuariosDT.Rows[0]["idpuesto"]);
                         UsuarioF = Convert.ToInt32(UsuariosDT.Rows[0]["IDEmpleado"]);
+                        Usuario = UsuariosDT.Rows[0]["Nombre"].ToString();
 
                         return true;
                     }

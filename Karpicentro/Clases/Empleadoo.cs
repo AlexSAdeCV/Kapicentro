@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using static iText.Signatures.LtvVerification;
-using System.Windows.Forms;
+using System.Data;
 
-namespace Karpicentro
+
+namespace Karpicentro.Clases
 {
-    public class Empleado
+    internal class Empleadoo
     {
         public string Usuario { get; set; }
         public string Contrasena { get; set; }
@@ -23,7 +22,7 @@ namespace Karpicentro
 
         public string Calle { get; set; }
         public string Telefono { get; set; }
-        public string CP { get; set; }  
+        public string CP { get; set; }
         public string NExterior { get; set; }
 
         public string Mensaje { get; set; }
@@ -53,7 +52,7 @@ namespace Karpicentro
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    Mensaje = ex.Message;
                 }
             }
 
@@ -118,14 +117,13 @@ namespace Karpicentro
                     filasafectadas = cmdCreate.ExecuteNonQuery();
                     if (filasafectadas > 0)
                     {
-                        MessageBox.Show("Empleado elimidado exitosamente");
 
                         return true;
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    Mensaje = ex.Message;
                 }
             }
             return false;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Karpicentro.Forms.Empleado;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,7 @@ namespace Karpicentro.Forms
         {
             InitializeComponent();
             this.lblUsuario.Text = $"Hola Empleado {InicioSesion.UsuarioF.ToString()}\nComo va su dia";
+            this.LblNombre.Text = InicioSesion.Usuario;
         }
 
         private void AbrirHijo(Form Hijito)
@@ -39,11 +41,24 @@ namespace Karpicentro.Forms
 
         private void BtnVentas_Click(object sender, EventArgs e)
         {
+            AbrirHijo(new Ventas());
         }
 
         private void BtnCatalogo_Click(object sender, EventArgs e)
         {
             AbrirHijo(new Catalogo());
+        }
+
+        private void BtnHome_Click(object sender, EventArgs e)
+        {
+            AbrirHijo(new MenuEmpleado()); 
+        }
+
+        public void Inicio()
+        {
+            MenuEmpleado interfaz_Home = new MenuEmpleado();
+            interfaz_Home.lblUsuario.Text = InicioSesion.Usuario;
+            AbrirHijo(interfaz_Home);
         }
     }
 }

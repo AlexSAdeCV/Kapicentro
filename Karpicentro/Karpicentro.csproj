@@ -149,7 +149,7 @@
     <Compile Include="Clases\Clientes.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\Cotizacion.cs" />
-    <Compile Include="Clases\Empleado.cs" />
+    <Compile Include="Clases\Empleadoo.cs" />
     <Compile Include="Clases\Facturas.cs" />
     <Compile Include="Clases\InicioSesion.cs" />
     <Compile Include="Clases\Productos.cs" />
@@ -160,6 +160,12 @@
     </Compile>
     <Compile Include="Forms\Almacens.Designer.cs">
       <DependentUpon>Almacens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuAdmin.Designer.cs">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Catalogo.cs">
       <SubType>Form</SubType>
@@ -197,6 +203,18 @@
     <Compile Include="Forms\HomeAdmin.Designer.cs">
       <DependentUpon>HomeAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MenuEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuEmpleado.Designer.cs">
+      <DependentUpon>MenuEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +241,9 @@
     <EmbeddedResource Include="Forms\Almacens.resx">
       <DependentUpon>Almacens.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuAdmin.resx">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Catalogo.resx">
       <DependentUpon>Catalogo.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +261,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HomeAdmin.resx">
       <DependentUpon>HomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuEmpleado.resx">
+      <DependentUpon>MenuEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ventas.resx">
+      <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

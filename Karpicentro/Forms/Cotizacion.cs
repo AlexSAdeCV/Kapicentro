@@ -14,6 +14,7 @@ namespace Karpicentro.Forms
     public partial class Cotizaciones : Form
     {
         double Precio = 1300;
+        int seleccion = 0;
         public Cotizaciones()
         {
             InitializeComponent();
@@ -22,9 +23,7 @@ namespace Karpicentro.Forms
 
         private void BtnRegreso_Click(object sender, EventArgs e)
         {
-            TxtAlto.Text = "70";
-            TxtAncho.Text = "50";
-            TxtLargo.Text = "50";
+            seleccion = 1;
         }
 
         private void CargaComboMadera()
@@ -80,6 +79,22 @@ namespace Karpicentro.Forms
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             //if (TxtLargo.Text )
+        }
+
+        private void Llenartextbox()
+        {
+            Cotizacion ct = new Cotizacion();
+            switch (seleccion)
+            {
+                case 0:
+                    //if (ct.MostrarCotizacion(seleccion))
+                    //{
+                        
+                    //}
+                    break; 
+                case 1:
+                    break;
+            }
         }
     }
 }

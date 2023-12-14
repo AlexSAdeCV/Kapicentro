@@ -214,6 +214,7 @@ namespace Karpicentro.Forms
 
             DgvAlmacen.AutoSize = true;
             DgvAlmacen.DataSource = almacen.MostrarAlmacen();
+
         }
     }
 }

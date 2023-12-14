@@ -30,6 +30,7 @@
         {
             this.Pnlinserstar = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.LblPrecio = new System.Windows.Forms.Label();
             this.LblMedidas = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
@@ -42,12 +43,13 @@
             this.LblTotal = new System.Windows.Forms.Label();
             this.BtnTerminarVenta = new System.Windows.Forms.Button();
             this.PnlTotal = new System.Windows.Forms.Panel();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.DgvProducto = new System.Windows.Forms.DataGridView();
             this.Pnlinserstar.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicboxProducto)).BeginInit();
             this.PnlTotal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // Pnlinserstar
@@ -76,6 +78,24 @@
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalles";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(332, 113);
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDown1.TabIndex = 12;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // LblPrecio
             // 
@@ -122,7 +142,7 @@
             this.LblNombreM.Location = new System.Drawing.Point(22, 0);
             this.LblNombreM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNombreM.Name = "LblNombreM";
-            this.LblNombreM.Size = new System.Drawing.Size(211, 40);
+            this.LblNombreM.Size = new System.Drawing.Size(164, 32);
             this.LblNombreM.TabIndex = 7;
             this.LblNombreM.Text = "SILLA LUSIANA";
             // 
@@ -196,7 +216,7 @@
             this.LblTotal.Font = new System.Drawing.Font("SimSun", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTotal.Location = new System.Drawing.Point(114, 35);
             this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(117, 40);
+            this.LblTotal.Size = new System.Drawing.Size(95, 33);
             this.LblTotal.TabIndex = 41;
             this.LblTotal.Text = "Total";
             // 
@@ -224,29 +244,21 @@
             this.PnlTotal.Size = new System.Drawing.Size(348, 211);
             this.PnlTotal.TabIndex = 43;
             // 
-            // numericUpDown1
+            // DgvProducto
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(332, 113);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 27);
-            this.numericUpDown1.TabIndex = 12;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.DgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvProducto.Location = new System.Drawing.Point(564, 13);
+            this.DgvProducto.Name = "DgvProducto";
+            this.DgvProducto.RowTemplate.Height = 24;
+            this.DgvProducto.Size = new System.Drawing.Size(240, 150);
+            this.DgvProducto.TabIndex = 44;
             // 
             // VistaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1238, 759);
+            this.Controls.Add(this.DgvProducto);
             this.Controls.Add(this.PnlTotal);
             this.Controls.Add(this.PicboxProducto);
             this.Controls.Add(this.BtnComprar);
@@ -260,10 +272,11 @@
             this.Pnlinserstar.ResumeLayout(false);
             this.Pnlinserstar.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicboxProducto)).EndInit();
             this.PnlTotal.ResumeLayout(false);
             this.PnlTotal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvProducto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -284,5 +297,6 @@
         private System.Windows.Forms.Button BtnTerminarVenta;
         private System.Windows.Forms.Panel PnlTotal;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.DataGridView DgvProducto;
     }
 }

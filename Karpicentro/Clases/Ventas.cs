@@ -8,6 +8,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
 
 namespace Karpicentro
 {
@@ -20,6 +21,8 @@ namespace Karpicentro
         public string Mensaje { get; set; }
         public int CantidadFintal { get; set; }
         public double preciofinal { get; set; }
+        public int CantidadComprada { get; set; }
+        public int idventa { get; set; }
 
         public bool VenderProducto()
         {
@@ -129,6 +132,75 @@ namespace Karpicentro
                 }
             }
             return false;
+        }
+
+        public int Sacaridventa()
+        {
+            int idv = 0;
+            DataTable Productos = new DataTable();
+
+            using (SqlConnection Conectar = Conexion.Conectar())
+            {
+                string Cadena;
+                SqlCommand CmdSQL;
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
+
+                Cadena = @"select IDVentas from Ventas";
+
+                CmdSQL = new SqlCommand(Cadena, Conectar);
+
+                try
+                {
+                    Conectar.Open();
+
+                    sqlDataAdapter.SelectCommand = CmdSQL;
+
+                    sqlDataAdapter.Fill(Productos);
+
+                    if (Productos.Rows.Count > 0)
+                    {
+                        idv = Convert.ToInt32(Productos.Rows[0]["IDVentas"]);
+                        return idv;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Mensaje = ex.Message;
+                }
+
+            }
+            return idv;
+        }
+
+        public DataTable MostrarVentas()
+        {
+            DataTable ventas = new DataTable();
+
+            using (SqlConnection Conectar = Conexion.Conectar())
+            {
+                string Cadena;
+                SqlCommand CmdSQL;
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
+
+                Cadena = @"Select * from ventas";
+
+                CmdSQL = new SqlCommand(Cadena, Conectar);
+
+                try
+                {
+                    Conectar.Open();
+
+                    sqlDataAdapter.SelectCommand = CmdSQL;
+
+                    sqlDataAdapter.Fill(ventas);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            return ventas;
         }
     }
 }

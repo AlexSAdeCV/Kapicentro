@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Karpicentro.Forms.Admin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,25 +18,11 @@ namespace Karpicentro.Forms
         public HomeAdmin()
         {
             InitializeComponent();
-            this.lblUsuario.Text = $"Hola Administrador {InicioSesion.UsuarioF.ToString()}\nComo va su dia";
         }
 
-        private void AbrirHijo(Form Hijito)
+        private void HomeAdmin_Load(object sender, EventArgs e)
         {
-            if (Hijo != null)
-                Hijo.Close();
-            else
-            {
-                Hijo = Hijito;
-                Hijito.TopLevel = false;
-                Hijito.FormBorderStyle = FormBorderStyle.None;
-                Hijito.Dock = DockStyle.Fill;
-                PanelFormSecundario.Controls.Add(Hijito);
-                PanelFormSecundario.Tag = Hijito;
-                Hijito.BringToFront();
-                Hijito.Show();
-                Hijo = null;
-            }
+            AbrirHijo(new MenuAdmin());
         }
 
         private void BtnAgregarEmpleados_Click(object sender, EventArgs e)
@@ -56,6 +43,29 @@ namespace Karpicentro.Forms
         private void BtnProductos_Click(object sender, EventArgs e)
         {
             AbrirHijo(new CatalogoAdmin());
+        }
+
+        private void BtnHome_Click(object sender, EventArgs e)
+        {
+            AbrirHijo(new MenuAdmin());
+        }
+
+        private void AbrirHijo(Form Hijito)
+        {
+            if (Hijo != null)
+                Hijo.Close();
+            else
+            {
+                Hijo = Hijito;
+                Hijito.TopLevel = false;
+                Hijito.FormBorderStyle = FormBorderStyle.None;
+                Hijito.Dock = DockStyle.Fill;
+                PanelFormSecundario.Controls.Add(Hijito);
+                PanelFormSecundario.Tag = Hijito;
+                Hijito.BringToFront();
+                Hijito.Show();
+                Hijo = null;
+            }
         }
     }
 }
