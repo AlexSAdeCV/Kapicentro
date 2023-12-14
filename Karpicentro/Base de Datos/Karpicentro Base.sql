@@ -115,3 +115,25 @@ create table Ventas
 	idempleado int,
 )
 go
+
+create table Cotizacion
+(
+	IDCotizacion int primary key identity (1,1),
+	NombreProducto nvarchar (50),
+	Alto float,
+	Ancho float,
+	Largo float,
+	PrecioMedidaInicial money,
+	idmadera int,
+	Acabado nvarchar (50)
+
+	foreign key (idmadera) references Almacen (IDAlmacen)
+)
+go
+
+insert into Cotizacion values 
+('Silla', 70,50,50, 1300, 1, 'Barnizado'),
+('Buro', 70,50,58, 1300, 1, 'Barnizado'),
+('Mesa', 80,160,81, 1300, 1, 'Barnizado'),
+('Taburete', 60,40.5,31, 1300, 1, 'Barnizado')
+go

@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Karpicentro
 {
@@ -14,6 +17,37 @@ namespace Karpicentro
 
         public void HacerCotizacion()
         {
+        }
+
+        public DataTable MostrarCotizacion()
+        {
+            DataTable Almacen = new DataTable();
+
+            using (SqlConnection Conectar = Conexion.Conectar())
+            {
+                string Cadena;
+                SqlCommand CmdSQL;
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
+
+                Cadena = @"Select * from Cotizacion";
+
+                CmdSQL = new SqlCommand(Cadena, Conectar);
+
+                try
+                {
+                    Conectar.Open();
+
+                    sqlDataAdapter.SelectCommand = CmdSQL;
+
+                    sqlDataAdapter.Fill(Almacen);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            return Almacen;
         }
     }
 }

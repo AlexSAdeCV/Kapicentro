@@ -80,6 +80,7 @@
             this.BtnCotizacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCotizacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnCotizacion.UseVisualStyleBackColor = false;
+            this.BtnCotizacion.Click += new System.EventHandler(this.BtnCotizacion_Click);
             // 
             // pictureBox1
             // 

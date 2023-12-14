@@ -137,3 +137,4 @@ C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.HomeAdmin.resources
 C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Catalogo.resources
 C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.VistaProducto.resources
 C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Cotizaciones.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Home_Empleado.resources

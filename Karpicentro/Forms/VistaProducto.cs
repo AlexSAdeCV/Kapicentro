@@ -126,7 +126,7 @@ namespace Karpicentro.Forms
             Venta vt = new Venta();
             Productos pr = new Productos();
 
-            InicioSesion.UsuarioF = 1;
+            //InicioSesion.UsuarioF = 1;
 
             DialogResult Resultado = MessageBox.Show("¿Desea terminar la venta?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 

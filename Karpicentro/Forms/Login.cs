@@ -38,8 +38,8 @@ namespace Karpicentro.Forms
                     }
                     if (InicioSesion.Nivel == 2)
                     {
-                        //HomeEmpleado home = new HomeEmpleado();
-                        //home.ShowDialog();
+                        Home_Empleado home = new Home_Empleado();   
+                        home.ShowDialog();
                     }
                 }
 

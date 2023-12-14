@@ -62,5 +62,12 @@ namespace Karpicentro.Forms
 
             vp.ShowDialog();
         }
+
+        private void BtnCotizacion_Click(object sender, EventArgs e)
+        {
+            Cotizaciones cotizaciones = new Cotizaciones();
+
+            cotizaciones.ShowDialog();
+        }
     }
 }
