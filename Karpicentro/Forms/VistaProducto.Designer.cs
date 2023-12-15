@@ -89,7 +89,7 @@
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 27);
             this.numericUpDown1.TabIndex = 12;
             this.numericUpDown1.Value = new decimal(new int[] {
             1,
@@ -142,7 +142,7 @@
             this.LblNombreM.Location = new System.Drawing.Point(22, 0);
             this.LblNombreM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNombreM.Name = "LblNombreM";
-            this.LblNombreM.Size = new System.Drawing.Size(164, 32);
+            this.LblNombreM.Size = new System.Drawing.Size(211, 40);
             this.LblNombreM.TabIndex = 7;
             this.LblNombreM.Text = "SILLA LUSIANA";
             // 
@@ -200,6 +200,7 @@
             this.IbtnRegresar.TabIndex = 34;
             this.IbtnRegresar.Text = "Regresar";
             this.IbtnRegresar.UseVisualStyleBackColor = false;
+            this.IbtnRegresar.Click += new System.EventHandler(this.IbtnRegresar_Click);
             // 
             // PicboxProducto
             // 
@@ -216,7 +217,7 @@
             this.LblTotal.Font = new System.Drawing.Font("SimSun", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTotal.Location = new System.Drawing.Point(114, 35);
             this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(95, 33);
+            this.LblTotal.Size = new System.Drawing.Size(117, 40);
             this.LblTotal.TabIndex = 41;
             this.LblTotal.Text = "Total";
             // 
@@ -226,7 +227,7 @@
             this.BtnTerminarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnTerminarVenta.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnTerminarVenta.ForeColor = System.Drawing.Color.White;
-            this.BtnTerminarVenta.Location = new System.Drawing.Point(52, 117);
+            this.BtnTerminarVenta.Location = new System.Drawing.Point(57, 166);
             this.BtnTerminarVenta.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.BtnTerminarVenta.Name = "BtnTerminarVenta";
             this.BtnTerminarVenta.Size = new System.Drawing.Size(249, 33);
@@ -241,7 +242,7 @@
             this.PnlTotal.Controls.Add(this.BtnTerminarVenta);
             this.PnlTotal.Location = new System.Drawing.Point(774, 511);
             this.PnlTotal.Name = "PnlTotal";
-            this.PnlTotal.Size = new System.Drawing.Size(348, 211);
+            this.PnlTotal.Size = new System.Drawing.Size(413, 236);
             this.PnlTotal.TabIndex = 43;
             // 
             // DgvProducto
@@ -249,6 +250,7 @@
             this.DgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProducto.Location = new System.Drawing.Point(564, 13);
             this.DgvProducto.Name = "DgvProducto";
+            this.DgvProducto.RowHeadersWidth = 51;
             this.DgvProducto.RowTemplate.Height = 24;
             this.DgvProducto.Size = new System.Drawing.Size(240, 150);
             this.DgvProducto.TabIndex = 44;

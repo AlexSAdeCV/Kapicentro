@@ -179,10 +179,10 @@
     <Compile Include="Forms\CatalogoAdmin.Designer.cs">
       <DependentUpon>CatalogoAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Cotizacion.cs">
+    <Compile Include="Botones\Cotizacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Cotizacion.Designer.cs">
+    <Compile Include="Botones\Cotizacion.Designer.cs">
       <DependentUpon>Cotizacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Empleados.cs">
@@ -250,7 +250,7 @@
     <EmbeddedResource Include="Forms\CatalogoAdmin.resx">
       <DependentUpon>CatalogoAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Cotizacion.resx">
+    <EmbeddedResource Include="Botones\Cotizacion.resx">
       <DependentUpon>Cotizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Empleados.resx">

@@ -14,7 +14,7 @@ namespace Karpicentro
             SqlConnection conexion;
             SqlConnectionStringBuilder CadenaConexion = new SqlConnectionStringBuilder();
 
-            CadenaConexion.DataSource = @"(localdb)\MSSQLLocalDB";
+            CadenaConexion.DataSource = @".";
             CadenaConexion.IntegratedSecurity = true;
             CadenaConexion.InitialCatalog = "Karpicentro";
             conexion = new SqlConnection(CadenaConexion.ConnectionString);

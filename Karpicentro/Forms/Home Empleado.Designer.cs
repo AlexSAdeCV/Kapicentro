@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.PanelBotones = new System.Windows.Forms.Panel();
+            this.BtnHome = new FontAwesome.Sharp.IconButton();
             this.LblNombre = new System.Windows.Forms.Label();
+            this.BtnCatalogo = new FontAwesome.Sharp.IconButton();
+            this.BtnVentas = new FontAwesome.Sharp.IconButton();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PanelFormSecundario = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.BtnHome = new FontAwesome.Sharp.IconButton();
-            this.BtnCatalogo = new FontAwesome.Sharp.IconButton();
-            this.BtnVentas = new FontAwesome.Sharp.IconButton();
             this.PanelBotones.SuspendLayout();
             this.PanelFormSecundario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -59,84 +59,6 @@
             this.PanelBotones.Size = new System.Drawing.Size(1616, 102);
             this.PanelBotones.TabIndex = 7;
             // 
-            // LblNombre
-            // 
-            this.LblNombre.AutoSize = true;
-            this.LblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNombre.Location = new System.Drawing.Point(733, 36);
-            this.LblNombre.Name = "LblNombre";
-            this.LblNombre.Size = new System.Drawing.Size(100, 37);
-            this.LblNombre.TabIndex = 2;
-            this.LblNombre.Text = "label1";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblUsuario.Font = new System.Drawing.Font("SimSun-ExtB", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(81, 107);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(249, 70);
-            this.lblUsuario.TabIndex = 14;
-            this.lblUsuario.Text = "Bienvenido,\r\nAdministrador\r\n";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("SimSun-ExtB", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(840, 330);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(384, 44);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "\"Karpicentro: where excellence in \r\ncarpentry finds it\'s home.\"\r\n";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PanelFormSecundario
-            // 
-            this.PanelFormSecundario.AutoSize = true;
-            this.PanelFormSecundario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(60)))), ((int)(((byte)(63)))));
-            this.PanelFormSecundario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.PanelFormSecundario.Controls.Add(this.pictureBox3);
-            this.PanelFormSecundario.Controls.Add(this.pictureBox2);
-            this.PanelFormSecundario.Controls.Add(this.label2);
-            this.PanelFormSecundario.Controls.Add(this.lblUsuario);
-            this.PanelFormSecundario.Cursor = System.Windows.Forms.Cursors.No;
-            this.PanelFormSecundario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelFormSecundario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.PanelFormSecundario.Location = new System.Drawing.Point(0, 102);
-            this.PanelFormSecundario.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.PanelFormSecundario.Name = "PanelFormSecundario";
-            this.PanelFormSecundario.Size = new System.Drawing.Size(1616, 775);
-            this.PanelFormSecundario.TabIndex = 8;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::Karpicentro.Properties.Resources.TablonMInecraft;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.InitialImage = null;
-            this.pictureBox3.Location = new System.Drawing.Point(1176, 401);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(189, 172);
-            this.pictureBox3.TabIndex = 18;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Karpicentro.Properties.Resources.LineaBlanca;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(709, 78);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(10, 559);
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
-            // 
             // BtnHome
             // 
             this.BtnHome.BackColor = System.Drawing.Color.Transparent;
@@ -153,11 +75,21 @@
             this.BtnHome.Name = "BtnHome";
             this.BtnHome.Size = new System.Drawing.Size(190, 102);
             this.BtnHome.TabIndex = 4;
-            this.BtnHome.Text = "Catalogo";
+            this.BtnHome.Text = "Home";
             this.BtnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnHome.UseVisualStyleBackColor = false;
             this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
+            // 
+            // LblNombre
+            // 
+            this.LblNombre.AutoSize = true;
+            this.LblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNombre.Location = new System.Drawing.Point(733, 36);
+            this.LblNombre.Name = "LblNombre";
+            this.LblNombre.Size = new System.Drawing.Size(126, 46);
+            this.LblNombre.TabIndex = 2;
+            this.LblNombre.Text = "label1";
             // 
             // BtnCatalogo
             // 
@@ -202,6 +134,74 @@
             this.BtnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnVentas.UseVisualStyleBackColor = false;
             this.BtnVentas.Click += new System.EventHandler(this.BtnVentas_Click);
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblUsuario.Font = new System.Drawing.Font("SimSun-ExtB", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(81, 107);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(305, 86);
+            this.lblUsuario.TabIndex = 14;
+            this.lblUsuario.Text = "Bienvenido,\r\nAdministrador\r\n";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("SimSun-ExtB", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(840, 330);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(488, 56);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "\"Karpicentro: where excellence in \r\ncarpentry finds it\'s home.\"\r\n";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PanelFormSecundario
+            // 
+            this.PanelFormSecundario.AutoSize = true;
+            this.PanelFormSecundario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(60)))), ((int)(((byte)(63)))));
+            this.PanelFormSecundario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.PanelFormSecundario.Controls.Add(this.pictureBox3);
+            this.PanelFormSecundario.Controls.Add(this.pictureBox2);
+            this.PanelFormSecundario.Controls.Add(this.label2);
+            this.PanelFormSecundario.Controls.Add(this.lblUsuario);
+            this.PanelFormSecundario.Cursor = System.Windows.Forms.Cursors.No;
+            this.PanelFormSecundario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelFormSecundario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.PanelFormSecundario.Location = new System.Drawing.Point(0, 102);
+            this.PanelFormSecundario.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.PanelFormSecundario.Name = "PanelFormSecundario";
+            this.PanelFormSecundario.Size = new System.Drawing.Size(1616, 775);
+            this.PanelFormSecundario.TabIndex = 8;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::Karpicentro.Properties.Resources.TablonMInecraft;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.InitialImage = null;
+            this.pictureBox3.Location = new System.Drawing.Point(1176, 401);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(189, 172);
+            this.pictureBox3.TabIndex = 18;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Karpicentro.Properties.Resources.LineaBlanca;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(709, 78);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(10, 559);
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
             // 
             // Home_Empleado
             // 

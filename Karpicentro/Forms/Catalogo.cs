@@ -16,13 +16,14 @@ namespace Karpicentro.Forms
         public Catalogo()
         {
             InitializeComponent();
+            BtnCotizacion.Visible = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             VistaProducto vp = new VistaProducto();
             vp.id = 1;
-            vp.PicboxProducto.Image = pictureBox2.Image;
+            vp.PicboxProducto.Image = pictureBox1.Image;
 
             vp.ShowDialog();
         }
@@ -30,19 +31,8 @@ namespace Karpicentro.Forms
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             VistaProducto vp = new VistaProducto();
-            vp.id = 2;
-            vp.PicboxProducto.Image = pictureBox2.Image;
-
-            vp.ShowDialog();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            VistaProducto vp = new VistaProducto();
-
             vp.id = 3;
-
-            vp.PicboxProducto.Image = pictureBox3.Image;
+            vp.PicboxProducto.Image = pictureBox2.Image;
 
             vp.ShowDialog();
         }

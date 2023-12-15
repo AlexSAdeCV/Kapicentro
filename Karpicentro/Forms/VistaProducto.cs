@@ -50,6 +50,7 @@ namespace Karpicentro.Forms
         {
             Productos Pr = new Productos();
             Pr.IDProducto = id;
+            Pr.IDProducto -= 1;
             if (Pr.MostrarCatalogo())
             {
                 LblNombreM.Text = Pr.Nombre;
@@ -219,6 +220,11 @@ namespace Karpicentro.Forms
                     MiDocumento.Close();
                 }
             }
+        }
+
+        private void IbtnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         public void Llenardgv()

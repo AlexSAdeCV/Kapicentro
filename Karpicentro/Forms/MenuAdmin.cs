@@ -15,7 +15,7 @@ namespace Karpicentro.Forms.Admin
         public MenuAdmin()
         {
             InitializeComponent();
-            this.lblUsuario.Text = $"Hola Administrador {InicioSesion.Usuario.ToString()}\nComo va su dia";
+            //this.lblUsuario.Text = $"Hola Administrador {InicioSesion.Usuario.ToString()}\nComo va su dia";
         }
     }
 }
