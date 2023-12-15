@@ -1,0 +1,524 @@
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Karpicentro.exe.config
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Karpicentro.exe
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Karpicentro.pdb
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.AssemblyReference.cache
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.SuggestedBindingRedirects.cache
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Properties.Resources.resources
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.GenerateResource.cache
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.CoreCompileInputs.cache
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.exe
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.pdb
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\CustomControls.RJControls.RJTextBox.resources
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Form1.resources
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.barcodes.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.bouncy-castle-connector.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.commons.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.forms.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.io.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.kernel.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.layout.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.pdfa.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.sign.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.styledxmlparser.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.svg.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\System.Buffers.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\System.Memory.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\System.ValueTuple.dll
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.barcodes.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.bouncy-castle-connector.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.commons.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.forms.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.io.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.kernel.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.layout.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.pdfa.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.sign.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.styledxmlparser.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\itext.svg.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\System.Buffers.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\System.Memory.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\bin\Debug\System.ValueTuple.xml
+C:\Users\ricar\Documents\GitHub\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.CopyComplete
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Karpicentro.exe.config
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Karpicentro.exe
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Karpicentro.pdb
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.barcodes.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.bouncy-castle-connector.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.commons.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.forms.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.io.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.kernel.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.layout.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.pdfa.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.sign.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.styledxmlparser.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.svg.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Newtonsoft.Json.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\System.Buffers.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\System.Memory.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\System.Numerics.Vectors.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\System.ValueTuple.dll
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.barcodes.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.bouncy-castle-connector.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.commons.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.forms.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.io.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.kernel.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.layout.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.pdfa.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.sign.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.styledxmlparser.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\itext.svg.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\Newtonsoft.Json.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\System.Buffers.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\System.Memory.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\System.Numerics.Vectors.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Github\Kapicentro\Karpicentro\bin\Debug\System.ValueTuple.xml
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.AssemblyReference.cache
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.SuggestedBindingRedirects.cache
+C:\Github\Kapicentro\Karpicentro\obj\Debug\CustomControls.RJControls.RJTextBox.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Login.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Properties.Resources.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.GenerateResource.cache
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.CoreCompileInputs.cache
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.CopyComplete
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.exe
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.pdb
+C:\Github\Kapicentro\Karpicentro\bin\Debug\FontAwesome.Sharp.dll
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Almacens.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Proveedores.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Empleados.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.CatalogoAdmin.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.HomeAdmin.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Catalogo.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.VistaProducto.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Cotizaciones.resources
+C:\Github\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Home_Empleado.resources
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.AssemblyReference.cache
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.SuggestedBindingRedirects.cache
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\CustomControls.RJControls.RJTextBox.resources
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Almacens.resources
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Catalogo.resources
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.CatalogoAdmin.resources
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Cotizaciones.resources
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Empleados.resources
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Home_Empleado.resources
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.HomeAdmin.resources
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Login.resources
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Proveedores.resources
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.VistaProducto.resources
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Properties.Resources.resources
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.GenerateResource.cache
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.CoreCompileInputs.cache
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.exe
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.pdb
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Karpicentro.exe.config
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Karpicentro.exe
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Karpicentro.pdb
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.barcodes.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.bouncy-castle-connector.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.commons.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.forms.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.io.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.kernel.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.layout.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.pdfa.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.sign.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.styledxmlparser.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.svg.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Newtonsoft.Json.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\System.Buffers.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\System.Memory.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\System.ValueTuple.dll
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.barcodes.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.bouncy-castle-connector.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.commons.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.forms.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.io.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.kernel.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.layout.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.pdfa.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.sign.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.styledxmlparser.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\itext.svg.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\Newtonsoft.Json.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\System.Buffers.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\System.Memory.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\bin\Debug\System.ValueTuple.xml
+C:\Users\CECyT 13 RFM\Downloads\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.CopyComplete
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Karpicentro.exe.config
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Karpicentro.exe
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Karpicentro.pdb
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\FontAwesome.Sharp.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.barcodes.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.bouncy-castle-connector.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.commons.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.forms.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.io.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.kernel.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.layout.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.pdfa.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.sign.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.styledxmlparser.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.svg.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Options.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Primitives.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Newtonsoft.Json.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Buffers.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Memory.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Numerics.Vectors.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.ValueTuple.dll
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.barcodes.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.bouncy-castle-connector.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.commons.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.forms.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.io.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.kernel.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.layout.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.pdfa.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.sign.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.styledxmlparser.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.svg.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Options.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Primitives.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\Newtonsoft.Json.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Buffers.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Memory.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Numerics.Vectors.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Threading.Tasks.Extensions.xml
+E:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.ValueTuple.xml
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.AssemblyReference.cache
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.SuggestedBindingRedirects.cache
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\CustomControls.RJControls.RJTextBox.resources
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Almacens.resources
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Catalogo.resources
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.CatalogoAdmin.resources
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Cotizaciones.resources
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Empleados.resources
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Home_Empleado.resources
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.HomeAdmin.resources
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Login.resources
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Proveedores.resources
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.VistaProducto.resources
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Properties.Resources.resources
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.GenerateResource.cache
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.CoreCompileInputs.cache
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.CopyComplete
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.exe
+E:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.pdb
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Karpicentro.exe.config
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Karpicentro.exe
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Karpicentro.pdb
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\FontAwesome.Sharp.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.barcodes.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.bouncy-castle-connector.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.commons.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.forms.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.io.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.kernel.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.layout.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.pdfa.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.sign.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.styledxmlparser.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.svg.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Newtonsoft.Json.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\System.Buffers.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\System.Memory.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\System.Numerics.Vectors.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\System.ValueTuple.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.barcodes.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.bouncy-castle-connector.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.commons.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.forms.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.io.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.kernel.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.layout.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.pdfa.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.sign.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.styledxmlparser.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\itext.svg.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\Newtonsoft.Json.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\System.Buffers.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\System.Memory.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\System.Numerics.Vectors.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\System.ValueTuple.xml
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.AssemblyReference.cache
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.SuggestedBindingRedirects.cache
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\CustomControls.RJControls.RJTextBox.resources
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Almacens.resources
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Admin.MenuAdmin.resources
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Catalogo.resources
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.CatalogoAdmin.resources
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Cotizaciones.resources
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Empleados.resources
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Home_Empleado.resources
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.HomeAdmin.resources
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Login.resources
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Proveedores.resources
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.VistaProducto.resources
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Properties.Resources.resources
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.GenerateResource.cache
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.CoreCompileInputs.cache
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.CopyComplete
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.exe
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.pdb
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Empleado.Ventas.resources
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.MenuEmpleado.resources
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Karpicentro.exe.config
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Karpicentro.exe
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Karpicentro.pdb
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\FontAwesome.Sharp.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.barcodes.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.bouncy-castle-connector.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.commons.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.forms.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.io.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.kernel.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.layout.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.pdfa.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.sign.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.styledxmlparser.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.svg.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Options.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Newtonsoft.Json.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Buffers.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Memory.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Numerics.Vectors.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.ValueTuple.dll
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.barcodes.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.bouncy-castle-connector.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.commons.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.forms.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.io.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.kernel.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.layout.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.pdfa.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.sign.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.styledxmlparser.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.svg.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Options.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\Newtonsoft.Json.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Buffers.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Memory.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Numerics.Vectors.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.ValueTuple.xml
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.AssemblyReference.cache
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.SuggestedBindingRedirects.cache
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\CustomControls.RJControls.RJTextBox.resources
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Almacens.resources
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Admin.MenuAdmin.resources
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Catalogo.resources
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.CatalogoAdmin.resources
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Cotizaciones.resources
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Empleados.resources
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Home_Empleado.resources
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.HomeAdmin.resources
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.MenuEmpleado.resources
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Empleado.Ventas.resources
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Login.resources
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Proveedores.resources
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.VistaProducto.resources
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Properties.Resources.resources
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.GenerateResource.cache
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.CoreCompileInputs.cache
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.CopyComplete
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.exe
+D:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.pdb
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Karpicentro.exe.config
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Karpicentro.exe
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Karpicentro.pdb
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\FontAwesome.Sharp.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.barcodes.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.bouncy-castle-connector.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.commons.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.forms.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.io.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.kernel.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.layout.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.pdfa.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.sign.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.styledxmlparser.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.svg.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Options.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Primitives.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Newtonsoft.Json.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Buffers.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Memory.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Numerics.Vectors.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Threading.Tasks.Extensions.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.ValueTuple.dll
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.barcodes.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.bouncy-castle-connector.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.commons.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.forms.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.io.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.kernel.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.layout.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.pdfa.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.sign.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.styledxmlparser.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\itext.svg.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Options.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Microsoft.Extensions.Primitives.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\Newtonsoft.Json.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Buffers.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Memory.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Numerics.Vectors.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.Threading.Tasks.Extensions.xml
+G:\5to\Kapicentro-main\Karpicentro\bin\Debug\System.ValueTuple.xml
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.AssemblyReference.cache
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.SuggestedBindingRedirects.cache
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\CustomControls.RJControls.RJTextBox.resources
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Almacens.resources
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Admin.MenuAdmin.resources
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Catalogo.resources
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.CatalogoAdmin.resources
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Cotizaciones.resources
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Empleados.resources
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Home_Empleado.resources
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.HomeAdmin.resources
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.MenuEmpleado.resources
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Empleado.Ventas.resources
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Login.resources
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.Proveedores.resources
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Forms.VistaProducto.resources
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.Properties.Resources.resources
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.GenerateResource.cache
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.CoreCompileInputs.cache
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.csproj.CopyComplete
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.exe
+G:\5to\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.pdb
