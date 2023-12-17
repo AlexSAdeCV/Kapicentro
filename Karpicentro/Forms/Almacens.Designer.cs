@@ -125,6 +125,7 @@
             this.TxtPrecio.Name = "TxtPrecio";
             this.TxtPrecio.Size = new System.Drawing.Size(285, 20);
             this.TxtPrecio.TabIndex = 27;
+            this.TxtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPrecio_KeyPress);
             // 
             // BtnCancelar
             // 

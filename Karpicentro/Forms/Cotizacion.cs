@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,9 @@ namespace Karpicentro.Forms
             InitializeComponent();
             CargaComboMadera();
             Mostrar(1, false, Color.Gray);
+            DeshabilitarCmb(1, false, Color.Gray);
+            BtnCancelar.Enabled = false;
+            BtnCancelar.BackColor = Color.Gray;
         }
 
         private void BtnRegreso_Click(object sender, EventArgs e)
@@ -394,6 +398,8 @@ namespace Karpicentro.Forms
             comprobarcambios();
             DeshabilitarMedidas(1, false, Color.Gray);
             habilitarcmb(2);
+            BtnCancelar.Enabled = true;
+            BtnCancelar.BackColor = Color.White;    
         }
 
         public void DeshabilitarMedidas(int s, bool tf, Color color)
@@ -426,6 +432,7 @@ namespace Karpicentro.Forms
                         CmbMadera.Enabled = false;
                         CmbTratamientos.Enabled = false;
                         BtnGuardarCmb.Enabled = false;
+                        BtnGuardarCmb.BackColor = Color.White;
                         break;
                     case 2:
                         CmbMadera.Enabled = true;
@@ -457,6 +464,7 @@ namespace Karpicentro.Forms
 
             LblPrecio.Text = "$ " + Precio.ToString();
             DeshabilitarCmb(1, false, Color.Gray);
+            BtnCancelar.Enabled = true;
 
         }
 
@@ -475,6 +483,28 @@ namespace Karpicentro.Forms
                         BtnGuardarCmb.Enabled = false;
                         BtnGuardarCmb.BackColor = color;
                         break;
+                }
+            }
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            DeshabilitarMedidas(1, false, Color.Gray);
+            DeshabilitarCmb(1, false, Color.Gray);
+            Limpiartxt();
+            Precio = 1300;
+            LblPrecio.Text = "$ " + Precio.ToString();
+            BtnCancelar.Enabled = false;
+            BtnCancelar.BackColor = Color.Gray;
+        }
+
+        public void Limpiartxt()
+        {
+            foreach (Control c in groupBox2.Controls)
+            {
+                if (c is TextBox)
+                {
+                    c.Text = " cm";
                 }
             }
         }

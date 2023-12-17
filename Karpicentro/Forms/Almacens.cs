@@ -84,6 +84,7 @@ namespace Karpicentro.Forms
                         Al.Nombre = TxtNombre.Text;
                         Al.CantidadMaterial = Convert.ToInt32(TxtStock.Text);
                         Al.Proveedor = Convert.ToInt32(CmbProveedores.SelectedValue);
+                        Al.precio = Convert.ToDouble(TxtPrecio.Text);
 
                         if (Al.Insertar())
                         {
@@ -101,6 +102,7 @@ namespace Karpicentro.Forms
                         Al.Nombre = TxtNombre.Text;
                         Al.CantidadMaterial = Convert.ToInt32(TxtStock.Text);
                         Al.Proveedor = Convert.ToInt32(CmbProveedores.SelectedValue);
+                        Al.precio = Convert.ToDouble(TxtPrecio.Text);
                         Al.idalmacen = Convert.ToInt32(id);
 
                         if (Al.Modificar())
@@ -237,6 +239,12 @@ namespace Karpicentro.Forms
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void TxtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && e.KeyChar != '.')
+                e.Handled = true;
         }
     }
 }

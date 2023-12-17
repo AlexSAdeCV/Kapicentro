@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnGuardarCmb = new System.Windows.Forms.Button();
             this.BtnGuardarMedidas = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -55,6 +56,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.BtnCancelar);
             this.groupBox2.Controls.Add(this.BtnGuardarCmb);
             this.groupBox2.Controls.Add(this.BtnGuardarMedidas);
             this.groupBox2.Controls.Add(this.label7);
@@ -78,16 +80,29 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Medidas";
             // 
+            // BtnCancelar
+            // 
+            this.BtnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnCancelar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnCancelar.Location = new System.Drawing.Point(404, 286);
+            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(94, 60);
+            this.BtnCancelar.TabIndex = 25;
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            // 
             // BtnGuardarCmb
             // 
             this.BtnGuardarCmb.BackColor = System.Drawing.Color.Transparent;
             this.BtnGuardarCmb.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnGuardarCmb.Location = new System.Drawing.Point(178, 248);
+            this.BtnGuardarCmb.Location = new System.Drawing.Point(185, 248);
             this.BtnGuardarCmb.Margin = new System.Windows.Forms.Padding(2);
             this.BtnGuardarCmb.Name = "BtnGuardarCmb";
             this.BtnGuardarCmb.Size = new System.Drawing.Size(94, 60);
             this.BtnGuardarCmb.TabIndex = 24;
-            this.BtnGuardarCmb.Text = "Guardar Medidas";
+            this.BtnGuardarCmb.Text = "Guardar ComboBox";
             this.BtnGuardarCmb.UseVisualStyleBackColor = false;
             this.BtnGuardarCmb.Click += new System.EventHandler(this.BtnGuardarCmb_Click);
             // 
@@ -391,5 +406,6 @@
         private FontAwesome.Sharp.IconButton IcbtnTaburete;
         private System.Windows.Forms.Button BtnGuardarCmb;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button BtnCancelar;
     }
 }

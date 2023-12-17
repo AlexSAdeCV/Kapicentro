@@ -16,7 +16,6 @@ namespace Karpicentro.Forms
         public Catalogo()
         {
             InitializeComponent();
-            BtnCotizacion.Visible = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

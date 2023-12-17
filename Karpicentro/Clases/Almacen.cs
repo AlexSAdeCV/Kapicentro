@@ -17,6 +17,7 @@ namespace Karpicentro
         public int CantidadMaterial { get; set; }
         public string Mensaje { get; set; }
         public int idalmacen { get; set; }
+        public double precio { get; set; }
 
         public bool Insertar()
         {
@@ -28,11 +29,12 @@ namespace Karpicentro
                 int resultado;
                 string Sentencia;
 
-                Sentencia = @"insert into Almacen values (@TipoMadera, @Stock, @idproveedor)";
+                Sentencia = @"insert into Almacen values (@TipoMadera, @Stock, @precioparahacermueble, @idproveedor)";
                 CMDSql = new SqlCommand(Sentencia, Con);
 
                 CMDSql.Parameters.AddWithValue("@TipoMadera", Nombre);
                 CMDSql.Parameters.AddWithValue("@Stock", CantidadMaterial);
+                CMDSql.Parameters.AddWithValue("@precioparahacermueble", precio);
                 CMDSql.Parameters.AddWithValue("@idproveedor", Proveedor);
 
                 try
@@ -64,12 +66,13 @@ namespace Karpicentro
                 int resultado;
                 string Sentencia;
 
-                Sentencia = @"update Almacen set TipoMadera = @TipoMadera, Stock = @Stock,  idproveedor = @idproveedor where IDAlmacen = @IDAlmacen";
+                Sentencia = @"update Almacen set TipoMadera = @TipoMadera, Stock = @Stock,  precioparahacermueble = @precioparahacermueble ,idproveedor = @idproveedor where IDAlmacen = @IDAlmacen";
                 CMDSql = new SqlCommand(Sentencia, Con);
 
                 CMDSql.Parameters.AddWithValue("@Stock", CantidadMaterial);
                 CMDSql.Parameters.AddWithValue("@TipoMadera", Nombre);
                 CMDSql.Parameters.AddWithValue("@idproveedor", Proveedor);
+                CMDSql.Parameters.AddWithValue("@precioparahacermueble", precio);
                 CMDSql.Parameters.AddWithValue("@IDAlmacen", idalmacen);
 
 
