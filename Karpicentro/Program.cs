@@ -1,4 +1,5 @@
 ﻿using Karpicentro.Forms;
+using Karpicentro.Forms.Admin;
 using Karpicentro.Forms.Empleado;
 using System;
 using System.Collections.Generic;

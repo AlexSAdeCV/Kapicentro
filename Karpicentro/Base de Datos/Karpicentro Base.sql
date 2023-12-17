@@ -42,7 +42,7 @@ go
 
 insert into Empleados values
 ('Juper456', 'DuendeVerde', 1, 'Juan', 'Perez', 'Gomez', '5640719551', 'Calle Madero', '123', '12345', 50000.00),
-('Maga967', '44n%uURk2', 2, 'Maria', 'Lopez', 'Garcia', '5572668334', 'Calle Benito Juarez', '456', '67890', 60000.00),
+('Maga967', 'magician67', 2, 'Maria', 'Lopez', 'Garcia', '5572668334', 'Calle Benito Juarez', '456', '67890', 60000.00),
 ('Carmart865', 's$iVr52', 2, 'Carlos', 'Rodriguez', 'Martinez', '5613285327', 'Paseo de la Reforma', '789', '54321', 55000.00),
 ('Lagura231', 'EHv57@TCC2', 2, 'Laura', 'Gutierrez', 'Ramirez', '5554793407', 'Av Alvaro Obregón', '987', '13579', 52000.00),
 ('Jaflora912', '11APDf9s1q', 2, 'Javier', 'Lara', 'Flores', '5657814671', 'Calle Ámsterdam', '246', '80246', 58000.00),
@@ -74,6 +74,7 @@ create table Almacen
 	IDAlmacen int primary key identity (1,1),
 	TipoMadera nvarchar (50),
 	Stock int,
+	precioparahacermueble float,
 	idproveedor int
 
 	foreign key (idproveedor) references Proveedor (IDProveedor)
@@ -81,10 +82,10 @@ create table Almacen
 go
 
 insert into Almacen values
-('Madera de Acacia','200', 4),
-('Madera de Abedul','400', 1),
-('Madera de Jungla','600', 3),
-('Madera de Roble','100', 2)
+('Madera de Acacia','200', 200,4),
+('Madera de Abedul','400', 500,1),
+('Madera de Jungla','600', 800,3),
+('Madera de Roble','100', 1100,2)
 go 
 
 Create table Producto 
@@ -140,4 +141,7 @@ insert into Cotizacion values
 ('Buro', 70,50,58, 1300, 1, 'Barnizado'),
 ('Mesa', 80,160,81, 1300, 1, 'Barnizado'),
 ('Taburete', 60,40.5,31, 1300, 1, 'Barnizado')
+go
+
+select * from Ventas
 go

@@ -46,10 +46,10 @@
             this.PanelFormSecundario.Cursor = System.Windows.Forms.Cursors.No;
             this.PanelFormSecundario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelFormSecundario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.PanelFormSecundario.Location = new System.Drawing.Point(0, 102);
-            this.PanelFormSecundario.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.PanelFormSecundario.Location = new System.Drawing.Point(0, 83);
+            this.PanelFormSecundario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelFormSecundario.Name = "PanelFormSecundario";
-            this.PanelFormSecundario.Size = new System.Drawing.Size(1616, 775);
+            this.PanelFormSecundario.Size = new System.Drawing.Size(1212, 630);
             this.PanelFormSecundario.TabIndex = 6;
             // 
             // PanelBotones
@@ -63,9 +63,9 @@
             this.PanelBotones.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelBotones.ForeColor = System.Drawing.SystemColors.Control;
             this.PanelBotones.Location = new System.Drawing.Point(0, 0);
-            this.PanelBotones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PanelBotones.Margin = new System.Windows.Forms.Padding(2);
             this.PanelBotones.Name = "PanelBotones";
-            this.PanelBotones.Size = new System.Drawing.Size(1616, 102);
+            this.PanelBotones.Size = new System.Drawing.Size(1212, 83);
             this.PanelBotones.TabIndex = 5;
             // 
             // BtnHome
@@ -78,12 +78,11 @@
             this.BtnHome.IconColor = System.Drawing.Color.White;
             this.BtnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnHome.Location = new System.Drawing.Point(1390, 0);
-            this.BtnHome.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnHome.Location = new System.Drawing.Point(1042, 0);
             this.BtnHome.Name = "BtnHome";
-            this.BtnHome.Size = new System.Drawing.Size(226, 102);
+            this.BtnHome.Size = new System.Drawing.Size(170, 83);
             this.BtnHome.TabIndex = 4;
-            this.BtnHome.Text = "Almacen";
+            this.BtnHome.Text = "Home";
             this.BtnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnHome.UseVisualStyleBackColor = true;
@@ -99,12 +98,11 @@
             this.BtnProductos.IconColor = System.Drawing.Color.White;
             this.BtnProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnProductos.Location = new System.Drawing.Point(591, 0);
-            this.BtnProductos.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnProductos.Location = new System.Drawing.Point(443, 0);
             this.BtnProductos.Name = "BtnProductos";
-            this.BtnProductos.Size = new System.Drawing.Size(226, 102);
+            this.BtnProductos.Size = new System.Drawing.Size(170, 83);
             this.BtnProductos.TabIndex = 3;
-            this.BtnProductos.Text = "Almacen";
+            this.BtnProductos.Text = "Productos";
             this.BtnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnProductos.UseVisualStyleBackColor = true;
@@ -120,12 +118,11 @@
             this.BtnAlmacen.IconColor = System.Drawing.Color.White;
             this.BtnAlmacen.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnAlmacen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAlmacen.Location = new System.Drawing.Point(386, 0);
-            this.BtnAlmacen.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnAlmacen.Location = new System.Drawing.Point(289, 0);
             this.BtnAlmacen.Name = "BtnAlmacen";
-            this.BtnAlmacen.Size = new System.Drawing.Size(205, 102);
+            this.BtnAlmacen.Size = new System.Drawing.Size(154, 83);
             this.BtnAlmacen.TabIndex = 2;
-            this.BtnAlmacen.Text = "Productos";
+            this.BtnAlmacen.Text = "Almacen";
             this.BtnAlmacen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAlmacen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAlmacen.UseVisualStyleBackColor = true;
@@ -142,10 +139,10 @@
             this.BtnProveedor.IconColor = System.Drawing.Color.White;
             this.BtnProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnProveedor.Location = new System.Drawing.Point(196, 0);
-            this.BtnProveedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnProveedor.Location = new System.Drawing.Point(147, 0);
+            this.BtnProveedor.Margin = new System.Windows.Forms.Padding(2);
             this.BtnProveedor.Name = "BtnProveedor";
-            this.BtnProveedor.Size = new System.Drawing.Size(190, 102);
+            this.BtnProveedor.Size = new System.Drawing.Size(142, 83);
             this.BtnProveedor.TabIndex = 1;
             this.BtnProveedor.Text = "Proveedor";
             this.BtnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -165,9 +162,9 @@
             this.BtnAgregarEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnAgregarEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAgregarEmpleados.Location = new System.Drawing.Point(0, 0);
-            this.BtnAgregarEmpleados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnAgregarEmpleados.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAgregarEmpleados.Name = "BtnAgregarEmpleados";
-            this.BtnAgregarEmpleados.Size = new System.Drawing.Size(196, 102);
+            this.BtnAgregarEmpleados.Size = new System.Drawing.Size(147, 83);
             this.BtnAgregarEmpleados.TabIndex = 0;
             this.BtnAgregarEmpleados.Text = "Empleados";
             this.BtnAgregarEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -177,12 +174,13 @@
             // 
             // HomeAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(1616, 877);
+            this.ClientSize = new System.Drawing.Size(1212, 713);
             this.Controls.Add(this.PanelFormSecundario);
             this.Controls.Add(this.PanelBotones);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HomeAdmin";
             this.Text = "HomeAdmin";
             this.Load += new System.EventHandler(this.HomeAdmin_Load);

@@ -78,6 +78,7 @@ namespace Karpicentro.Forms
         {
             if (ValidarCamposBlanco())
             {
+                errorProvider1.Clear();
                 empleado.Usuario = Txt_Usuario.Text;
                 empleado.Contrasena = Txt_Contrasena.Text;
                 empleado.Puesto = Convert.ToInt32(Cbox_IdPuesto.SelectedIndex.ToString()) + 1;
@@ -116,21 +117,19 @@ namespace Karpicentro.Forms
         }
         private bool ValidarCamposBlanco()
         {
-            foreach(Control c in this.Pnlinserstar.Controls)
+            bool valido = true;
+            foreach (Control c in Pnlinserstar.Controls)
             {
-               if(c is TextBox)
+                if (c is TextBox)
                 {
-                    if (c.Text == "")
+                    if (c.Text.Length <= 0)
                     {
-                        return false;
+                        errorProvider1.SetError(c, "Campo no puede estar en blanco");
+                        valido = false;
                     }
                 }
             }
-            if(Cbox_IdPuesto.Text == "")
-            {
-                return false;
-            }
-            return true;
+            return valido;
         }
 
         private void Btn_Eliminar_Click(object sender, EventArgs e)

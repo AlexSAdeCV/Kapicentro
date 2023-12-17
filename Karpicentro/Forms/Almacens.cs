@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,7 @@ namespace Karpicentro.Forms
 
             MostrarAlmacen();
             Mostrar(1,false, Color.Gray);
+            CargaProveedores();
         }
 
         private void TxtStock_KeyPress(object sender, KeyPressEventArgs e)
@@ -72,16 +74,17 @@ namespace Karpicentro.Forms
             int renglon;
             string id;
 
-            switch (op)
+            if (ValidaCampos())
             {
-                case 1:
-                    Al.Nombre = TxtNombre.Text;
-                    Al.CantidadMaterial = Convert.ToInt32(TxtStock.Text);
-                    Al.Proveedor = TxtProveedor.Text;
+                errorProvider1.Clear();
+                switch (op)
+                {
+                    case 1:
 
-                    if (ValidaCampos(1))
-                    {
-                        QuitarValidacion();
+                        Al.Nombre = TxtNombre.Text;
+                        Al.CantidadMaterial = Convert.ToInt32(TxtStock.Text);
+                        Al.Proveedor = Convert.ToInt32(CmbProveedores.SelectedValue);
+
                         if (Al.Insertar())
                         {
                             MessageBox.Show("Registro agregado exitosamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -90,19 +93,16 @@ namespace Karpicentro.Forms
                             HabilitaBotones();
                             Mostrar(1, false, Color.Gray);
                         }
-                    }
-                    break;
-                case 2:
-                    renglon = DgvAlmacen.CurrentRow.Index;
-                    id = DgvAlmacen.Rows[renglon].Cells[0].Value.ToString();
-                    Al.Nombre = TxtNombre.Text;
-                    Al.CantidadMaterial = Convert.ToInt32(TxtStock.Text);
-                    Al.Proveedor = TxtProveedor.Text;
-                    Al.idalmacen = Convert.ToInt32(id);
 
-                    if (ValidaCampos(2))
-                    {
-                        QuitarValidacion();
+                        break;
+                    case 2:
+                        renglon = DgvAlmacen.CurrentRow.Index;
+                        id = DgvAlmacen.Rows[renglon].Cells[0].Value.ToString();
+                        Al.Nombre = TxtNombre.Text;
+                        Al.CantidadMaterial = Convert.ToInt32(TxtStock.Text);
+                        Al.Proveedor = Convert.ToInt32(CmbProveedores.SelectedValue);
+                        Al.idalmacen = Convert.ToInt32(id);
+
                         if (Al.Modificar())
                         {
                             MessageBox.Show("Registro modificado exitosamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -111,9 +111,10 @@ namespace Karpicentro.Forms
                             HabilitaBotones();
                             Mostrar(1, false, Color.Gray);
                         }
-                    }
-                    break;
+                        break;
+                }
             }
+            
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
@@ -183,29 +184,21 @@ namespace Karpicentro.Forms
 
         }
 
-        private bool ValidaCampos(int op)
+        private bool ValidaCampos()
         {
             bool valido = true;
-            if (op == 1)
+            foreach (Control c in Pnlinserstar.Controls)
             {
-                errorProvider1.SetError(TxtNombre, "Este campo no debe estar vacio");
-                errorProvider1.SetError(TxtProveedor, "Este campo no debe estar vacio");
-                errorProvider1.SetError(TxtStock, "Este campo no debe estar vacio");
-            }
-            if (op == 2)
-            {
-                errorProvider1.SetError(TxtNombre, "Este campo no debe estar vacio");
-                errorProvider1.SetError(TxtProveedor, "Este campo no debe estar vacio");
-                errorProvider1.SetError(TxtStock, "Este campo no debe estar vacio");
+                if (c is TextBox)
+                {
+                    if (c.Text.Length <= 0)
+                    {
+                        errorProvider1.SetError(c, "Campo no puede estar en blanco");
+                        valido = false;
+                    }
+                }
             }
             return valido;
-        }
-
-        private void QuitarValidacion()
-        {
-            errorProvider1.SetError(TxtNombre, "");
-            errorProvider1.SetError(TxtProveedor, "");
-            errorProvider1.SetError(TxtStock, "");
         }
 
         private void MostrarAlmacen()
@@ -215,6 +208,35 @@ namespace Karpicentro.Forms
             DgvAlmacen.AutoSize = true;
             DgvAlmacen.DataSource = almacen.MostrarAlmacen();
 
+        }
+
+        private void CargaProveedores()
+        {
+            DataTable Almacen = new DataTable();
+
+            using (SqlConnection conexion = Conexion.Conectar())
+            {
+                SqlCommand cmdSelect;
+                SqlDataAdapter adapterLibros = new SqlDataAdapter();
+
+                string sentencia = "Select * from Proveedor";
+
+                try
+                {
+                    cmdSelect = new SqlCommand(sentencia, conexion);
+                    adapterLibros.SelectCommand = cmdSelect;
+                    conexion.Open();
+                    adapterLibros.Fill(Almacen);
+                    CmbProveedores.DataSource = Almacen;
+                    CmbProveedores.DisplayMember = Almacen.Columns[1].ToString();
+                    CmbProveedores.ValueMember = Almacen.Columns[0].ToString();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }

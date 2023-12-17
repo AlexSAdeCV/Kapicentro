@@ -83,26 +83,19 @@ namespace Karpicentro.Forms
 
         }
 
-        private bool ValidaCampos(int op)
+        private bool ValidaCampos()
         {
             bool valido = true;
-            if (op == 1)
+            foreach (Control c in Pnlinserstar.Controls)
             {
-                errorProvider1.SetError(TxtNombre, "Este campo no debe estar vacio");
-                errorProvider1.SetError(TxtDelegacion, "Este campo no debe estar vacio");
-                errorProvider1.SetError(TxtColonia, "Este campo no debe estar vacio");
-                errorProvider1.SetError(TxtCP, "Este campo no debe estar vacio");
-                errorProvider1.SetError(TxtTelefono, "Este campo no debe estar vacio");
-                errorProvider1.SetError(TxtPContacto, "Este campo no debe estar vacio");
-            }
-            if (op == 2)
-            {
-                errorProvider1.SetError(TxtNombre, "Este campo no debe estar vacio");
-                errorProvider1.SetError(TxtDelegacion, "Este campo no debe estar vacio");
-                errorProvider1.SetError(TxtColonia, "Este campo no debe estar vacio");
-                errorProvider1.SetError(TxtCP, "Este campo no debe estar vacio");
-                errorProvider1.SetError(TxtTelefono, "Este campo no debe estar vacio");
-                errorProvider1.SetError(TxtPContacto, "Este campo no debe estar vacio");
+                if (c is TextBox)
+                {
+                    if (c.Text.Length <= 0)
+                    {
+                        errorProvider1.SetError(c, "Campo no puede estar en blanco");
+                        valido = false;
+                    }
+                }
             }
             return valido;
         }
@@ -137,20 +130,21 @@ namespace Karpicentro.Forms
             int renglon;
             string id;
 
-            switch (op)
+            if (ValidaCampos())
             {
-                case 1:
-                    Pv.Nombre = TxtNombre.Text;
-                    Pv.Delegacion = TxtDelegacion.Text;
-                    Pv.Colonia = TxtColonia.Text;
-                    Pv.Calle = TxtCalle.Text;
-                    Pv.Cp = TxtCP.Text;
-                    Pv.Telefono = TxtTelefono.Text;
-                    Pv.PContacto = TxtPContacto.Text;
+                errorProvider1.Clear();
 
-                    if (ValidaCampos(1))
-                    {
-                        QuitarValidacion();
+                switch (op)
+                {
+                    case 1:
+                        Pv.Nombre = TxtNombre.Text;
+                        Pv.Delegacion = TxtDelegacion.Text;
+                        Pv.Colonia = TxtColonia.Text;
+                        Pv.Calle = TxtCalle.Text;
+                        Pv.Cp = TxtCP.Text;
+                        Pv.Telefono = TxtTelefono.Text;
+                        Pv.PContacto = TxtPContacto.Text;
+
                         if (Pv.AgregarProveedor())
                         {
                             MessageBox.Show("Registro agregado exitosamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -159,23 +153,21 @@ namespace Karpicentro.Forms
                             HabilitaBotones();
                             Mostrar(1, false, Color.Gray);
                         }
-                    }
-                    break;
-                case 2:
-                    renglon = DgvProveedor.CurrentRow.Index;
-                    id = DgvProveedor.Rows[renglon].Cells[0].Value.ToString();
-                    Pv.IDProveedor = Convert.ToInt32(id);
-                    Pv.Nombre = TxtNombre.Text;
-                    Pv.Delegacion = TxtDelegacion.Text;
-                    Pv.Colonia = TxtColonia.Text;
-                    Pv.Calle = TxtCalle.Text;
-                    Pv.Cp = TxtCP.Text;
-                    Pv.Telefono = TxtTelefono.Text;
-                    Pv.PContacto = TxtPContacto.Text;
 
-                    if (ValidaCampos(1))
-                    {
-                        QuitarValidacion();
+
+                        break;
+                    case 2:
+                        renglon = DgvProveedor.CurrentRow.Index;
+                        id = DgvProveedor.Rows[renglon].Cells[0].Value.ToString();
+                        Pv.IDProveedor = Convert.ToInt32(id);
+                        Pv.Nombre = TxtNombre.Text;
+                        Pv.Delegacion = TxtDelegacion.Text;
+                        Pv.Colonia = TxtColonia.Text;
+                        Pv.Calle = TxtCalle.Text;
+                        Pv.Cp = TxtCP.Text;
+                        Pv.Telefono = TxtTelefono.Text;
+                        Pv.PContacto = TxtPContacto.Text;
+
                         if (Pv.ModificarProveedor())
                         {
                             MessageBox.Show("Registro modificado exitosamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -184,8 +176,9 @@ namespace Karpicentro.Forms
                             HabilitaBotones();
                             Mostrar(1, false, Color.Gray);
                         }
-                    }
-                    break;
+                        break;
+                }
+
             }
         }
 

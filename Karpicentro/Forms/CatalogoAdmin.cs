@@ -44,21 +44,21 @@ namespace Karpicentro.Forms
             int renglon;
             string id;
 
-            switch (op)
+            if (ValidaCampos())
             {
-                case 1:
-                    Pr.Nombre = TxtNombre.Text;
-                    Pr.TipoMadera = Convert.ToInt32(CmbMadera.SelectedValue);
-                    Pr.PrecioVenta = Convert.ToInt32(TxtPrecioVenta.Text);
-                    Pr.Existencia = Convert.ToInt32(NupExistencia.Value);
-                    Pr.Descripcion = TxtDescripcion.Text;
-                    Pr.Medidas[0] = Convert.ToDouble(TxtAlto.Text);
-                    Pr.Medidas[1] = Convert.ToDouble(TxtLargo.Text);
-                    Pr.Medidas[2] = Convert.ToDouble(TxtAncho.Text);
+                errorProvider1.Clear();
+                switch (op)
+                {
+                    case 1:
+                        Pr.Nombre = TxtNombre.Text;
+                        Pr.TipoMadera = Convert.ToInt32(CmbMadera.SelectedValue);
+                        Pr.PrecioVenta = Convert.ToInt32(TxtPrecioVenta.Text);
+                        Pr.Existencia = Convert.ToInt32(NupExistencia.Value);
+                        Pr.Descripcion = TxtDescripcion.Text;
+                        Pr.Medidas[0] = Convert.ToDouble(TxtAlto.Text);
+                        Pr.Medidas[1] = Convert.ToDouble(TxtLargo.Text);
+                        Pr.Medidas[2] = Convert.ToDouble(TxtAncho.Text);
 
-                    if (ValidaCampos(1))
-                    {
-                        QuitarValidacion();
                         if (Pr.Insertar())
                         {
                             MessageBox.Show("Registro agregado exitosamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -67,20 +67,16 @@ namespace Karpicentro.Forms
                             HabilitaBotones();
                             Mostrar(1, false, Color.Gray);
                         }
-                    }
-                    break;
-                case 2:
-                    renglon = DgvProductos.CurrentRow.Index;
-                    id = DgvProductos.Rows[renglon].Cells[0].Value.ToString();
-                    Pr.Nombre = TxtNombre.Text;
-                    Pr.TipoMadera = Convert.ToInt32(CmbMadera.SelectedValue);
-                    Pr.PrecioVenta = Convert.ToInt32(TxtPrecioVenta.Text);
-                    Pr.Existencia = Convert.ToInt32(NupExistencia.Value);
-                    Pr.IDProducto = Convert.ToInt32(id);
+                        break;
+                    case 2:
+                        renglon = DgvProductos.CurrentRow.Index;
+                        id = DgvProductos.Rows[renglon].Cells[0].Value.ToString();
+                        Pr.Nombre = TxtNombre.Text;
+                        Pr.TipoMadera = Convert.ToInt32(CmbMadera.SelectedValue);
+                        Pr.PrecioVenta = Convert.ToInt32(TxtPrecioVenta.Text);
+                        Pr.Existencia = Convert.ToInt32(NupExistencia.Value);
+                        Pr.IDProducto = Convert.ToInt32(id);
 
-                    if (ValidaCampos(1))
-                    {
-                        QuitarValidacion();
                         if (Pr.Actualizar())
                         {
                             MessageBox.Show("Registro actualizado exitosamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -89,9 +85,9 @@ namespace Karpicentro.Forms
                             HabilitaBotones();
                             Mostrar(1, false, Color.Gray);
                         }
-                    }
+                        break;
+                }
 
-                    break;
             }
         }
 
@@ -218,21 +214,21 @@ namespace Karpicentro.Forms
 
         }
 
-        private bool ValidaCampos(int op)
+        private bool ValidaCampos()
         {
             bool valido = true;
-            if (op == 1)
+            foreach (Control c in Pnlinserstar.Controls)
             {
-                errorProvider1.SetError(TxtNombre, "Este campo no debe estar vacio");
-                errorProvider1.SetError(TxtPrecioVenta, "Este campo no debe estar vacio");
+                if (c is TextBox)
+                {
+                    if (c.Text.Length <= 0)
+                    {
+                        errorProvider1.SetError(c, "Campo no puede estar en blanco");
+                        valido = false;
+                    }
+                }
             }
             return valido;
-        }
-
-        private void QuitarValidacion()
-        {
-            errorProvider1.SetError(TxtNombre, "");
-            errorProvider1.SetError(TxtPrecioVenta, "");
         }
 
         private void MostarCatalago()

@@ -29,9 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.BtnRegreso = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.Pnlinserstar = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TxtDescripcion = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TxtLargo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtAncho = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TxtAlto = new System.Windows.Forms.TextBox();
             this.NupExistencia = new System.Windows.Forms.NumericUpDown();
             this.CmbMadera = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,40 +54,11 @@
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.DgvProductos = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.TxtAlto = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.TxtAncho = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.TxtLargo = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TxtDescripcion = new System.Windows.Forms.TextBox();
             this.Pnlinserstar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NupExistencia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BtnRegreso
-            // 
-            this.BtnRegreso.AutoSize = true;
-            this.BtnRegreso.BackColor = System.Drawing.Color.Transparent;
-            this.BtnRegreso.FlatAppearance.BorderSize = 0;
-            this.BtnRegreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnRegreso.Font = new System.Drawing.Font("SimSun-ExtB", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegreso.ForeColor = System.Drawing.Color.Black;
-            this.BtnRegreso.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
-            this.BtnRegreso.IconColor = System.Drawing.Color.Black;
-            this.BtnRegreso.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnRegreso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegreso.Location = new System.Drawing.Point(40, 30);
-            this.BtnRegreso.Name = "BtnRegreso";
-            this.BtnRegreso.Size = new System.Drawing.Size(129, 54);
-            this.BtnRegreso.TabIndex = 53;
-            this.BtnRegreso.Text = "Regresar";
-            this.BtnRegreso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegreso.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnRegreso.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -88,7 +66,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("SimSun-ExtB", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(180, 32);
+            this.label1.Location = new System.Drawing.Point(44, 47);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 38);
@@ -128,10 +106,86 @@
             this.Pnlinserstar.Size = new System.Drawing.Size(360, 317);
             this.Pnlinserstar.TabIndex = 51;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(206, 64);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 16);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Descripcion";
+            // 
+            // TxtDescripcion
+            // 
+            this.TxtDescripcion.Location = new System.Drawing.Point(208, 84);
+            this.TxtDescripcion.Name = "TxtDescripcion";
+            this.TxtDescripcion.Size = new System.Drawing.Size(129, 20);
+            this.TxtDescripcion.TabIndex = 37;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(208, 116);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 16);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "Largo";
+            // 
+            // TxtLargo
+            // 
+            this.TxtLargo.Location = new System.Drawing.Point(210, 136);
+            this.TxtLargo.Name = "TxtLargo";
+            this.TxtLargo.Size = new System.Drawing.Size(129, 20);
+            this.TxtLargo.TabIndex = 35;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(20, 159);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 16);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Ancho";
+            // 
+            // TxtAncho
+            // 
+            this.TxtAncho.Location = new System.Drawing.Point(22, 179);
+            this.TxtAncho.Name = "TxtAncho";
+            this.TxtAncho.Size = new System.Drawing.Size(129, 20);
+            this.TxtAncho.TabIndex = 33;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(21, 116);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 16);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Alto";
+            // 
+            // TxtAlto
+            // 
+            this.TxtAlto.Location = new System.Drawing.Point(23, 136);
+            this.TxtAlto.Name = "TxtAlto";
+            this.TxtAlto.Size = new System.Drawing.Size(129, 20);
+            this.TxtAlto.TabIndex = 31;
+            // 
             // NupExistencia
             // 
             this.NupExistencia.Location = new System.Drawing.Point(211, 179);
-            this.NupExistencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NupExistencia.Margin = new System.Windows.Forms.Padding(2);
             this.NupExistencia.Name = "NupExistencia";
             this.NupExistencia.Size = new System.Drawing.Size(90, 20);
             this.NupExistencia.TabIndex = 30;
@@ -140,7 +194,7 @@
             // 
             this.CmbMadera.FormattingEnabled = true;
             this.CmbMadera.Location = new System.Drawing.Point(209, 37);
-            this.CmbMadera.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CmbMadera.Margin = new System.Windows.Forms.Padding(2);
             this.CmbMadera.Name = "CmbMadera";
             this.CmbMadera.Size = new System.Drawing.Size(130, 21);
             this.CmbMadera.TabIndex = 29;
@@ -298,92 +352,15 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(21, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 16);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Alto";
-            // 
-            // TxtAlto
-            // 
-            this.TxtAlto.Location = new System.Drawing.Point(23, 136);
-            this.TxtAlto.Name = "TxtAlto";
-            this.TxtAlto.Size = new System.Drawing.Size(129, 20);
-            this.TxtAlto.TabIndex = 31;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(20, 159);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 16);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Ancho";
-            // 
-            // TxtAncho
-            // 
-            this.TxtAncho.Location = new System.Drawing.Point(22, 179);
-            this.TxtAncho.Name = "TxtAncho";
-            this.TxtAncho.Size = new System.Drawing.Size(129, 20);
-            this.TxtAncho.TabIndex = 33;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(208, 116);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 16);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "Largo";
-            // 
-            // TxtLargo
-            // 
-            this.TxtLargo.Location = new System.Drawing.Point(210, 136);
-            this.TxtLargo.Name = "TxtLargo";
-            this.TxtLargo.Size = new System.Drawing.Size(129, 20);
-            this.TxtLargo.TabIndex = 35;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(206, 64);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 16);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Descripcion";
-            // 
-            // TxtDescripcion
-            // 
-            this.TxtDescripcion.Location = new System.Drawing.Point(208, 84);
-            this.TxtDescripcion.Name = "TxtDescripcion";
-            this.TxtDescripcion.Size = new System.Drawing.Size(129, 20);
-            this.TxtDescripcion.TabIndex = 37;
-            // 
             // CatalogoAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1152, 555);
-            this.Controls.Add(this.BtnRegreso);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Pnlinserstar);
             this.Controls.Add(this.DgvProductos);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CatalogoAdmin";
             this.Text = "Alto";
             this.Pnlinserstar.ResumeLayout(false);
@@ -397,8 +374,6 @@
         }
 
         #endregion
-
-        private FontAwesome.Sharp.IconButton BtnRegreso;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel Pnlinserstar;
         private System.Windows.Forms.Button BtnCancelar;

@@ -13,7 +13,7 @@ namespace Karpicentro
     public class Almacen
     {
         public string Nombre { get; set; }
-        public string Proveedor { get; set; }
+        public int Proveedor { get; set; }
         public int CantidadMaterial { get; set; }
         public string Mensaje { get; set; }
         public int idalmacen { get; set; }

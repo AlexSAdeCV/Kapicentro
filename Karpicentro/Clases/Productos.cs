@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Forms;
 using iText.StyledXmlParser.Node;
 using iText.Commons.Actions;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace Karpicentro.Clases
 {
@@ -23,6 +24,7 @@ namespace Karpicentro.Clases
         public int Existencia { get; set; }
         public int IDProducto { get; set; }
         public string Mensaje { get; set; }
+        public static int cantidadfinal { get; set; }
 
         public Productos()
         {
@@ -221,6 +223,71 @@ namespace Karpicentro.Clases
             }
 
             return exito;
+        }
+
+        public bool ActualizarExistencia(int s)
+        {
+            bool Exito = false;
+            using (SqlConnection Con = Conexion.Conectar())
+            {
+                SqlCommand CMDSql;
+
+                int resultado;
+                string Sentencia;
+
+                Sentencia = @"update Producto set Existencia = @Existencia where IDProducto = @IDProducto";
+                CMDSql = new SqlCommand(Sentencia, Con);
+
+                CMDSql.Parameters.AddWithValue("@Existencia", s);
+                CMDSql.Parameters.AddWithValue("@IDProducto", IDProducto);
+
+                try
+                {
+                    Con.Open();
+
+                    resultado = CMDSql.ExecuteNonQuery();
+                    if (resultado > 0)
+                    {
+
+                        Exito = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Mensaje = ex.Message;
+                }
+            }
+            return Exito;
+        }
+
+        public int MostrarExistencia(int s)
+        {
+            int e = 0;
+            DataTable producto = new DataTable();
+            using (SqlConnection Con = Conexion.Conectar())
+            {
+                SqlCommand CMDSql;
+                SqlDataAdapter adapter = new SqlDataAdapter();
+
+
+                string Sentencia = @"select existencia from Producto where IDProducto = @IDProducto";
+                CMDSql = new SqlCommand(Sentencia, Con);
+
+                CMDSql.Parameters.AddWithValue("@IDProducto", s);
+
+                try
+                {
+                    adapter.SelectCommand = CMDSql;
+                    Con.Open();
+                    adapter.Fill(producto);
+                    e = Convert.ToInt32(producto.Rows[1]["Existencia"]);
+                }
+                catch (Exception ex)
+                {
+                    Mensaje = ex.Message;
+                }
+            }
+            return e;
         }
     }
 }

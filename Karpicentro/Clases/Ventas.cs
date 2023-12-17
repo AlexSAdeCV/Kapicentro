@@ -19,7 +19,6 @@ namespace Karpicentro
         public int idempleado { get; set; }
         public string Fecha { get; set; }
         public string Mensaje { get; set; }
-        public int CantidadFintal { get; set; }
         public double preciofinal { get; set; }
         public int CantidadComprada { get; set; }
         public int idventa { get; set; }

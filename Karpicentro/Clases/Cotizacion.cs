@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Karpicentro.Clases;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -17,43 +18,12 @@ namespace Karpicentro
         public bool Personalizado { get; set; }
         public string Mensaje { get; set; }
 
-        public void HacerCotizacion()
+        public Cotizacion() 
         {
             Medidas = new double[3];
         }
 
-        public DataTable MostrarCotizacion()
-        {
-            DataTable Almacen = new DataTable();
-
-            using (SqlConnection Conectar = Conexion.Conectar())
-            {
-                string Cadena;
-                SqlCommand CmdSQL;
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
-
-                Cadena = @"Select * from Cotizacion";
-
-                CmdSQL = new SqlCommand(Cadena, Conectar);
-
-                try
-                {
-                    Conectar.Open();
-
-                    sqlDataAdapter.SelectCommand = CmdSQL;
-
-                    sqlDataAdapter.Fill(Almacen);
-                }
-                catch (Exception ex)
-                {
-                    Mensaje = ex.Message;
-                }
-            }
-
-            return Almacen;
-        }
-
-        public bool MostrarCatalogo(int r)
+        public bool MostrarMedidas(int r)
         {
             bool exito = false;
             DataTable Productos = new DataTable();
@@ -81,9 +51,9 @@ namespace Karpicentro
 
                     if (Productos.Rows.Count > 0)
                     {
-                        Medidas[0] = Convert.ToDouble(Productos.Rows[r]["Nombre"]);
-                        Medidas[1] = Convert.ToDouble(Productos.Rows[r]["Nombre"]);
-                        Medidas[2] = Convert.ToDouble(Productos.Rows[r]["Nombre"]);
+                        Medidas[0] = Convert.ToDouble(Productos.Rows[r]["Alto"]);
+                        Medidas[1] = Convert.ToDouble(Productos.Rows[r]["Ancho"]);
+                        Medidas[2] = Convert.ToDouble(Productos.Rows[r]["Largo"]);
 
                         exito = true;
                     }
@@ -96,6 +66,39 @@ namespace Karpicentro
             }
 
             return exito;
+        }
+
+        public double PrecioMadera(int s)
+        {
+            DataTable Almacen = new DataTable();
+            double precio = 0;
+
+            using (SqlConnection conexion = Conexion.Conectar())
+            {
+                SqlCommand cmdSelect;
+                SqlDataAdapter adapterLibros = new SqlDataAdapter();
+
+                string sentencia = "Select precioparahacermueble from Almacen where IDAlmacen = @IDAlmacen";
+                cmdSelect = new SqlCommand(sentencia, conexion);
+
+                cmdSelect.Parameters.AddWithValue("@IDAlmacen",s);
+
+                try
+                {
+                    
+                    adapterLibros.SelectCommand = cmdSelect;
+                    conexion.Open();
+                    adapterLibros.Fill(Almacen);
+
+                    precio = Convert.ToDouble(Almacen.Rows[0]["precioparahacermueble"]);
+
+                }
+                catch (Exception ex)
+                {
+                    Mensaje =(ex.Message);
+                }
+            }
+            return precio;
         }
     }
 }

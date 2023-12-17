@@ -15,7 +15,11 @@ namespace Karpicentro.Forms
         public MenuEmpleado()
         {
             InitializeComponent();
-            this.lblUsuario.Text = $"Hola Empleado {InicioSesion.Usuario}\nComo va su dia";
+        }
+
+        private void MenuEmpleado_Load(object sender, EventArgs e)
+        {
+            lblUsuario.Text = $"Hola Empleado\nComo va su dia";
         }
     }
 }
