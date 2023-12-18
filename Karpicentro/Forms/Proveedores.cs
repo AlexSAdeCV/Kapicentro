@@ -211,5 +211,11 @@ namespace Karpicentro.Forms
                 }
             }
         }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Mostrar(1, false, Color.Gray);
+            errorProvider1.Clear();
+        }
     }
 }

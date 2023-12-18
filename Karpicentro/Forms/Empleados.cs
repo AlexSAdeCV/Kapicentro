@@ -107,6 +107,8 @@ namespace Karpicentro.Forms
         private void Btn_Cancelar_Click(object sender, EventArgs e)
         {
             Mostrar(1, false, Color.Gray);
+            LimpiaCampos();
+            errorProvider1.Clear();
         }
 
         //Metodos
@@ -142,6 +144,19 @@ namespace Karpicentro.Forms
                 empleado.Eliminar_Tabla(Id);
             }
             Mostrar(1, false, Color.Gray);
+        }
+
+        private void LimpiaCampos()
+        {
+            foreach (Control c in Pnlinserstar.Controls)
+            {
+                if (c is TextBox)
+                {
+                    TextBox x;
+                    x = (TextBox)c;
+                    x.Clear();
+                }
+            }
         }
     }
 }

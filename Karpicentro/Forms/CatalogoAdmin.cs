@@ -122,6 +122,7 @@ namespace Karpicentro.Forms
         {
             Mostrar(1, false, Color.Gray);
             LimpiaCampos();
+            errorProvider1.Clear();
         }
 
         private void CargaComboMadera()
