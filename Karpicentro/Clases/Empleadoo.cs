@@ -38,7 +38,7 @@ namespace Karpicentro.Clases
                 SqlCommand CmdSQL;
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
 
-                Cadena = @"Select Nombre + ' ' +ApellidoPaterno +  ' ' +ApellidoMaterno as Nombre, Telefono, Calle + ' ' + NoExterior + ' ' + CodigoPostal as Domicilio, Sueldo from Empleados";
+                Cadena = @"Select IDEmpleado, Nombre + ' ' +ApellidoPaterno +  ' ' +ApellidoMaterno as Nombre, Telefono, Calle + ' ' + NoExterior + ' ' + CodigoPostal as Domicilio, Sueldo from Empleados";
 
                 CmdSQL = new SqlCommand(Cadena, Conectar);
 
@@ -83,6 +83,50 @@ namespace Karpicentro.Clases
                 CMDSql.Parameters.AddWithValue("@Telefono", Telefono);
                 CMDSql.Parameters.AddWithValue("@CP", CP);
                 CMDSql.Parameters.AddWithValue("@NExterior", NExterior);
+
+                try
+                {
+                    Con.Open();
+
+                    resultado = CMDSql.ExecuteNonQuery();
+                    if (resultado > 0)
+                    {
+                        Exito = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Mensaje = ex.Message;
+                }
+            }
+            return Exito;
+        }
+
+        public bool Actualizar(int i)
+        {
+            bool Exito = false;
+            using (SqlConnection Con = Conexion.Conectar())
+            {
+                SqlCommand CMDSql;
+
+                int resultado;
+                string Sentencia;
+
+                Sentencia = @"update Empleados set usuario = @Usuario, Contraseña = @Contrasena, idpuesto = @Puesto, Sueldo = @Sueldo, Nombre = @Nombre, ApellidoPaterno = @PApellido, ApellidoMaterno = @SApellido, Calle = @Calle, Telefono = @Telefono, CodigoPostal =  @CP, NoExterior = @NExterior Where IDEmpleado = @IDEmpleado";
+                CMDSql = new SqlCommand(Sentencia, Con);
+
+                CMDSql.Parameters.AddWithValue("@Usuario", Usuario);
+                CMDSql.Parameters.AddWithValue("@Contrasena", Contrasena);
+                CMDSql.Parameters.AddWithValue("@Puesto", Puesto);
+                CMDSql.Parameters.AddWithValue("@Sueldo", Sueldo);
+                CMDSql.Parameters.AddWithValue("@Nombre", Nombre);
+                CMDSql.Parameters.AddWithValue("@PApellido", PApellido);
+                CMDSql.Parameters.AddWithValue("@SApellido", SApellido);
+                CMDSql.Parameters.AddWithValue("@Calle", Calle);
+                CMDSql.Parameters.AddWithValue("@Telefono", Telefono);
+                CMDSql.Parameters.AddWithValue("@CP", CP);
+                CMDSql.Parameters.AddWithValue("@NExterior", NExterior);
+                CMDSql.Parameters.AddWithValue("@IDEmpleado", i);
 
                 try
                 {

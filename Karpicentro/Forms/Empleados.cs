@@ -16,6 +16,7 @@ namespace Karpicentro.Forms
     public partial class Empleados : Form
     {
         Empleadoo empleado = new Empleadoo();
+        int op;
         public Empleados()
         {
             InitializeComponent();
@@ -72,36 +73,69 @@ namespace Karpicentro.Forms
         private void Btn_Agregar_Click(object sender, EventArgs e)
         {
             Mostrar(2, true, Color.White);
+            op = 1;
         }
 
         private void Btn_Guardar_Click(object sender, EventArgs e)
         {
+            int renglon;
+            string id;
+
             if (ValidarCamposBlanco())
             {
                 errorProvider1.Clear();
-                empleado.Usuario = Txt_Usuario.Text;
-                empleado.Contrasena = Txt_Contrasena.Text;
-                empleado.Puesto = Convert.ToInt32(Cbox_IdPuesto.SelectedIndex.ToString()) + 1;
+                switch (op)
+                {
+                    case 1:
+                        empleado.Usuario = Txt_Usuario.Text;
+                        empleado.Contrasena = Txt_Contrasena.Text;
+                        empleado.Puesto = Convert.ToInt32(Cbox_IdPuesto.SelectedIndex.ToString()) + 1;
 
-                empleado.Nombre = Txt_Nombre.Text;
-                empleado.PApellido = Txt_AP.Text;
-                empleado.SApellido = Txt_AM.Text;
+                        empleado.Nombre = Txt_Nombre.Text;
+                        empleado.PApellido = Txt_AP.Text;
+                        empleado.SApellido = Txt_AM.Text;
 
-                empleado.Calle = Txt_Calle.Text;
-                empleado.Telefono = Txt_Telefono.Text;
-                empleado.CP = Txt_CP.Text;
-                empleado.NExterior = Txt_NE.Text;
-                empleado.InsertarEmpleado();
+                        empleado.Calle = Txt_Calle.Text;
+                        empleado.Telefono = Txt_Telefono.Text;
+                        empleado.CP = Txt_CP.Text;
+                        empleado.NExterior = Txt_NE.Text;
+
+                        if (empleado.InsertarEmpleado())
+                        {
+                            MessageBox.Show("Registro agregado exitosamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LimpiaCampos();
+                            MostrarEmpleados();
+                            HabilitaBotones();
+                            Mostrar(1, false, Color.Gray);
+                        }
+                        break;
+                    case 2:
+                        renglon = DgvAlmacen.CurrentRow.Index;
+                        id = DgvAlmacen.Rows[renglon].Cells[0].Value.ToString();
+                        empleado.Usuario = Txt_Usuario.Text;
+                        empleado.Contrasena = Txt_Contrasena.Text;
+                        empleado.Puesto = Convert.ToInt32(Cbox_IdPuesto.SelectedIndex.ToString()) + 1;
+
+                        empleado.Nombre = Txt_Nombre.Text;
+                        empleado.PApellido = Txt_AP.Text;
+                        empleado.SApellido = Txt_AM.Text;
+
+                        empleado.Calle = Txt_Calle.Text;
+                        empleado.Telefono = Txt_Telefono.Text;
+                        empleado.CP = Txt_CP.Text;
+                        empleado.NExterior = Txt_NE.Text;
+
+                        if (empleado.Actualizar(Convert.ToInt32(id)))
+                        {
+                            MessageBox.Show("Registro modificado exitosamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LimpiaCampos();
+                            MostrarEmpleados();
+                            HabilitaBotones();
+                            Mostrar(1, false, Color.Gray);
+                        }
+                        break;
+                }
             }
-
-            int s = 0;
-            //switch(s)
-            //{
-            //    case 0:
-                    
-            //        break;
-            //}
-            Mostrar(1, false, Color.Gray);
         }
 
         private void Btn_Cancelar_Click(object sender, EventArgs e)
@@ -157,6 +191,23 @@ namespace Karpicentro.Forms
                     x.Clear();
                 }
             }
+        }
+
+        private void HabilitaBotones()
+        {
+            foreach (Control b in Pnlinserstar.Controls)
+            {
+                if (b is Button)
+                {
+                    b.Enabled = true;
+                }
+            }
+        }
+
+        private void Btn_Modificar_Click(object sender, EventArgs e)
+        {
+            Mostrar(2, true, Color.White);
+            op = 2;
         }
     }
 }

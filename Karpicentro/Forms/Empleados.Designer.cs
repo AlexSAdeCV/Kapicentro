@@ -32,7 +32,6 @@
             this.Pnlinserstar = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.Cbox_IdPuesto = new CustomControls.RJControls.RJComboBox();
             this.Txt_CP = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Txt_NE = new System.Windows.Forms.TextBox();
@@ -64,6 +63,7 @@
             this.DgvAlmacen = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Cbox_IdPuesto = new CustomControls.RJControls.RJComboBox();
             this.Pnlinserstar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvAlmacen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -115,7 +115,7 @@
             this.textBox1.Location = new System.Drawing.Point(26, 400);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(158, 20);
-            this.textBox1.TabIndex = 59;
+            this.textBox1.TabIndex = 12;
             // 
             // label6
             // 
@@ -129,34 +129,12 @@
             this.label6.TabIndex = 58;
             this.label6.Text = "Telefono";
             // 
-            // Cbox_IdPuesto
-            // 
-            this.Cbox_IdPuesto.BackColor = System.Drawing.Color.White;
-            this.Cbox_IdPuesto.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.Cbox_IdPuesto.BorderSize = 1;
-            this.Cbox_IdPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.Cbox_IdPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Cbox_IdPuesto.ForeColor = System.Drawing.Color.DimGray;
-            this.Cbox_IdPuesto.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.Cbox_IdPuesto.Items.AddRange(new object[] {
-            "Admin",
-            "Empleado"});
-            this.Cbox_IdPuesto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.Cbox_IdPuesto.ListTextColor = System.Drawing.Color.DimGray;
-            this.Cbox_IdPuesto.Location = new System.Drawing.Point(22, 81);
-            this.Cbox_IdPuesto.Margin = new System.Windows.Forms.Padding(2);
-            this.Cbox_IdPuesto.MinimumSize = new System.Drawing.Size(150, 24);
-            this.Cbox_IdPuesto.Name = "Cbox_IdPuesto";
-            this.Cbox_IdPuesto.Padding = new System.Windows.Forms.Padding(1);
-            this.Cbox_IdPuesto.Size = new System.Drawing.Size(150, 24);
-            this.Cbox_IdPuesto.TabIndex = 57;
-            // 
             // Txt_CP
             // 
             this.Txt_CP.Location = new System.Drawing.Point(26, 349);
             this.Txt_CP.Name = "Txt_CP";
             this.Txt_CP.Size = new System.Drawing.Size(158, 20);
-            this.Txt_CP.TabIndex = 54;
+            this.Txt_CP.TabIndex = 10;
             // 
             // label10
             // 
@@ -175,7 +153,7 @@
             this.Txt_NE.Location = new System.Drawing.Point(210, 349);
             this.Txt_NE.Name = "Txt_NE";
             this.Txt_NE.Size = new System.Drawing.Size(140, 20);
-            this.Txt_NE.TabIndex = 52;
+            this.Txt_NE.TabIndex = 11;
             // 
             // label13
             // 
@@ -209,7 +187,7 @@
             this.Txt_Calle.Location = new System.Drawing.Point(26, 301);
             this.Txt_Calle.Name = "Txt_Calle";
             this.Txt_Calle.Size = new System.Drawing.Size(158, 20);
-            this.Txt_Calle.TabIndex = 50;
+            this.Txt_Calle.TabIndex = 8;
             // 
             // Btn_Eliminar
             // 
@@ -217,7 +195,7 @@
             this.Btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Eliminar.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Eliminar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Eliminar.Location = new System.Drawing.Point(246, 497);
+            this.Btn_Eliminar.Location = new System.Drawing.Point(134, 469);
             this.Btn_Eliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Eliminar.Name = "Btn_Eliminar";
             this.Btn_Eliminar.Size = new System.Drawing.Size(100, 35);
@@ -231,7 +209,7 @@
             this.Txt_Telefono.Location = new System.Drawing.Point(210, 300);
             this.Txt_Telefono.Name = "Txt_Telefono";
             this.Txt_Telefono.Size = new System.Drawing.Size(140, 20);
-            this.Txt_Telefono.TabIndex = 49;
+            this.Txt_Telefono.TabIndex = 9;
             // 
             // Btn_Cancelar
             // 
@@ -239,7 +217,7 @@
             this.Btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Cancelar.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Cancelar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Cancelar.Location = new System.Drawing.Point(21, 497);
+            this.Btn_Cancelar.Location = new System.Drawing.Point(250, 501);
             this.Btn_Cancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Cancelar.Name = "Btn_Cancelar";
             this.Btn_Cancelar.Size = new System.Drawing.Size(100, 35);
@@ -254,7 +232,7 @@
             this.Btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Guardar.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Guardar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Guardar.Location = new System.Drawing.Point(134, 469);
+            this.Btn_Guardar.Location = new System.Drawing.Point(22, 502);
             this.Btn_Guardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Guardar.Name = "Btn_Guardar";
             this.Btn_Guardar.Size = new System.Drawing.Size(100, 35);
@@ -269,13 +247,14 @@
             this.Btn_Modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Modificar.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Modificar.ForeColor = System.Drawing.Color.White;
-            this.Btn_Modificar.Location = new System.Drawing.Point(246, 428);
+            this.Btn_Modificar.Location = new System.Drawing.Point(250, 427);
             this.Btn_Modificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Modificar.Name = "Btn_Modificar";
             this.Btn_Modificar.Size = new System.Drawing.Size(100, 35);
             this.Btn_Modificar.TabIndex = 44;
             this.Btn_Modificar.Text = "Modificar";
             this.Btn_Modificar.UseVisualStyleBackColor = false;
+            this.Btn_Modificar.Click += new System.EventHandler(this.Btn_Modificar_Click);
             // 
             // label14
             // 
@@ -342,7 +321,7 @@
             this.Txt_AP.Location = new System.Drawing.Point(22, 211);
             this.Txt_AP.Name = "Txt_AP";
             this.Txt_AP.Size = new System.Drawing.Size(158, 20);
-            this.Txt_AP.TabIndex = 37;
+            this.Txt_AP.TabIndex = 6;
             // 
             // label7
             // 
@@ -361,14 +340,14 @@
             this.Txt_AM.Location = new System.Drawing.Point(194, 211);
             this.Txt_AM.Name = "Txt_AM";
             this.Txt_AM.Size = new System.Drawing.Size(158, 20);
-            this.Txt_AM.TabIndex = 31;
+            this.Txt_AM.TabIndex = 7;
             // 
             // Txt_Nombre
             // 
             this.Txt_Nombre.Location = new System.Drawing.Point(23, 151);
             this.Txt_Nombre.Name = "Txt_Nombre";
             this.Txt_Nombre.Size = new System.Drawing.Size(158, 20);
-            this.Txt_Nombre.TabIndex = 30;
+            this.Txt_Nombre.TabIndex = 5;
             // 
             // label3
             // 
@@ -411,7 +390,7 @@
             this.Txt_Sueldo.Location = new System.Drawing.Point(195, 81);
             this.Txt_Sueldo.Name = "Txt_Sueldo";
             this.Txt_Sueldo.Size = new System.Drawing.Size(140, 20);
-            this.Txt_Sueldo.TabIndex = 10;
+            this.Txt_Sueldo.TabIndex = 4;
             // 
             // lblStock
             // 
@@ -430,7 +409,7 @@
             this.Txt_Contrasena.Location = new System.Drawing.Point(195, 32);
             this.Txt_Contrasena.Name = "Txt_Contrasena";
             this.Txt_Contrasena.Size = new System.Drawing.Size(158, 20);
-            this.Txt_Contrasena.TabIndex = 8;
+            this.Txt_Contrasena.TabIndex = 2;
             this.Txt_Contrasena.UseSystemPasswordChar = true;
             // 
             // LblNombreM
@@ -450,7 +429,7 @@
             this.Txt_Usuario.Location = new System.Drawing.Point(24, 32);
             this.Txt_Usuario.Name = "Txt_Usuario";
             this.Txt_Usuario.Size = new System.Drawing.Size(158, 20);
-            this.Txt_Usuario.TabIndex = 6;
+            this.Txt_Usuario.TabIndex = 1;
             // 
             // DgvAlmacen
             // 
@@ -481,6 +460,28 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // Cbox_IdPuesto
+            // 
+            this.Cbox_IdPuesto.BackColor = System.Drawing.Color.White;
+            this.Cbox_IdPuesto.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.Cbox_IdPuesto.BorderSize = 1;
+            this.Cbox_IdPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.Cbox_IdPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Cbox_IdPuesto.ForeColor = System.Drawing.Color.DimGray;
+            this.Cbox_IdPuesto.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.Cbox_IdPuesto.Items.AddRange(new object[] {
+            "Admin",
+            "Empleado"});
+            this.Cbox_IdPuesto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.Cbox_IdPuesto.ListTextColor = System.Drawing.Color.DimGray;
+            this.Cbox_IdPuesto.Location = new System.Drawing.Point(22, 81);
+            this.Cbox_IdPuesto.Margin = new System.Windows.Forms.Padding(2);
+            this.Cbox_IdPuesto.MinimumSize = new System.Drawing.Size(150, 24);
+            this.Cbox_IdPuesto.Name = "Cbox_IdPuesto";
+            this.Cbox_IdPuesto.Padding = new System.Windows.Forms.Padding(1);
+            this.Cbox_IdPuesto.Size = new System.Drawing.Size(150, 24);
+            this.Cbox_IdPuesto.TabIndex = 3;
             // 
             // Empleados
             // 

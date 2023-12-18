@@ -49,6 +49,33 @@ insert into Empleados values
 ('AnaDiaz798', '3SbXC6w79', 2, 'Ana', 'Hernandez', 'Diaz', '7645891334', 'Calle Genova', '357', '97531', 53000.00)
 go
 
+create table Clientes
+(
+    IDCliente int primary key identity (1,1),
+    Nombre nvarchar(40),
+    ApellidoPaterno nvarchar(40),
+    ApellidoMaterno nvarchar(40),
+    Telefono nvarchar(40),
+    Calle nvarchar(40),
+    NoExterior nvarchar(40),
+    CodigoPostal nvarchar(40),
+    Delegacion nvarchar(40)
+)
+go
+
+insert into Clientes values
+('Juan', 'Gomez', 'Lopez', '55 1234 5678', 'Insurgentes Sur', '123', '01000', 'Benito Juarez'),
+('Maria', 'Perez', 'Martinez', '55 2345 6789', 'Paseo de la Reforma', '456', '06500', 'Cuauhtemoc'),
+('Carlos', 'Lara', 'Rodriguez', '55 3456 7890', 'Avenida Juarez', '789', '03000', 'Cuauhtemoc'),
+('Ana', 'Gonzalez', 'Santos', '55 4567 8901', 'Calle Madero', '1011', '06000', 'Cuauhtemoc'),
+('Pedro', 'Ramirez', 'Cruz', '55 5678 9012', 'Avenida Chapultepec', '1213', '06700', 'Cuauhtemoc'),
+('Laura', 'Diaz', 'Flores', '55 6789 0123', 'Calzada de Tlalpan', '1415', '14000', 'Tlalpan'),
+('Miguel', 'Fernandez', 'Rios', '55 7890 1234', 'Avenida Insurgentes Norte', '1617', '07700', 'Gustavo A. Madero'),
+('Sofia', 'Lopez', 'Jimenez', '55 8901 2345', 'Calle Venustiano Carranza', '1819', '06050', 'Cuauhtemoc'),
+('Raul', 'Torres', 'Hernandez', '55 9012 3456', 'Paseo de la Castellana', '2021', '01030', 'Benito Juarez'),
+('Elena', 'Garcia', 'Ortiz', '55 0123 4567', 'Calle 16 de Septiembre', '2223', '06750', 'Cuauhtemoc')
+go
+
 Create Table Proveedor
 (
 	IDProveedor int primary key identity (1,1),
@@ -141,7 +168,4 @@ insert into Cotizacion values
 ('Buro', 70,50,58, 1300, 1, 'Barnizado'),
 ('Mesa', 80,160,81, 1300, 1, 'Barnizado'),
 ('Taburete', 60,40.5,31, 1300, 1, 'Barnizado')
-go
-
-select * from Ventas
 go

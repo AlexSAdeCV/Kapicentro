@@ -152,11 +152,10 @@
     </Compile>
     <Compile Include="Botones\RJTextBox1.Designer.cs" />
     <Compile Include="Clases\Almacen.cs" />
-    <Compile Include="Clases\Clientes.cs" />
+    <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\Cotizacion.cs" />
     <Compile Include="Clases\Empleadoo.cs" />
-    <Compile Include="Clases\Facturas.cs" />
     <Compile Include="Clases\InicioSesion.cs" />
     <Compile Include="Clases\Productos.cs" />
     <Compile Include="Clases\Proveedor.cs" />
@@ -166,6 +165,12 @@
     </Compile>
     <Compile Include="Forms\Almacens.Designer.cs">
       <DependentUpon>Almacens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MenuAdmin.cs">
       <SubType>Form</SubType>
@@ -246,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Almacens.resx">
       <DependentUpon>Almacens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MenuAdmin.resx">
       <DependentUpon>MenuAdmin.cs</DependentUpon>

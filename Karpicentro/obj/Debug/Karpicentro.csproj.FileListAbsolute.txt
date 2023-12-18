@@ -608,3 +608,4 @@ C:\Users\alexa\Videos\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.CoreCo
 C:\Users\alexa\Videos\Kapicentro\Karpicentro\obj\Debug\Karpicentro.csproj.CopyComplete
 C:\Users\alexa\Videos\Kapicentro\Karpicentro\obj\Debug\Karpicentro.exe
 C:\Users\alexa\Videos\Kapicentro\Karpicentro\obj\Debug\Karpicentro.pdb
+C:\Github\Kapicentro\Kapicentro\Karpicentro\obj\Debug\Karpicentro.Forms.Clientes.resources
