@@ -44,8 +44,8 @@
             this.pictureBox3.BackgroundImage = global::Karpicentro.Properties.Resources.TablonMInecraft;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.InitialImage = null;
-            this.pictureBox3.Location = new System.Drawing.Point(901, 366);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(804, 369);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(142, 140);
             this.pictureBox3.TabIndex = 28;
@@ -55,8 +55,8 @@
             // 
             this.pictureBox2.BackgroundImage = global::Karpicentro.Properties.Resources.LineaBlanca;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(550, 104);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(467, 96);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(8, 454);
             this.pictureBox2.TabIndex = 27;
@@ -69,7 +69,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("SimSun-ExtB", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(649, 309);
+            this.label2.Location = new System.Drawing.Point(552, 312);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(384, 44);
@@ -83,8 +83,8 @@
             this.pictureBox1.BackgroundImage = global::Karpicentro.Properties.Resources.Logo;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(712, 64);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(615, 67);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(226, 243);
             this.pictureBox1.TabIndex = 25;
@@ -97,7 +97,7 @@
             this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblUsuario.Font = new System.Drawing.Font("SimSun-ExtB", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(59, 124);
+            this.lblUsuario.Location = new System.Drawing.Point(35, 119);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(249, 70);
@@ -109,13 +109,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(60)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(1084, 632);
+            this.ClientSize = new System.Drawing.Size(984, 713);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblUsuario);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuEmpleado";
             this.Text = "MenuEmpleado";
             this.Load += new System.EventHandler(this.MenuEmpleado_Load);

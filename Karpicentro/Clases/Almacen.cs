@@ -140,7 +140,7 @@ namespace Karpicentro
                 SqlCommand CmdSQL;
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
 
-                Cadena = @"Select * from Almacen";
+                Cadena = "Select IDAlmacen, TipoMadera, stock, precioparahacermueble as Precio, NombreProv as Proveedor, IDProveedor from Almacen inner join Proveedor on idprov = IDProveedor";
 
                 CmdSQL = new SqlCommand(Cadena, Conectar);
 

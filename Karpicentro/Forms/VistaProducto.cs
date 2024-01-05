@@ -20,6 +20,7 @@ using System.Windows.Forms;
 using System.Runtime.CompilerServices;
 using System.Drawing.Printing;
 using iText.Bouncycastleconnector;
+using System.Data.SqlClient;
 
 namespace Karpicentro.Forms
 {
@@ -29,6 +30,10 @@ namespace Karpicentro.Forms
         public double precio, preciof;
         public string Nombre;
         public int x = 0;
+        int Existencia = 0;
+        double Precio = 0;
+        double PrecioT = 0;
+
         public VistaProducto()
         {
             InitializeComponent();
@@ -50,16 +55,21 @@ namespace Karpicentro.Forms
         {
             Productos Pr = new Productos();
             Pr.IDProducto = id;
-            if (id != 1)
-                Pr.IDProducto -= 1;
+            //if (id != 1)
+            //    Pr.IDProducto -= 1;
             if (Pr.MostrarCatalogo())
             {
                 LblNombreM.Text = Pr.Nombre;
                 lblDescripcion.Text = Pr.Descripcion;
-                LblPrecio.Text = Pr.PrecioVenta.ToString();
+                LblPrecio.Text = "Precio: $" + Pr.PrecioVenta.ToString()+ " C/U";
+                Precio = Pr.PrecioVenta;
                 LblMedidas.Text = $"Medidas\n{Pr.Medidas[0]} X {Pr.Medidas[1]} x {Pr.Medidas[2]}";
-                LblExstencia.Text = /*"Existencia: " + */Pr.Existencia.ToString();
+                LblExstencia.Text = "Existencia: " + Pr.Existencia.ToString();
+                Existencia = Pr.Existencia;
                 numericUpDown1.Maximum = Pr.Existencia;
+                MemoryStream ms = new MemoryStream(Pr.Imagen);   
+                Bitmap bm = new Bitmap(ms);
+                PicboxProducto.Image = bm;
             }
 
         }
@@ -101,32 +111,42 @@ namespace Karpicentro.Forms
 
         private void BtnComprar_Click(object sender, EventArgs e)
         {
-            Venta vt = new Venta();
-            Productos pr = new Productos();
-
-            Habilitar();
-
-            vt.idproducto = pr.IDProducto;
-
-            int cantidadinicial = Convert.ToInt32(LblExstencia.Text);
-            int cantidadcomprada = Convert.ToInt32(numericUpDown1.Value);
-            precio = Convert.ToDouble(LblPrecio.Text);
-
-            if (cantidadcomprada > 1)
+            if (Existencia == 0)
             {
-                preciof = cantidadcomprada * precio;
-                vt.preciofinal = preciof;
-                LblTotal.Text = $"Total\n$ {vt.preciofinal}";
-
-                int cantidadfinal = cantidadinicial - cantidadcomprada;
-                Productos.cantidadfinal = cantidadfinal;
-                vt.CantidadComprada = cantidadinicial;
-
+                MessageBox.Show("No hay Existencia de este producto", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             else
             {
-                LblTotal.Text = $"Total\n$ {LblPrecio.Text}";
-                preciof = Convert.ToDouble(LblPrecio.Text);
+                Venta vt = new Venta();
+                Productos pr = new Productos();
+
+                Habilitar();
+
+                vt.idproducto = pr.IDProducto;
+
+                int cantidadinicial = Existencia;
+                int cantidadcomprada = Convert.ToInt32(numericUpDown1.Value);
+                precio = Precio;
+
+                if (cantidadcomprada > 1)
+                {
+                    preciof = cantidadcomprada * precio;
+                    vt.preciofinal = preciof;
+                    LblTotal.Text = $"Total\n$ {vt.preciofinal}";
+                    PrecioT = vt.preciofinal;
+
+                    int cantidadfinal = cantidadinicial - cantidadcomprada;
+                    Productos.cantidadfinal = cantidadfinal;
+                    vt.CantidadComprada = cantidadinicial;
+
+                }
+                else
+                {
+                    LblTotal.Text = $"Total\n$ {Precio}";
+                    preciof = Precio;
+                    PrecioT = Precio;
+                }
             }
         }
 
@@ -166,6 +186,12 @@ namespace Karpicentro.Forms
                 {
                     IPDF(Convert.ToString(vt.Sacaridventa()), Nombre);
                 }
+                this.Close();
+            }
+            else
+            {
+                LblTotal.Visible = false;
+                BtnTerminarVenta.Visible = false;
             }
 
         }
@@ -176,7 +202,7 @@ namespace Karpicentro.Forms
             int cant = Convert.ToInt32(numericUpDown1.Value);
             string rp = @"Factura Nº " + x++;
             GuardaArchivoPdf.Filter = "Archivos PDF|*.pdf";
-            GuardaArchivoPdf.FileName = @"Factura Nº " + x++;
+            GuardaArchivoPdf.FileName = @"Factura Nº " + EncontrarIDMax().ToString();
             if (GuardaArchivoPdf.ShowDialog() == DialogResult.OK)
             {
                 using (FileStream stream = new FileStream(GuardaArchivoPdf.FileName, FileMode.Create))
@@ -189,15 +215,15 @@ namespace Karpicentro.Forms
                     PdfCanvas canvas = new PdfCanvas(pdfDocument.AddNewPage());
 
                     MiDocumento.Add(new Paragraph("************************************************"));
-                    MiDocumento.Add(new Paragraph("Factura Nº: " + x++));
+                    MiDocumento.Add(new Paragraph("Factura Nº: " + EncontrarIDMax().ToString()));
                     MiDocumento.Add(new Paragraph("Fecha: " + DateTime.Now));
                     MiDocumento.Add(new Paragraph("************************************************"));
 
-                    MiDocumento.Add(new Paragraph("Cantidad      Producto                Precio"));
-                    MiDocumento.Add(new Paragraph(cant + "            " + LblNombreM.Text + "              $" + LblPrecio.Text));
+                    MiDocumento.Add(new Paragraph("Cantidad             Producto                Precio"));
+                    MiDocumento.Add(new Paragraph(cant + "                      " + LblNombreM.Text + "           $" + Precio + " C/U"));
 
                     MiDocumento.Add(new Paragraph("************************************************"));
-                    MiDocumento.Add(new Paragraph("TOTAL:                             $" + LblTotal.Text));
+                    MiDocumento.Add(new Paragraph("TOTAL:                             $" + PrecioT));
                     MiDocumento.Add(new Paragraph("************************************************"));
                     MiDocumento.Add(new Paragraph("Gracias por su compra"));
                     MiDocumento.Close();
@@ -214,6 +240,41 @@ namespace Karpicentro.Forms
         private void IbtnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private int EncontrarIDMax()
+        {
+            int Idp = 0;
+
+            DataTable Productos = new DataTable();
+            using (SqlConnection conexion = Conexion.Conectar())
+            {
+                SqlCommand cmdSelect;
+                SqlDataAdapter adapterLibros = new SqlDataAdapter();
+
+                string sentencia = "select MAX(IDVentas) as id from Ventas";
+                cmdSelect = new SqlCommand(sentencia, conexion);
+
+                try
+                {
+                    adapterLibros.SelectCommand = cmdSelect;
+                    conexion.Open();
+                    adapterLibros.Fill(Productos);
+
+                    string temporal = Productos.Rows[0]["id"].ToString();
+
+                    if (temporal == "")
+                        Idp = 1;
+                    else
+                        Idp = (Int32)Productos.Rows[0]["id"];
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            return Idp;
         }
     }
 }

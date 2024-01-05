@@ -1,4 +1,6 @@
-﻿Create database Karpicentro
+﻿use master
+go
+Create database Karpicentro
 --On
 --(Name = KarpicentroDat, Filename = 'E:\5to\Karpicentro\Karpicentro Base\KarpicentroMDF.mdf', SIZE = 10, MAXSIZE	= 50, FILEGROWTH = 5)
 --Log on 
@@ -17,7 +19,7 @@ create table Puestos
 go
 
 insert into Puestos values 
-('Administrado', 'Control total del sistema'),
+('Administrador', 'Control total del sistema'),
 ('Empleado', 'Empleado')
 go
 
@@ -102,9 +104,9 @@ create table Almacen
 	TipoMadera nvarchar (50),
 	Stock int,
 	precioparahacermueble float,
-	idproveedor int
+	idprov int
 
-	foreign key (idproveedor) references Proveedor (IDProveedor)
+	foreign key (idprov) references Proveedor (IDProveedor)
 )
 go
 
@@ -117,7 +119,7 @@ go
 
 Create table Producto 
 (
-	IDProducto int primary key identity (1,1) not null,
+	IDProducto int primary key not null,
 	Nombre nvarchar(max),
 	Descripcion nvarchar (max),
 	idmadera int,
@@ -125,18 +127,12 @@ Create table Producto
 	Alto float,
 	Largo float,
 	Ancho float,
+	Imagen image,
 	Existencia int
 
 	foreign key (idmadera) references Almacen (IDAlmacen)
 )
 go
-
-insert into Producto values 
-('Silla Luisiana', 'Silla con diseño vanguardista, Ideal para complementar tu espacio.' ,1,5390.00,40,48,99,10),
-('Mesa Chicago', 'Mesa con el color ideal para tu hogar' ,2,4423.00,40,69,55,25),
-('Buro Renata', 'Buro Renata para complementar tu habitacion' ,3,3599.00,50,69,65,2),
-('Taburete Kim', 'Diseño vanguardista ideal para complementar tu sala' ,4,3990.00,60,25,55,15)
-go 
 
 create table Ventas 
 (
@@ -156,16 +152,13 @@ create table Cotizacion
 	Ancho float,
 	Largo float,
 	PrecioMedidaInicial money,
-	idmadera int,
 	Acabado nvarchar (50)
-
-	foreign key (idmadera) references Almacen (IDAlmacen)
 )
 go
 
 insert into Cotizacion values 
-('Silla', 70,50,50, 1300, 1, 'Barnizado'),
-('Buro', 70,50,58, 1300, 1, 'Barnizado'),
-('Mesa', 80,160,81, 1300, 1, 'Barnizado'),
-('Taburete', 60,40.5,31, 1300, 1, 'Barnizado')
+('Silla', 70,50,50, 1300, 'Barnizado'),
+('Buro', 70,50,58, 1300, 'Barnizado'),
+('Mesa', 80,160,81, 1300, 'Barnizado'),
+('Taburete', 60,40.5,31, 1300, 'Barnizado')
 go

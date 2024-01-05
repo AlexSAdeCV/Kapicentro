@@ -38,7 +38,7 @@ namespace Karpicentro.Clases
                 SqlCommand CmdSQL;
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
 
-                Cadena = @"Select IDEmpleado, Nombre + ' ' +ApellidoPaterno +  ' ' +ApellidoMaterno as Nombre, Telefono, Calle + ' ' + NoExterior + ' ' + CodigoPostal as Domicilio, Sueldo from Empleados";
+                Cadena = @"Select IDEmpleado, Nombre + ' ' +ApellidoPaterno +  ' ' +ApellidoMaterno as Nombre, Telefono, Calle + ' ' + NoExterior + ' ' + CodigoPostal as Domicilio, Sueldo, Identificacion as Puesto, Puesto as idpuesto from Empleados inner join Puestos on idpuesto = Puesto";
 
                 CmdSQL = new SqlCommand(Cadena, Conectar);
 
@@ -69,7 +69,7 @@ namespace Karpicentro.Clases
                 int resultado;
                 string Sentencia;
 
-                Sentencia = @"insert into Empleados values (@Usuario, @Contrasena, @Puesto, @Sueldo, @Nombre, @PApellido, @SApellido, @Calle, @Telefono, @CP, @NExterior)";
+                Sentencia = @"insert into Empleados values (@Usuario, @Contrasena, @Puesto, @Nombre, @PApellido, @SApellido, @Telefono, @Calle, @NExterior, @CP, @Sueldo)";
                 CMDSql = new SqlCommand(Sentencia, Con);
 
                 CMDSql.Parameters.AddWithValue("@Usuario", Usuario);
@@ -171,24 +171,6 @@ namespace Karpicentro.Clases
                 }
             }
             return false;
-        }
-
-
-
-        public void ConstruirProducto()
-        {
-        }
-
-        public void VenderProductos()
-        {
-        }
-
-        public void HacerProductos()
-        {
-        }
-
-        public void HacerCotizacion()
-        {
         }
     }
 }

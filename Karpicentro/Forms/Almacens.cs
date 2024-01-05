@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Annotations;
 using System.Windows.Forms;
 using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
 
@@ -40,7 +42,44 @@ namespace Karpicentro.Forms
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
+            int renglon;
+            string id, idprov;
+
+            renglon = DgvAlmacen.CurrentRow.Index;
+            id = DgvAlmacen.Rows[renglon].Cells[0].Value.ToString();
+
             Mostrar(2, true, Color.White);
+
+            DataTable Almacen = new DataTable();
+
+            using (SqlConnection conexion = Conexion.Conectar())
+            {
+                SqlCommand cmdSelect;
+                SqlDataAdapter adapterLibros = new SqlDataAdapter();
+
+                string sentencia = "Select TipoMadera, Stock, precioparahacermueble from Almacen where IDAlmacen = @id";
+                cmdSelect = new SqlCommand(sentencia, conexion);
+                cmdSelect.Parameters.AddWithValue("@id", Convert.ToInt32(id));
+
+                try
+                {
+                    adapterLibros.SelectCommand = cmdSelect;
+                    conexion.Open();
+                    adapterLibros.Fill(Almacen);
+                    TxtNombre.Text = Almacen.Rows[0]["TipoMadera"].ToString();
+                    TxtStock.Text = Almacen.Rows[0]["Stock"].ToString();
+                    TxtPrecio.Text = Almacen.Rows[0]["precioparahacermueble"].ToString();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            idprov = DgvAlmacen.Rows[renglon].Cells[5].Value.ToString();
+
+            CmbProveedores.SelectedIndex = Convert.ToInt32(idprov) - 1;
 
             op = 2;
         }
@@ -124,6 +163,7 @@ namespace Karpicentro.Forms
             Mostrar(1, false, Color.Gray);
             LimpiaCampos();
             errorProvider1.Clear();
+            CmbProveedores.SelectedIndex = 0;
         }
 
         private void HabilitaBotones()
@@ -210,7 +250,7 @@ namespace Karpicentro.Forms
 
             DgvAlmacen.AutoSize = true;
             DgvAlmacen.DataSource = almacen.MostrarAlmacen();
-
+            DgvAlmacen.Columns[5].Visible = false;
         }
 
         private void CargaProveedores()

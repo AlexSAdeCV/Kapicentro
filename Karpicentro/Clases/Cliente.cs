@@ -149,7 +149,7 @@ namespace Karpicentro
                 SqlCommand CmdSQL;
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
 
-                Cadena = @"select IDCliente, (Nombre + ' ' + ApellidoMaterno + ' ' + ApellidoMaterno) as 'Nombre Completo', Telefono, (Calle + ', ' + NoExterior + ', ' + CodigoPostal + ', ' + Delegacion) as Calle from Clientes";
+                Cadena = @"select IDCliente, (Nombre + ' ' + ApellidoPaterno + ' ' + ApellidoMaterno) as 'Nombre Completo', Telefono, (Calle + ', ' + NoExterior + ', ' + CodigoPostal + ', ' + Delegacion) as Calle from Clientes";
 
                 CmdSQL = new SqlCommand(Cadena, Conectar);
 

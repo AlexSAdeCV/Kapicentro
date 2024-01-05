@@ -135,11 +135,6 @@ namespace Karpicentro
             return Exito;
         }
 
-        public void DevolverInsumos()
-        {
-            
-        }
-
         public DataTable MostrarProveedores()
         {
             DataTable Proveedores = new DataTable();
@@ -169,6 +164,74 @@ namespace Karpicentro
             }
 
             return Proveedores;
+        }
+
+        public DataTable Obtenerid()
+        {
+            DataTable Proveedores = new DataTable();
+
+            using (SqlConnection Conectar = Conexion.Conectar())
+            {
+                string Cadena;
+                SqlCommand CmdSQL;
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
+
+                Cadena = @"Select * from Almacen where idprov = @IDProveedor";
+
+                CmdSQL = new SqlCommand(Cadena, Conectar);
+
+                try
+                {
+                    Conectar.Open();
+
+                    sqlDataAdapter.SelectCommand = CmdSQL;
+
+                    sqlDataAdapter.Fill(Proveedores);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            return Proveedores;
+        }
+
+
+
+        public bool EliminarRegAlmacen()
+        {
+            bool Exito = false;
+            using (SqlConnection Con = Conexion.Conectar())
+            {
+                SqlCommand CMDSql;
+
+                int resultado;
+                string Sentencia;
+
+                Sentencia = @"delete from Almacen where idprov = @IDProveedor";
+                CMDSql = new SqlCommand(Sentencia, Con);
+
+                CMDSql.Parameters.AddWithValue("@IDProveedor", IDProveedor);
+
+
+                try
+                {
+                    Con.Open();
+
+                    resultado = CMDSql.ExecuteNonQuery();
+                    if (resultado > 0)
+                    {
+                        Mensaje = "Se agrego el nuevo tipo de madera";
+                        Exito = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Mensaje = ex.Message;
+                }
+            }
+            return Exito;
         }
     }
 }

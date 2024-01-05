@@ -133,8 +133,20 @@
   <data name="MesaComedor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MesaComedor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="mesita_de_noche" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mesita-de-noche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="silla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\silla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tabla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tabla.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="TablonMInecraft" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TablonMInecraft.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="taburete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\taburete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_1_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1.0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

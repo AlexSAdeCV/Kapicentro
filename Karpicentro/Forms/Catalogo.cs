@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,56 +15,96 @@ namespace Karpicentro.Forms
 {
     public partial class Catalogo : Form
     {
+        private List<Image> imagenespic;
+        private int ImagenActual;
+
         public Catalogo()
         {
             InitializeComponent();
+            imagenespic = Imagenes();
+
+            ImagenActual = 0;
+
+            PcbImgProducto.Image = imagenespic[0];
+
+            timer1.Interval = 3000;
+            timer1.Start();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void BtnAtras_Click(object sender, EventArgs e)
         {
+            timer1.Stop();
+
+            if (ImagenActual == 0)
+            {
+                Image img = imagenespic.Last();
+                PcbImgProducto.Image = img;
+                ImagenActual = imagenespic.Count() - 1;
+            }
+            else
+                PcbImgProducto.Image = imagenespic[ImagenActual = ((ImagenActual - 1) % imagenespic.Count)];
+
+            timer1.Start();
+        }
+
+        private void BtnAdelante_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+
+            if (ImagenActual == 0)
+            {
+                Image img = imagenespic.Last();
+                PcbImgProducto.Image = img;
+            }
+
+            PcbImgProducto.Image = imagenespic[ImagenActual = ((ImagenActual + 1) % imagenespic.Count)];
+
+            timer1.Start();
+        }
+
+        private void BtnComprar_Click_1(object sender, EventArgs e)
+        {
+            timer1.Stop();
+
             VistaProducto vp = new VistaProducto();
-            vp.id = 1;
-            vp.PicboxProducto.Image = pictureBox1.Image;
+
+            vp.id = ImagenActual + 1;
 
             vp.ShowDialog();
+
+            timer1.Start();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            VistaProducto vp = new VistaProducto();
-            vp.id = 3;
-            vp.PicboxProducto.Image = pictureBox2.Image;
+            ImagenActual = (ImagenActual + 1) % imagenespic.Count;
 
-            vp.ShowDialog();
+            PcbImgProducto.Image = imagenespic[ImagenActual];
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private List<Image> Imagenes() 
         {
-            VistaProducto vp = new VistaProducto();
+            List<Image> imagen = new List<Image>();
 
-            vp.id = 4;
+            using (SqlConnection Con = Conexion.Conectar())
+            {
+                SqlCommand command;
+                string Sentencia;
 
-            vp.PicboxProducto.Image = pictureBox4.Image;
+                Sentencia = @"Select Imagen from Producto";
+                command = new SqlCommand(Sentencia, Con);
 
-            vp.ShowDialog();
-        }
+                Con.Open();
+                SqlDataReader reader = command.ExecuteReader();
 
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            VistaProducto vp = new VistaProducto();
-
-            vp.id = 5;
-
-            vp.PicboxProducto.Image = pictureBox5.Image;
-
-            vp.ShowDialog();
-        }
-
-        private void BtnCotizacion_Click(object sender, EventArgs e)
-        {
-            Cotizaciones cotizaciones = new Cotizaciones();
-
-            cotizaciones.ShowDialog();
+                while (reader.Read())
+                {
+                    byte[] imageBytes = (byte[])reader["Imagen"];
+                    MemoryStream memoryStream = new MemoryStream(imageBytes);
+                    imagen.Add(Image.FromStream(memoryStream));
+                }
+            }
+            return imagen;
         }
     }
 }

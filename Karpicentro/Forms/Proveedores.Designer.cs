@@ -111,6 +111,7 @@
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.Size = new System.Drawing.Size(158, 20);
             this.TxtTelefono.TabIndex = 33;
+            this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress);
             // 
             // TxtCP
             // 
@@ -118,6 +119,7 @@
             this.TxtCP.Name = "TxtCP";
             this.TxtCP.Size = new System.Drawing.Size(140, 20);
             this.TxtCP.TabIndex = 32;
+            this.TxtCP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCP_KeyPress);
             // 
             // TxtCalle
             // 

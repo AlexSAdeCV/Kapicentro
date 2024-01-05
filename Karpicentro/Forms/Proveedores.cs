@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -184,7 +185,44 @@ namespace Karpicentro.Forms
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
+            int renglon;
+            string id, idmad;
+
+            renglon = DgvProveedor.CurrentRow.Index;
+            id = DgvProveedor.Rows[renglon].Cells[0].Value.ToString();
+
             Mostrar(2, true, Color.White);
+
+            DataTable Productos = new DataTable();
+
+            using (SqlConnection conexion = Conexion.Conectar())
+            {
+                SqlCommand cmdSelect;
+                SqlDataAdapter adapterLibros = new SqlDataAdapter();
+
+                string sentencia = "Select * from Proveedor where IDProveedor = @id";
+                cmdSelect = new SqlCommand(sentencia, conexion);
+                cmdSelect.Parameters.AddWithValue("@id", Convert.ToInt32(id));
+
+                try
+                {
+                    adapterLibros.SelectCommand = cmdSelect;
+                    conexion.Open();
+                    adapterLibros.Fill(Productos);
+                    TxtNombre.Text = Productos.Rows[0]["NombreProv"].ToString();
+                    TxtCalle.Text = Productos.Rows[0]["Calle"].ToString();
+                    TxtDelegacion.Text = Productos.Rows[0]["Delegacion"].ToString();
+                    TxtColonia.Text = Productos.Rows[0]["Colonia"].ToString();
+                    TxtCP.Text = Productos.Rows[0]["C_Postal"].ToString();
+                    TxtTelefono.Text = Productos.Rows[0]["Telefono"].ToString();
+                    TxtPContacto.Text = Productos.Rows[0]["PersonaContacto"].ToString();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
 
             op = 2;
         }
@@ -202,12 +240,19 @@ namespace Karpicentro.Forms
             DialogResult Resultado = MessageBox.Show("¿Desea elimar el registro " + id + " ?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (Resultado == DialogResult.Yes)
             {
-                if (pv.Eliminar())
+                DialogResult Resultad2 = MessageBox.Show("¿Si quiere eliminar a este proveedor debe elimnar los registros del almacen ?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (Resultad2 == DialogResult.Yes)
                 {
-                    MessageBox.Show("Registro eliminado exitosamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MostrarProveedor();
-                    HabilitaBotones();
-                    Mostrar(1, false, Color.Gray);
+                    if (pv.EliminarRegAlmacen())
+                    {
+                        if (pv.Eliminar())
+                        {
+                            MessageBox.Show("Registro eliminado exitosamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MostrarProveedor();
+                            HabilitaBotones();
+                            Mostrar(1, false, Color.Gray);
+                        }
+                    }
                 }
             }
         }
@@ -215,7 +260,20 @@ namespace Karpicentro.Forms
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             Mostrar(1, false, Color.Gray);
+            LimpiaCampos();
             errorProvider1.Clear();
+        }
+
+        private void TxtCP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && e.KeyChar != '.')
+                e.Handled = true;
+        }
+
+        private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && e.KeyChar != '.')
+                e.Handled = true;
         }
     }
 }

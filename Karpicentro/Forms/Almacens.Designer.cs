@@ -245,12 +245,12 @@
             this.DgvAlmacen.BackgroundColor = System.Drawing.Color.White;
             this.DgvAlmacen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvAlmacen.GridColor = System.Drawing.Color.Black;
-            this.DgvAlmacen.Location = new System.Drawing.Point(447, 162);
+            this.DgvAlmacen.Location = new System.Drawing.Point(478, 145);
             this.DgvAlmacen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvAlmacen.Name = "DgvAlmacen";
             this.DgvAlmacen.RowHeadersWidth = 51;
             this.DgvAlmacen.RowTemplate.Height = 24;
-            this.DgvAlmacen.Size = new System.Drawing.Size(584, 270);
+            this.DgvAlmacen.Size = new System.Drawing.Size(613, 357);
             this.DgvAlmacen.TabIndex = 44;
             // 
             // errorProvider1

@@ -30,6 +30,8 @@
         {
             this.PanelFormSecundario = new System.Windows.Forms.Panel();
             this.PanelBotones = new System.Windows.Forms.Panel();
+            this.BtnSalir = new FontAwesome.Sharp.IconButton();
+            this.BtnClientes = new FontAwesome.Sharp.IconButton();
             this.BtnHome = new FontAwesome.Sharp.IconButton();
             this.BtnProductos = new FontAwesome.Sharp.IconButton();
             this.BtnAlmacen = new FontAwesome.Sharp.IconButton();
@@ -55,6 +57,8 @@
             // PanelBotones
             // 
             this.PanelBotones.BackColor = System.Drawing.Color.Transparent;
+            this.PanelBotones.Controls.Add(this.BtnSalir);
+            this.PanelBotones.Controls.Add(this.BtnClientes);
             this.PanelBotones.Controls.Add(this.BtnHome);
             this.PanelBotones.Controls.Add(this.BtnProductos);
             this.PanelBotones.Controls.Add(this.BtnAlmacen);
@@ -67,6 +71,46 @@
             this.PanelBotones.Name = "PanelBotones";
             this.PanelBotones.Size = new System.Drawing.Size(1212, 83);
             this.PanelBotones.TabIndex = 5;
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BtnSalir.FlatAppearance.BorderSize = 0;
+            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalir.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnSalir.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.BtnSalir.IconColor = System.Drawing.Color.White;
+            this.BtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSalir.Location = new System.Drawing.Point(928, 0);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(114, 83);
+            this.BtnSalir.TabIndex = 6;
+            this.BtnSalir.Text = "Salir";
+            this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            // 
+            // BtnClientes
+            // 
+            this.BtnClientes.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BtnClientes.FlatAppearance.BorderSize = 0;
+            this.BtnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClientes.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnClientes.IconChar = FontAwesome.Sharp.IconChar.BasketShopping;
+            this.BtnClientes.IconColor = System.Drawing.Color.White;
+            this.BtnClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnClientes.Location = new System.Drawing.Point(613, 0);
+            this.BtnClientes.Name = "BtnClientes";
+            this.BtnClientes.Size = new System.Drawing.Size(170, 83);
+            this.BtnClientes.TabIndex = 5;
+            this.BtnClientes.Text = "Clientes";
+            this.BtnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnClientes.UseVisualStyleBackColor = true;
+            this.BtnClientes.Click += new System.EventHandler(this.BtnClientes_Click);
             // 
             // BtnHome
             // 
@@ -199,5 +243,7 @@
         private FontAwesome.Sharp.IconButton BtnProveedor;
         private FontAwesome.Sharp.IconButton BtnAgregarEmpleados;
         private FontAwesome.Sharp.IconButton BtnHome;
+        private FontAwesome.Sharp.IconButton BtnClientes;
+        private FontAwesome.Sharp.IconButton BtnSalir;
     }
 }

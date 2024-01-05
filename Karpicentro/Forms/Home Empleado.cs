@@ -52,5 +52,15 @@ namespace Karpicentro.Forms
         {
             AbrirHijo(new MenuEmpleado()); 
         }
+
+        private void BtnCotizacion_Click(object sender, EventArgs e)
+        {
+            AbrirHijo(new Catalogo());
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

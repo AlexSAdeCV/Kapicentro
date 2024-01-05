@@ -101,6 +101,9 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RJCodeAdvance.RJControls.1.0.0\lib\net45\RJCodeAdvance.RJControls.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -109,6 +112,7 @@
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.5.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -138,12 +142,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Botones\RJButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Botones\RJComboBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Botones\RJTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -172,6 +170,12 @@
     <Compile Include="Forms\Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Cotizaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cotizaciones.Designer.cs">
+      <DependentUpon>Cotizaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MenuAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,12 +193,6 @@
     </Compile>
     <Compile Include="Forms\CatalogoAdmin.Designer.cs">
       <DependentUpon>CatalogoAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Cotizacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Cotizacion.Designer.cs">
-      <DependentUpon>Cotizacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Empleados.cs">
       <SubType>Form</SubType>
@@ -255,6 +253,9 @@
     <EmbeddedResource Include="Forms\Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cotizaciones.resx">
+      <DependentUpon>Cotizaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MenuAdmin.resx">
       <DependentUpon>MenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,9 +264,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CatalogoAdmin.resx">
       <DependentUpon>CatalogoAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Cotizacion.resx">
-      <DependentUpon>Cotizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
@@ -317,6 +315,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Base de Datos\Karpicentro Base.sql" />
+    <None Include="Resources\tabla.png" />
+    <None Include="Resources\silla.png" />
+    <None Include="Resources\mesita-de-noche.png" />
+    <None Include="Resources\taburete.png" />
     <None Include="Resources\MesaComedor.png" />
     <None Include="Resources\1.0.png" />
     <None Include="Resources\2.0.png" />

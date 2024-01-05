@@ -32,12 +32,12 @@
             this.Pnlinserstar = new System.Windows.Forms.Panel();
             this.TxtTelefono = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.Txt_CP = new System.Windows.Forms.TextBox();
+            this.TxtCP = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.Txt_NE = new System.Windows.Forms.TextBox();
+            this.TxtNE = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.Txt_Calle = new System.Windows.Forms.TextBox();
+            this.TxtCalle = new System.Windows.Forms.TextBox();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.TxtDelegacion = new System.Windows.Forms.TextBox();
             this.BtnCancelar = new System.Windows.Forms.Button();
@@ -47,17 +47,17 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Txt_AP = new System.Windows.Forms.TextBox();
+            this.TxtAP = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.Txt_AM = new System.Windows.Forms.TextBox();
-            this.Txt_Nombre = new System.Windows.Forms.TextBox();
+            this.TxtAM = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.DgvAlmacen = new System.Windows.Forms.DataGridView();
+            this.DgvClientes = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Pnlinserstar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvAlmacen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,12 +67,12 @@
             this.Pnlinserstar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Pnlinserstar.Controls.Add(this.TxtTelefono);
             this.Pnlinserstar.Controls.Add(this.label6);
-            this.Pnlinserstar.Controls.Add(this.Txt_CP);
+            this.Pnlinserstar.Controls.Add(this.TxtCP);
             this.Pnlinserstar.Controls.Add(this.label10);
-            this.Pnlinserstar.Controls.Add(this.Txt_NE);
+            this.Pnlinserstar.Controls.Add(this.TxtNE);
             this.Pnlinserstar.Controls.Add(this.label13);
             this.Pnlinserstar.Controls.Add(this.BtnAgregar);
-            this.Pnlinserstar.Controls.Add(this.Txt_Calle);
+            this.Pnlinserstar.Controls.Add(this.TxtCalle);
             this.Pnlinserstar.Controls.Add(this.BtnEliminar);
             this.Pnlinserstar.Controls.Add(this.TxtDelegacion);
             this.Pnlinserstar.Controls.Add(this.BtnCancelar);
@@ -82,10 +82,10 @@
             this.Pnlinserstar.Controls.Add(this.label15);
             this.Pnlinserstar.Controls.Add(this.label5);
             this.Pnlinserstar.Controls.Add(this.label4);
-            this.Pnlinserstar.Controls.Add(this.Txt_AP);
+            this.Pnlinserstar.Controls.Add(this.TxtAP);
             this.Pnlinserstar.Controls.Add(this.label7);
-            this.Pnlinserstar.Controls.Add(this.Txt_AM);
-            this.Pnlinserstar.Controls.Add(this.Txt_Nombre);
+            this.Pnlinserstar.Controls.Add(this.TxtAM);
+            this.Pnlinserstar.Controls.Add(this.TxtNombre);
             this.Pnlinserstar.Controls.Add(this.label3);
             this.Pnlinserstar.Controls.Add(this.label2);
             this.Pnlinserstar.ForeColor = System.Drawing.Color.White;
@@ -114,13 +114,13 @@
             this.label6.TabIndex = 58;
             this.label6.Text = "Telefono";
             // 
-            // Txt_CP
+            // TxtCP
             // 
-            this.Txt_CP.Location = new System.Drawing.Point(20, 252);
-            this.Txt_CP.Name = "Txt_CP";
-            this.Txt_CP.Size = new System.Drawing.Size(158, 20);
-            this.Txt_CP.TabIndex = 6;
-            this.Txt_CP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_CP_KeyPress);
+            this.TxtCP.Location = new System.Drawing.Point(20, 252);
+            this.TxtCP.Name = "TxtCP";
+            this.TxtCP.Size = new System.Drawing.Size(158, 20);
+            this.TxtCP.TabIndex = 6;
+            this.TxtCP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_CP_KeyPress);
             // 
             // label10
             // 
@@ -134,13 +134,13 @@
             this.label10.TabIndex = 53;
             this.label10.Text = "CP";
             // 
-            // Txt_NE
+            // TxtNE
             // 
-            this.Txt_NE.Location = new System.Drawing.Point(204, 252);
-            this.Txt_NE.Name = "Txt_NE";
-            this.Txt_NE.Size = new System.Drawing.Size(140, 20);
-            this.Txt_NE.TabIndex = 7;
-            this.Txt_NE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_NE_KeyPress);
+            this.TxtNE.Location = new System.Drawing.Point(204, 252);
+            this.TxtNE.Name = "TxtNE";
+            this.TxtNE.Size = new System.Drawing.Size(140, 20);
+            this.TxtNE.TabIndex = 7;
+            this.TxtNE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_NE_KeyPress);
             // 
             // label13
             // 
@@ -169,12 +169,12 @@
             this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.Btn_Agregar_Click);
             // 
-            // Txt_Calle
+            // TxtCalle
             // 
-            this.Txt_Calle.Location = new System.Drawing.Point(20, 204);
-            this.Txt_Calle.Name = "Txt_Calle";
-            this.Txt_Calle.Size = new System.Drawing.Size(158, 20);
-            this.Txt_Calle.TabIndex = 4;
+            this.TxtCalle.Location = new System.Drawing.Point(20, 204);
+            this.TxtCalle.Name = "TxtCalle";
+            this.TxtCalle.Size = new System.Drawing.Size(158, 20);
+            this.TxtCalle.TabIndex = 4;
             // 
             // BtnEliminar
             // 
@@ -291,12 +291,12 @@
             this.label4.TabIndex = 40;
             this.label4.Text = "------Datos------";
             // 
-            // Txt_AP
+            // TxtAP
             // 
-            this.Txt_AP.Location = new System.Drawing.Point(18, 130);
-            this.Txt_AP.Name = "Txt_AP";
-            this.Txt_AP.Size = new System.Drawing.Size(158, 20);
-            this.Txt_AP.TabIndex = 2;
+            this.TxtAP.Location = new System.Drawing.Point(18, 130);
+            this.TxtAP.Name = "TxtAP";
+            this.TxtAP.Size = new System.Drawing.Size(158, 20);
+            this.TxtAP.TabIndex = 2;
             // 
             // label7
             // 
@@ -310,19 +310,19 @@
             this.label7.TabIndex = 36;
             this.label7.Text = "Ap. Paterno";
             // 
-            // Txt_AM
+            // TxtAM
             // 
-            this.Txt_AM.Location = new System.Drawing.Point(190, 130);
-            this.Txt_AM.Name = "Txt_AM";
-            this.Txt_AM.Size = new System.Drawing.Size(158, 20);
-            this.Txt_AM.TabIndex = 3;
+            this.TxtAM.Location = new System.Drawing.Point(190, 130);
+            this.TxtAM.Name = "TxtAM";
+            this.TxtAM.Size = new System.Drawing.Size(158, 20);
+            this.TxtAM.TabIndex = 3;
             // 
-            // Txt_Nombre
+            // TxtNombre
             // 
-            this.Txt_Nombre.Location = new System.Drawing.Point(19, 70);
-            this.Txt_Nombre.Name = "Txt_Nombre";
-            this.Txt_Nombre.Size = new System.Drawing.Size(158, 20);
-            this.Txt_Nombre.TabIndex = 1;
+            this.TxtNombre.Location = new System.Drawing.Point(19, 70);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(158, 20);
+            this.TxtNombre.TabIndex = 1;
             // 
             // label3
             // 
@@ -348,19 +348,19 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "Nombre";
             // 
-            // DgvAlmacen
+            // DgvClientes
             // 
-            this.DgvAlmacen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvAlmacen.BackgroundColor = System.Drawing.Color.White;
-            this.DgvAlmacen.ColumnHeadersHeight = 29;
-            this.DgvAlmacen.GridColor = System.Drawing.Color.Black;
-            this.DgvAlmacen.Location = new System.Drawing.Point(418, 72);
-            this.DgvAlmacen.Margin = new System.Windows.Forms.Padding(2);
-            this.DgvAlmacen.Name = "DgvAlmacen";
-            this.DgvAlmacen.RowHeadersWidth = 10;
-            this.DgvAlmacen.RowTemplate.Height = 24;
-            this.DgvAlmacen.Size = new System.Drawing.Size(871, 505);
-            this.DgvAlmacen.TabIndex = 58;
+            this.DgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvClientes.BackgroundColor = System.Drawing.Color.White;
+            this.DgvClientes.ColumnHeadersHeight = 29;
+            this.DgvClientes.GridColor = System.Drawing.Color.Black;
+            this.DgvClientes.Location = new System.Drawing.Point(418, 72);
+            this.DgvClientes.Margin = new System.Windows.Forms.Padding(2);
+            this.DgvClientes.Name = "DgvClientes";
+            this.DgvClientes.RowHeadersWidth = 10;
+            this.DgvClientes.RowTemplate.Height = 24;
+            this.DgvClientes.Size = new System.Drawing.Size(871, 505);
+            this.DgvClientes.TabIndex = 58;
             // 
             // label1
             // 
@@ -385,13 +385,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(60)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1300, 599);
             this.Controls.Add(this.Pnlinserstar);
-            this.Controls.Add(this.DgvAlmacen);
+            this.Controls.Add(this.DgvClientes);
             this.Controls.Add(this.label1);
             this.Name = "Clientes";
             this.Text = "Clientes";
             this.Pnlinserstar.ResumeLayout(false);
             this.Pnlinserstar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvAlmacen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -403,12 +403,12 @@
         private System.Windows.Forms.Panel Pnlinserstar;
         private System.Windows.Forms.TextBox TxtTelefono;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox Txt_CP;
+        private System.Windows.Forms.TextBox TxtCP;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox Txt_NE;
+        private System.Windows.Forms.TextBox TxtNE;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.TextBox Txt_Calle;
+        private System.Windows.Forms.TextBox TxtCalle;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.TextBox TxtDelegacion;
         private System.Windows.Forms.Button BtnCancelar;
@@ -418,13 +418,13 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox Txt_AP;
+        private System.Windows.Forms.TextBox TxtAP;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox Txt_AM;
-        private System.Windows.Forms.TextBox Txt_Nombre;
+        private System.Windows.Forms.TextBox TxtAM;
+        private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView DgvAlmacen;
+        private System.Windows.Forms.DataGridView DgvClientes;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }

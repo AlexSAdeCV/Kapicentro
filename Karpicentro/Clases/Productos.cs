@@ -24,6 +24,7 @@ namespace Karpicentro.Clases
         public int Existencia { get; set; }
         public int IDProducto { get; set; }
         public string Mensaje { get; set; }
+        public byte[] Imagen { get; set; }
         public static int cantidadfinal { get; set; }
 
         public Productos()
@@ -41,9 +42,10 @@ namespace Karpicentro.Clases
                 int resultado;
                 string Sentencia;
 
-                Sentencia = @"insert into Producto values (@Nombre, @Descripcion, @TipoMadera, @PrecioV, @Alto,@Largo,@Ancho, @Existencia)";
+                Sentencia = @"insert into Producto values (@IDProducto, @Nombre, @Descripcion, @TipoMadera, @PrecioV, @Alto, @Largo, @Ancho,  @Imagen, @Existencia)";
                 CMDSql = new SqlCommand(Sentencia, Con);
 
+                CMDSql.Parameters.AddWithValue("@IDProducto", IDProducto);
                 CMDSql.Parameters.AddWithValue("@Nombre", Nombre);
                 CMDSql.Parameters.AddWithValue("@Descripcion", Descripcion);
                 CMDSql.Parameters.AddWithValue("@TipoMadera", TipoMadera);
@@ -52,6 +54,7 @@ namespace Karpicentro.Clases
                 CMDSql.Parameters.AddWithValue("@Largo", Medidas[1]);
                 CMDSql.Parameters.AddWithValue("@Ancho", Medidas[2]);
                 CMDSql.Parameters.AddWithValue("@Existencia", Existencia);
+                CMDSql.Parameters.AddWithValue("@Imagen", Imagen);
 
                 try
                 {
@@ -82,13 +85,18 @@ namespace Karpicentro.Clases
                 int resultado;
                 string Sentencia;
 
-                Sentencia = @"update Producto set Nombre = @Nombre, idmadera = @idmadera, PrecioV = @PrecioV, Existencia = @Existencia  where IDProducto = @IDProducto";
+                Sentencia = @"update Producto set Nombre = @Nombre, Descripcion = @Descripcion, idmadera = @TipoMadera, PrecioV = @PrecioV, Alto = @Alto, Largo = @Largo, Ancho = @Ancho, Existencia = @Existencia, Imagen = @Imagen where IDProducto = @IDProducto";
                 CMDSql = new SqlCommand(Sentencia, Con);
 
                 CMDSql.Parameters.AddWithValue("@Nombre", Nombre);
-                CMDSql.Parameters.AddWithValue("@idmadera", TipoMadera);
+                CMDSql.Parameters.AddWithValue("@Descripcion", Descripcion);
+                CMDSql.Parameters.AddWithValue("@TipoMadera", TipoMadera);
                 CMDSql.Parameters.AddWithValue("@PrecioV", PrecioVenta);
+                CMDSql.Parameters.AddWithValue("@Alto", Medidas[0]);
+                CMDSql.Parameters.AddWithValue("@Largo", Medidas[1]);
+                CMDSql.Parameters.AddWithValue("@Ancho", Medidas[2]);
                 CMDSql.Parameters.AddWithValue("@Existencia", Existencia);
+                CMDSql.Parameters.AddWithValue("@Imagen", Imagen);
                 CMDSql.Parameters.AddWithValue("@IDProducto", IDProducto);
 
                 try
@@ -154,7 +162,7 @@ namespace Karpicentro.Clases
                 SqlCommand CmdSQL;
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
 
-                Cadena = @"select IDProducto, Nombre, TipoMadera, PrecioV, Existencia from Producto inner join Almacen on idmadera = IDAlmacen";
+                Cadena = @"select IDProducto, Nombre, TipoMadera, PrecioV, Existencia, idmadera from Producto inner join Almacen on idmadera = IDAlmacen";
 
                 CmdSQL = new SqlCommand(Cadena, Conectar);
 
@@ -186,7 +194,7 @@ namespace Karpicentro.Clases
                 SqlCommand CmdSQL;
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
 
-                Cadena = @"select IDProducto,Nombre, Descripcion, TipoMadera, PrecioV, Alto, Largo, Ancho, Existencia from Producto inner join Almacen on idmadera = IDAlmacen";
+                Cadena = @"select IDProducto,Nombre, Descripcion, TipoMadera, PrecioV, Alto, Largo, Ancho, Imagen, Existencia from Producto inner join Almacen on idmadera = IDAlmacen";
 
                 CmdSQL = new SqlCommand(Cadena, Conectar);
                 CmdSQL.Parameters.AddWithValue("@IDProducto", IDProducto);
@@ -210,6 +218,7 @@ namespace Karpicentro.Clases
                         Medidas[0] = Convert.ToDouble(Productos.Rows[IDProducto]["Alto"]);
                         Medidas[1] = Convert.ToDouble(Productos.Rows[IDProducto]["Largo"]);
                         Medidas[2] = Convert.ToDouble(Productos.Rows[IDProducto]["Ancho"]);
+                        Imagen = (Byte[])Productos.Rows[IDProducto]["Imagen"];
                         Existencia = Convert.ToInt32(Productos.Rows[IDProducto]["Existencia"]);
 
                         exito = true;

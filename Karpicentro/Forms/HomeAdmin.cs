@@ -50,6 +50,11 @@ namespace Karpicentro.Forms
             AbrirHijo(new MenuAdmin());
         }
 
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void AbrirHijo(Form Hijito)
         {
             if (Hijo != null)
@@ -66,6 +71,11 @@ namespace Karpicentro.Forms
                 Hijito.Show();
                 Hijo = null;
             }
+        }
+
+        private void BtnClientes_Click(object sender, EventArgs e)
+        {
+            AbrirHijo(new Clientes());
         }
     }
 }

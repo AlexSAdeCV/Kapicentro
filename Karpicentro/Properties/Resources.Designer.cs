@@ -163,9 +163,49 @@ namespace Karpicentro.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mesita_de_noche {
+            get {
+                object obj = ResourceManager.GetObject("mesita_de_noche", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap silla {
+            get {
+                object obj = ResourceManager.GetObject("silla", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tabla {
+            get {
+                object obj = ResourceManager.GetObject("tabla", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TablonMInecraft {
             get {
                 object obj = ResourceManager.GetObject("TablonMInecraft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap taburete {
+            get {
+                object obj = ResourceManager.GetObject("taburete", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

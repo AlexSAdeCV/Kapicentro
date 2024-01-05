@@ -1,4 +1,5 @@
-﻿using Karpicentro.Forms;
+﻿using Karpicentro.Clases;
+using Karpicentro.Forms;
 using Karpicentro.Forms.Admin;
 using Karpicentro.Forms.Empleado;
 using System;
@@ -19,7 +20,7 @@ namespace Karpicentro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Empleados());
+            Application.Run(new Catalogo());
         }
     }
 }
