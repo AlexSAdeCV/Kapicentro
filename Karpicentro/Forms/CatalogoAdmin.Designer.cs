@@ -58,6 +58,8 @@
             this.DgvProductos = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.OfdImagen = new System.Windows.Forms.OpenFileDialog();
+            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.Pnlinserstar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PcbImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NupExistencia)).BeginInit();
@@ -403,11 +405,36 @@
             this.OfdImagen.FileName = "openFileDialog1";
             this.OfdImagen.FileOk += new System.ComponentModel.CancelEventHandler(this.OfdImagen_FileOk);
             // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.ForeColor = System.Drawing.Color.Black;
+            this.BtnBuscar.Location = new System.Drawing.Point(1039, 49);
+            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(100, 35);
+            this.BtnBuscar.TabIndex = 65;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(833, 57);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(189, 20);
+            this.textBox1.TabIndex = 66;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
             // CatalogoAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1152, 565);
+            this.Controls.Add(this.BtnBuscar);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Pnlinserstar);
             this.Controls.Add(this.DgvProductos);
@@ -455,5 +482,7 @@
         private System.Windows.Forms.PictureBox PcbImagen;
         private System.Windows.Forms.OpenFileDialog OfdImagen;
         private System.Windows.Forms.Label LblID;
+        private System.Windows.Forms.Button BtnBuscar;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

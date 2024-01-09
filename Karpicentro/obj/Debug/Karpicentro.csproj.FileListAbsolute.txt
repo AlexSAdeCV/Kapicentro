@@ -784,3 +784,4 @@ C:\Users\alexa\OneDrive\Escritorio\Kapicentro-main\Karpicentro\obj\Debug\Karpice
 C:\Users\alexa\OneDrive\Escritorio\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.exe
 C:\Users\alexa\OneDrive\Escritorio\Kapicentro-main\Karpicentro\obj\Debug\Karpicentro.pdb
 C:\Users\alexa\OneDrive\Escritorio\Kapicentro-main\Karpicentro\bin\Debug\RJCodeAdvance.RJControls.dll
+C:\Github\Kapicentro\Kapicentro\Karpicentro\bin\Debug\RJCodeAdvance.RJControls.dll

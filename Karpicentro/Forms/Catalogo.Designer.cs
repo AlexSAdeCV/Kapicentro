@@ -38,8 +38,13 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnComprar = new RJCodeAdvance.RJControls.RJButton();
+            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LblID = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PcbImgProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -141,11 +146,51 @@
             this.BtnComprar.UseVisualStyleBackColor = false;
             this.BtnComprar.Click += new System.EventHandler(this.BtnComprar_Click_1);
             // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.ForeColor = System.Drawing.Color.Black;
+            this.BtnBuscar.Location = new System.Drawing.Point(549, 71);
+            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(100, 35);
+            this.BtnBuscar.TabIndex = 67;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(343, 79);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(189, 20);
+            this.textBox1.TabIndex = 68;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // LblID
+            // 
+            this.LblID.AutoSize = true;
+            this.LblID.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Bold);
+            this.LblID.Location = new System.Drawing.Point(234, 142);
+            this.LblID.Name = "LblID";
+            this.LblID.Size = new System.Drawing.Size(61, 16);
+            this.LblID.TabIndex = 69;
+            this.LblID.Text = "label7";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Catalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 713);
+            this.Controls.Add(this.LblID);
+            this.Controls.Add(this.BtnBuscar);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.BtnComprar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
@@ -158,6 +203,7 @@
             this.Text = "Catalogo";
             ((System.ComponentModel.ISupportInitialize)(this.PcbImgProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,5 +218,9 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private RJCodeAdvance.RJControls.RJButton BtnComprar;
+        private System.Windows.Forms.Button BtnBuscar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label LblID;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

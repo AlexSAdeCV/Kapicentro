@@ -42,54 +42,61 @@ namespace Karpicentro.Forms
 
         private void Btn_Modificar_Click(object sender, EventArgs e)
         {
-            int renglon;
-            string id, idpuesto;
-
-            renglon = DgvEmpleados.CurrentRow.Index;
-            id = DgvEmpleados.Rows[renglon].Cells[0].Value.ToString();
-
-            Mostrar(2, true, Color.White);
-
-            DataTable Productos = new DataTable();
-
-            using (SqlConnection conexion = Conexion.Conectar())
+            if (DgvEmpleados.Rows.Count < 0)
             {
-                SqlCommand cmdSelect;
-                SqlDataAdapter adapterLibros = new SqlDataAdapter();
-
-                string sentencia = "Select usuario, Contraseña, Nombre, ApellidoPaterno, ApellidoMaterno, Telefono, Calle, NoExterior, CodigoPostal, Sueldo from Empleados where IDEmpleado = @id";
-                cmdSelect = new SqlCommand(sentencia, conexion);
-                cmdSelect.Parameters.AddWithValue("@id", Convert.ToInt32(id));
-
-                try
-                {
-                    adapterLibros.SelectCommand = cmdSelect;
-                    conexion.Open();
-                    adapterLibros.Fill(Productos);
-                    TxtUsuario.Text = Productos.Rows[0]["usuario"].ToString();
-                    TxtContrasena.Text = Productos.Rows[0]["Contraseña"].ToString();
-                    TxtNombre.Text = Productos.Rows[0]["Nombre"].ToString();
-                    TxtAP.Text = Productos.Rows[0]["ApellidoPaterno"].ToString();
-                    TxtAM.Text = Productos.Rows[0]["ApellidoMaterno"].ToString();
-                    TxtTelefono.Text = Productos.Rows[0]["Telefono"].ToString();
-                    TxtCalle.Text = Productos.Rows[0]["Calle"].ToString();
-                    TxtNE.Text = Productos.Rows[0]["NoExterior"].ToString();
-                    TxtCP.Text = Productos.Rows[0]["CodigoPostal"].ToString();
-                    TxtSueldo.Text = Productos.Rows[0]["Sueldo"].ToString();
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                MessageBox.Show($"Debe de seleccionar un registro primero", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-            if ((Int32)DgvEmpleados.Rows[renglon].Cells[6].Value == 1)
-                CmbIDPuesto.Text = "Administrador";
             else
-                CmbIDPuesto.SelectedIndex = 1;
+            {
+                int renglon;
+                string id, idpuesto;
 
-            op = 2;
+                renglon = DgvEmpleados.CurrentRow.Index;
+                id = DgvEmpleados.Rows[renglon].Cells[0].Value.ToString();
+
+                Mostrar(2, true, Color.White);
+
+                DataTable Productos = new DataTable();
+
+                using (SqlConnection conexion = Conexion.Conectar())
+                {
+                    SqlCommand cmdSelect;
+                    SqlDataAdapter adapterLibros = new SqlDataAdapter();
+
+                    string sentencia = "Select usuario, Contraseña, Nombre, ApellidoPaterno, ApellidoMaterno, Telefono, Calle, NoExterior, CodigoPostal, Sueldo from Empleados where IDEmpleado = @id";
+                    cmdSelect = new SqlCommand(sentencia, conexion);
+                    cmdSelect.Parameters.AddWithValue("@id", Convert.ToInt32(id));
+
+                    try
+                    {
+                        adapterLibros.SelectCommand = cmdSelect;
+                        conexion.Open();
+                        adapterLibros.Fill(Productos);
+                        TxtUsuario.Text = Productos.Rows[0]["usuario"].ToString();
+                        TxtContrasena.Text = Productos.Rows[0]["Contraseña"].ToString();
+                        TxtNombre.Text = Productos.Rows[0]["Nombre"].ToString();
+                        TxtAP.Text = Productos.Rows[0]["ApellidoPaterno"].ToString();
+                        TxtAM.Text = Productos.Rows[0]["ApellidoMaterno"].ToString();
+                        TxtTelefono.Text = Productos.Rows[0]["Telefono"].ToString();
+                        TxtCalle.Text = Productos.Rows[0]["Calle"].ToString();
+                        TxtNE.Text = Productos.Rows[0]["NoExterior"].ToString();
+                        TxtCP.Text = Productos.Rows[0]["CodigoPostal"].ToString();
+                        TxtSueldo.Text = Productos.Rows[0]["Sueldo"].ToString();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+
+                if ((Int32)DgvEmpleados.Rows[renglon].Cells[6].Value == 1)
+                    CmbIDPuesto.Text = "Administrador";
+                else
+                    CmbIDPuesto.SelectedIndex = 1;
+
+                op = 2;
+            }
         }
 
         private void Btn_Eliminar_Click(object sender, EventArgs e)
@@ -160,7 +167,7 @@ namespace Karpicentro.Forms
                         empleado.Usuario = TxtUsuario.Text;
                         empleado.Contrasena = TxtContrasena.Text;
                         empleado.Puesto = Convert.ToInt32(CmbIDPuesto.SelectedIndex.ToString()) + 1;
-                        empleado.Sueldo = Convert.ToInt32(TxtSueldo.Text);
+                        empleado.Sueldo = Convert.ToDouble(TxtSueldo.Text);
 
                         empleado.Nombre = TxtNombre.Text;
                         empleado.PApellido = TxtAP.Text;
@@ -186,7 +193,7 @@ namespace Karpicentro.Forms
                         empleado.Usuario = TxtUsuario.Text;
                         empleado.Contrasena = TxtContrasena.Text;
                         empleado.Puesto = Convert.ToInt32(CmbIDPuesto.SelectedIndex.ToString()) + 1;
-                        empleado.Sueldo = Convert.ToInt32(TxtSueldo.Text);
+                        empleado.Sueldo = Convert.ToDouble(TxtSueldo.Text);
 
                         empleado.Nombre = TxtNombre.Text;
                         empleado.PApellido = TxtAP.Text;
@@ -206,6 +213,32 @@ namespace Karpicentro.Forms
                             Mostrar(1, false, Color.Gray);
                         }
                         break;
+                    case 3:
+                        empleado.Usuario = TxtUsuario.Text;
+                        empleado.Contrasena = TxtContrasena.Text;
+                        empleado.Puesto = Convert.ToInt32(CmbIDPuesto.SelectedIndex.ToString()) + 1;
+                        empleado.Sueldo = Convert.ToDouble(TxtSueldo.Text);
+
+                        empleado.Nombre = TxtNombre.Text;
+                        empleado.PApellido = TxtAP.Text;
+                        empleado.SApellido = TxtAM.Text;
+
+                        empleado.Calle = TxtCalle.Text;
+                        empleado.Telefono = TxtTelefono.Text;
+                        empleado.CP = TxtCP.Text;
+                        empleado.NExterior = TxtNE.Text;
+
+                        if (empleado.Actualizar(Convert.ToInt32(textBox1.Text)))
+                        {
+                            MessageBox.Show("Registro modificado exitosamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LimpiaCampos();
+                            MostrarEmpleados();
+                            HabilitaBotones();
+                            Mostrar(1, false, Color.Gray);
+                        }
+
+                        textBox1.Text = "";
+                        break;
                 }
             }
         }
@@ -214,6 +247,7 @@ namespace Karpicentro.Forms
         {
             Mostrar(1, false, Color.Gray);
             LimpiaCampos();
+            textBox1.Text = "";
             errorProvider1.Clear();
             CmbIDPuesto.SelectedIndex = 0;
         }
@@ -317,6 +351,129 @@ namespace Karpicentro.Forms
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            if (ValidaCamposBuscar())
+            {
+                if (Convert.ToInt32(textBox1.Text) > EncontrarIDMax())
+                {
+                    MessageBox.Show($"No Existe el registro {textBox1.Text}", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBox1.Text = "";
+                }
+                else
+                {
+                    errorProvider1.Clear();
+                    int renglon;
+                    string id;
+
+                    renglon = DgvEmpleados.CurrentRow.Index;
+                    id = DgvEmpleados.Rows[renglon].Cells[0].Value.ToString();
+
+                    Mostrar(2, true, Color.White);
+
+                    DataTable Productos = new DataTable();
+
+                    using (SqlConnection conexion = Conexion.Conectar())
+                    {
+                        SqlCommand cmdSelect;
+                        SqlDataAdapter adapterLibros = new SqlDataAdapter();
+
+                        string sentencia = "Select usuario, Contraseña, Nombre, ApellidoPaterno, ApellidoMaterno, Telefono, Calle, NoExterior, CodigoPostal, Sueldo, idpuesto from Empleados where IDEmpleado = @id";
+                        cmdSelect = new SqlCommand(sentencia, conexion);
+                        cmdSelect.Parameters.AddWithValue("@id", Convert.ToInt32(textBox1.Text));
+
+                        try
+                        {
+                            adapterLibros.SelectCommand = cmdSelect;
+                            conexion.Open();
+                            adapterLibros.Fill(Productos);
+                            TxtUsuario.Text = Productos.Rows[0]["usuario"].ToString();
+                            TxtContrasena.Text = Productos.Rows[0]["Contraseña"].ToString();
+                            TxtNombre.Text = Productos.Rows[0]["Nombre"].ToString();
+                            TxtAP.Text = Productos.Rows[0]["ApellidoPaterno"].ToString();
+                            TxtAM.Text = Productos.Rows[0]["ApellidoMaterno"].ToString();
+                            TxtTelefono.Text = Productos.Rows[0]["Telefono"].ToString();
+                            TxtCalle.Text = Productos.Rows[0]["Calle"].ToString();
+                            TxtNE.Text = Productos.Rows[0]["NoExterior"].ToString();
+                            TxtCP.Text = Productos.Rows[0]["CodigoPostal"].ToString();
+                            TxtSueldo.Text = Productos.Rows[0]["Sueldo"].ToString();
+                            CmbIDPuesto.SelectedIndex = (Int32)Productos.Rows[0]["idpuesto"] - 1;
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+
+                    op = 3;
+                }
+            }
+        }
+
+        private void textBox1_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && e.KeyChar != '.')
+                e.Handled = true;
+        }
+
+        private bool ValidaCamposBuscar()
+        {
+            bool valido = true;
+            if (textBox1.Text.Length <= 0)
+            {
+                errorProvider1.SetError(textBox1, "Campo no puede estar en blanco");
+                valido = false;
+            }
+            return valido;
+        }
+
+        private int EncontrarIDMax()
+        {
+            int Idp = 0;
+
+            DataTable Productos = new DataTable();
+            using (SqlConnection conexion = Conexion.Conectar())
+            {
+                SqlCommand cmdSelect;
+                SqlDataAdapter adapterLibros = new SqlDataAdapter();
+
+                string sentencia = "select MAX(IDEmpleado) as id from Empleados";
+                cmdSelect = new SqlCommand(sentencia, conexion);
+
+                try
+                {
+                    adapterLibros.SelectCommand = cmdSelect;
+                    conexion.Open();
+                    adapterLibros.Fill(Productos);
+
+                    string temporal = Productos.Rows[0]["id"].ToString();
+
+                    if (temporal == "")
+                        Idp = 1;
+                    else
+                        Idp = (Int32)Productos.Rows[0]["id"];
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            return Idp;
+        }
+
+        private bool ValidaCamposModificar()
+        {
+            bool valido = true;
+            if (textBox1.Text.Length <= 0)
+            {
+                errorProvider1.SetError(textBox1, "Campo no puede estar en blanco");
+                valido = false;
+            }
+            return valido;
         }
     }
 }

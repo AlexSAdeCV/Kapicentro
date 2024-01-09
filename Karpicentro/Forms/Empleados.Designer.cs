@@ -62,6 +62,8 @@
             this.TxtTelefono = new System.Windows.Forms.TextBox();
             this.CmbIDPuesto = new System.Windows.Forms.ComboBox();
             this.Pnlinserstar = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEmpleados)).BeginInit();
             this.Pnlinserstar.SuspendLayout();
@@ -449,12 +451,37 @@
             this.Pnlinserstar.Size = new System.Drawing.Size(382, 554);
             this.Pnlinserstar.TabIndex = 56;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(955, 28);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(189, 20);
+            this.textBox1.TabIndex = 62;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress_1);
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.ForeColor = System.Drawing.Color.White;
+            this.BtnBuscar.Location = new System.Drawing.Point(1161, 20);
+            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(100, 35);
+            this.BtnBuscar.TabIndex = 62;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1314, 648);
+            this.Controls.Add(this.BtnBuscar);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.DgvEmpleados);
             this.Controls.Add(this.Pnlinserstar);
             this.Controls.Add(this.label1);
@@ -505,5 +532,7 @@
         private System.Windows.Forms.TextBox TxtContrasena;
         private System.Windows.Forms.Label LblNombreM;
         private System.Windows.Forms.TextBox TxtUsuario;
+        private System.Windows.Forms.Button BtnBuscar;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

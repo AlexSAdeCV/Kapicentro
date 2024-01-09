@@ -61,56 +61,63 @@ namespace Karpicentro.Forms
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-            int renglon;
-            string id, idmad;
-
-            renglon = DgvProductos.CurrentRow.Index;
-            id = DgvProductos.Rows[renglon].Cells[0].Value.ToString();
-
-            Mostrar(2, true, Color.White);
-
-            DataTable Productos = new DataTable();
-
-            using (SqlConnection conexion = Conexion.Conectar())
+            if (DgvProductos.RowCount == 1)
             {
-                SqlCommand cmdSelect;
-                SqlDataAdapter adapterLibros = new SqlDataAdapter();
-
-                string sentencia = "Select * from Producto where IDProducto = @id";
-                cmdSelect = new SqlCommand(sentencia, conexion);
-                cmdSelect.Parameters.AddWithValue("@id",Convert.ToInt32(id));
-
-                try
-                {
-                    adapterLibros.SelectCommand = cmdSelect;
-                    conexion.Open();
-                    adapterLibros.Fill(Productos);
-                    LblID.Visible = true;
-                    LblID.Text = $"ID: {Productos.Rows[0]["IDProducto"].ToString()}";
-                    TxtNombre.Text = Productos.Rows[0]["Nombre"].ToString();
-                    TxtPrecioVenta.Text = Productos.Rows[0]["PrecioV"].ToString();
-                    TxtDescripcion.Text = Productos.Rows[0]["Descripcion"].ToString();
-                    TxtAlto.Text = Productos.Rows[0]["Alto"].ToString();
-                    TxtLargo.Text = Productos.Rows[0]["Largo"].ToString();
-                    TxtAncho.Text = Productos.Rows[0]["Ancho"].ToString();
-                    MemoryStream ms = new MemoryStream((Byte[])Productos.Rows[0]["Imagen"]);
-                    Bitmap bm = new Bitmap(ms);
-                    PcbImagen.Visible = true;
-                    PcbImagen.Image = bm;
-                    NupExistencia.Value = (Int32)Productos.Rows[0]["Existencia"];
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                MessageBox.Show("No se han encontrado registros.");
             }
+            else
+            {
+                int renglon;
+                string id, idmad;
 
-            idmad = DgvProductos.Rows[renglon].Cells[5].Value.ToString();
+                renglon = DgvProductos.CurrentRow.Index;
+                id = DgvProductos.Rows[renglon].Cells[0].Value.ToString();
 
-            CmbMadera.SelectedIndex = Convert.ToInt32(idmad) - 1;
+                Mostrar(2, true, Color.White);
 
-            op = 2;
+                DataTable Productos = new DataTable();
+
+                using (SqlConnection conexion = Conexion.Conectar())
+                {
+                    SqlCommand cmdSelect;
+                    SqlDataAdapter adapterLibros = new SqlDataAdapter();
+
+                    string sentencia = "Select * from Producto where IDProducto = @id";
+                    cmdSelect = new SqlCommand(sentencia, conexion);
+                    cmdSelect.Parameters.AddWithValue("@id", Convert.ToInt32(id));
+
+                    try
+                    {
+                        adapterLibros.SelectCommand = cmdSelect;
+                        conexion.Open();
+                        adapterLibros.Fill(Productos);
+                        LblID.Visible = true;
+                        LblID.Text = $"ID: {Productos.Rows[0]["IDProducto"].ToString()}";
+                        TxtNombre.Text = Productos.Rows[0]["Nombre"].ToString();
+                        TxtPrecioVenta.Text = Productos.Rows[0]["PrecioV"].ToString();
+                        TxtDescripcion.Text = Productos.Rows[0]["Descripcion"].ToString();
+                        TxtAlto.Text = Productos.Rows[0]["Alto"].ToString();
+                        TxtLargo.Text = Productos.Rows[0]["Largo"].ToString();
+                        TxtAncho.Text = Productos.Rows[0]["Ancho"].ToString();
+                        MemoryStream ms = new MemoryStream((Byte[])Productos.Rows[0]["Imagen"]);
+                        Bitmap bm = new Bitmap(ms);
+                        PcbImagen.Visible = true;
+                        PcbImagen.Image = bm;
+                        NupExistencia.Value = (Int32)Productos.Rows[0]["Existencia"];
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+
+                idmad = DgvProductos.Rows[renglon].Cells[5].Value.ToString();
+
+                CmbMadera.SelectedIndex = Convert.ToInt32(idmad) - 1;
+
+                op = 2;
+            }
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -175,6 +182,31 @@ namespace Karpicentro.Forms
                             Mostrar(1, false, Color.Gray);
                         }
                         break;
+                    case 3:
+                        Pr.Nombre = TxtNombre.Text;
+                        Pr.TipoMadera = Convert.ToInt32(CmbMadera.SelectedValue);
+                        Pr.PrecioVenta = Convert.ToDouble(TxtPrecioVenta.Text);
+                        Pr.Descripcion = TxtDescripcion.Text;
+                        Pr.Medidas[0] = Convert.ToDouble(TxtAlto.Text);
+                        Pr.Medidas[1] = Convert.ToDouble(TxtLargo.Text);
+                        Pr.Medidas[2] = Convert.ToDouble(TxtAncho.Text);
+                        PcbImagen.Image.Save(ms, ImageFormat.Jpeg);
+                        Pr.Imagen = ms.ToArray();
+                        Pr.Existencia = Convert.ToInt32(NupExistencia.Value);
+                        Pr.IDProducto = Convert.ToInt32(textBox1.Text);
+
+                        if (Pr.Actualizar())
+                        {
+                            MessageBox.Show("Registro actualizado exitosamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LimpiaCampos();
+                            MostarCatalago();
+                            HabilitaBotones();
+                            PicBox(1);
+                            Mostrar(1, false, Color.Gray);
+                        }
+
+                        textBox1.Text = "";
+                        break;
                 }
 
             }
@@ -212,6 +244,7 @@ namespace Karpicentro.Forms
             Mostrar(1, false, Color.Gray);
             LimpiaCampos();
             PicBox(1);
+            textBox1.Text = "";
             LblID.Visible = false;
             errorProvider1.Clear();
             CmbMadera.SelectedIndex = 0;
@@ -421,6 +454,75 @@ namespace Karpicentro.Forms
             }
         }
 
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            if (ValidaCamposBuscar())
+            {
+                if (Convert.ToInt32(textBox1.Text) > EncontrarIDMax())
+                {
+                    MessageBox.Show($"No Existe el registro {textBox1.Text}", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBox1.Text = "";
+                }
+                else
+                {
+                    errorProvider1.Clear();
+                    int renglon;
+                    string id, idmad;
+
+                    renglon = DgvProductos.CurrentRow.Index;
+                    id = DgvProductos.Rows[renglon].Cells[0].Value.ToString();
+
+                    Mostrar(2, true, Color.White);
+
+                    DataTable Productos = new DataTable();
+
+                    using (SqlConnection conexion = Conexion.Conectar())
+                    {
+                        SqlCommand cmdSelect;
+                        SqlDataAdapter adapterLibros = new SqlDataAdapter();
+
+                        string sentencia = "Select * from Producto where IDProducto = @id";
+                        cmdSelect = new SqlCommand(sentencia, conexion);
+                        cmdSelect.Parameters.AddWithValue("@id", Convert.ToInt32(textBox1.Text));
+
+                        try
+                        {
+                            adapterLibros.SelectCommand = cmdSelect;
+                            conexion.Open();
+                            adapterLibros.Fill(Productos);
+                            LblID.Visible = true;
+                            LblID.Text = $"ID: {Productos.Rows[0]["IDProducto"].ToString()}";
+                            TxtNombre.Text = Productos.Rows[0]["Nombre"].ToString();
+                            CmbMadera.SelectedIndex = (Int32)Productos.Rows[0]["idmadera"] - 1;
+                            TxtPrecioVenta.Text = Productos.Rows[0]["PrecioV"].ToString();
+                            TxtDescripcion.Text = Productos.Rows[0]["Descripcion"].ToString();
+                            TxtAlto.Text = Productos.Rows[0]["Alto"].ToString();
+                            TxtLargo.Text = Productos.Rows[0]["Largo"].ToString();
+                            TxtAncho.Text = Productos.Rows[0]["Ancho"].ToString();
+                            MemoryStream ms = new MemoryStream((Byte[])Productos.Rows[0]["Imagen"]);
+                            Bitmap bm = new Bitmap(ms);
+                            PcbImagen.Visible = true;
+                            PcbImagen.Image = bm;
+                            NupExistencia.Value = (Int32)Productos.Rows[0]["Existencia"];
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+
+                    op = 3;
+                }
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && e.KeyChar != '.')
+                e.Handled = true;
+        }
+
         private int EncontrarIDMax()
         {
             int Idp = 0;
@@ -445,7 +547,7 @@ namespace Karpicentro.Forms
                     if (temporal == "")
                         Idp = 1;
                     else
-                        Idp = (Int32)Productos.Rows[0]["id"] + 1;
+                        Idp = (Int32)Productos.Rows[0]["id"];
                 }
                 catch (Exception ex)
                 {
@@ -454,6 +556,17 @@ namespace Karpicentro.Forms
             }
 
             return Idp;
+        }
+
+        private bool ValidaCamposBuscar()
+        {
+            bool valido = true;
+            if (textBox1.Text.Length <= 0)
+            {
+                errorProvider1.SetError(textBox1, "Campo no puede estar en blanco");
+                valido = false;
+            }
+            return valido;
         }
     }
 }

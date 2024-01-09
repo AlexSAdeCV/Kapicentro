@@ -153,6 +153,24 @@ namespace Karpicentro.Forms
                             Mostrar(1, false, Color.Gray);
                         }
                         break;
+                    case 3:
+                        Al.Nombre = TxtNombre.Text;
+                        Al.CantidadMaterial = Convert.ToInt32(TxtStock.Text);
+                        Al.Proveedor = Convert.ToInt32(CmbProveedores.SelectedValue);
+                        Al.precio = Convert.ToDouble(TxtPrecio.Text);
+                        Al.idalmacen = Convert.ToInt32(textBox1.Text);
+
+                        if (Al.Modificar())
+                        {
+                            MessageBox.Show("Registro modificado exitosamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LimpiaCampos();
+                            MostrarAlmacen();
+                            HabilitaBotones();
+                            Mostrar(1, false, Color.Gray);
+                        }
+
+                        textBox1.Text = "";
+                        break;
                 }
             }
             
@@ -162,6 +180,7 @@ namespace Karpicentro.Forms
         {
             Mostrar(1, false, Color.Gray);
             LimpiaCampos();
+            textBox1.Text = "";
             errorProvider1.Clear();
             CmbProveedores.SelectedIndex = 0;
         }
@@ -244,6 +263,18 @@ namespace Karpicentro.Forms
             return valido;
         }
 
+        private bool ValidaCamposBuscar()
+        {
+            bool valido = true;
+            if (textBox1.Text.Length <= 0)
+            {
+                errorProvider1.SetError(textBox1, "Campo no puede estar en blanco");
+                valido = false;
+            }
+            return valido;
+        }
+
+
         private void MostrarAlmacen()
         {
             Almacen almacen = new Almacen();
@@ -286,6 +317,100 @@ namespace Karpicentro.Forms
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && e.KeyChar != '.')
                 e.Handled = true;
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            if (ValidaCamposBuscar())
+            {
+                if (Convert.ToInt32(textBox1.Text) > EncontrarIDMax())
+                {
+                    MessageBox.Show($"No Existe el registro {textBox1.Text}", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBox1.Text = "";
+                }
+                else
+                {
+                    errorProvider1.Clear();
+                    int renglon;
+                    string id, idprov;
+
+                    renglon = DgvAlmacen.CurrentRow.Index;
+                    id = DgvAlmacen.Rows[renglon].Cells[0].Value.ToString();
+
+                    Mostrar(2, true, Color.White);
+
+                    DataTable Almacen = new DataTable();
+
+                    using (SqlConnection conexion = Conexion.Conectar())
+                    {
+                        SqlCommand cmdSelect;
+                        SqlDataAdapter adapterLibros = new SqlDataAdapter();
+
+                        string sentencia = "Select TipoMadera, Stock, precioparahacermueble, idprov from Almacen where IDAlmacen = @id";
+                        cmdSelect = new SqlCommand(sentencia, conexion);
+                        cmdSelect.Parameters.AddWithValue("@id", Convert.ToInt32(textBox1.Text));
+
+                        try
+                        {
+                            adapterLibros.SelectCommand = cmdSelect;
+                            conexion.Open();
+                            adapterLibros.Fill(Almacen);
+                            TxtNombre.Text = Almacen.Rows[0]["TipoMadera"].ToString();
+                            TxtStock.Text = Almacen.Rows[0]["Stock"].ToString();
+                            TxtPrecio.Text = Almacen.Rows[0]["precioparahacermueble"].ToString();
+                            CmbProveedores.SelectedIndex = (Int32)Almacen.Rows[0]["precioparahacermueble"] - 1;
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+
+                    op = 3;
+                }
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && e.KeyChar != '.')
+                e.Handled = true;
+        }
+
+        private int EncontrarIDMax()
+        {
+            int Idp = 0;
+
+            DataTable Productos = new DataTable();
+            using (SqlConnection conexion = Conexion.Conectar())
+            {
+                SqlCommand cmdSelect;
+                SqlDataAdapter adapterLibros = new SqlDataAdapter();
+
+                string sentencia = "select MAX(IDAlmacen) as id from Almacen";
+                cmdSelect = new SqlCommand(sentencia, conexion);
+
+                try
+                {
+                    adapterLibros.SelectCommand = cmdSelect;
+                    conexion.Open();
+                    adapterLibros.Fill(Productos);
+
+                    string temporal = Productos.Rows[0]["id"].ToString();
+
+                    if (temporal == "")
+                        Idp = 1;
+                    else
+                        Idp = (Int32)Productos.Rows[0]["id"];
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            return Idp;
         }
     }
 }

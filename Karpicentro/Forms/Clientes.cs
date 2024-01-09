@@ -151,6 +151,28 @@ namespace Karpicentro.Forms
                             Mostrar(1, false, Color.Gray);
                         }
                         break;
+                    case 3:
+                        cl.IDCliente = Convert.ToInt32(textBox1.Text);
+                        cl.Nombre = TxtNombre.Text;
+                        cl.PApellido = TxtAP.Text;
+                        cl.MApellido = TxtAM.Text;
+                        cl.Calle = TxtCalle.Text;
+                        cl.Delegacion = TxtDelegacion.Text;
+                        cl.Cp = TxtCP.Text;
+                        cl.NoExterior = TxtNE.Text;
+                        cl.Telefono = TxtTelefono.Text;
+
+                        if (cl.Actualizar())
+                        {
+                            MessageBox.Show("Registro modificado exitosamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LimpiaCampos();
+                            MostrarClientes();
+                            HabilitaBotones();
+                            Mostrar(1, false, Color.Gray);
+                        }
+
+                        textBox1.Text = "";
+                        break;
                 }
             }
         }
@@ -159,6 +181,7 @@ namespace Karpicentro.Forms
         {
             Mostrar(1, false, Color.Gray);
             LimpiaCampos();
+            textBox1.Text = "";
             errorProvider1.Clear();
         }
 
@@ -265,6 +288,115 @@ namespace Karpicentro.Forms
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && e.KeyChar != '.')
                 e.Handled = true;
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            if (ValidaCamposBuscar())
+            {
+                if (Convert.ToInt32(textBox1.Text) > EncontrarIDMax())
+                {
+                    MessageBox.Show($"No Existe el registro {textBox1.Text}", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    textBox1.Text = "";
+                }
+                else
+                {
+                    errorProvider1.Clear();
+                    int renglon;
+                    string id, idmad;
+
+                    renglon = DgvClientes.CurrentRow.Index;
+                    id = DgvClientes.Rows[renglon].Cells[0].Value.ToString();
+
+                    Mostrar(2, true, Color.White);
+
+                    DataTable Productos = new DataTable();
+
+                    using (SqlConnection conexion = Conexion.Conectar())
+                    {
+                        SqlCommand cmdSelect;
+                        SqlDataAdapter adapterLibros = new SqlDataAdapter();
+
+                        string sentencia = "Select * from Clientes where IDCliente = @id";
+                        cmdSelect = new SqlCommand(sentencia, conexion);
+                        cmdSelect.Parameters.AddWithValue("@id", Convert.ToInt32(textBox1.Text));
+
+                        try
+                        {
+                            adapterLibros.SelectCommand = cmdSelect;
+                            conexion.Open();
+                            adapterLibros.Fill(Productos);
+                            TxtNombre.Text = Productos.Rows[0]["Nombre"].ToString();
+                            TxtAP.Text = Productos.Rows[0]["ApellidoPaterno"].ToString();
+                            TxtAM.Text = Productos.Rows[0]["ApellidoMaterno"].ToString();
+                            TxtCalle.Text = Productos.Rows[0]["Calle"].ToString();
+                            TxtDelegacion.Text = Productos.Rows[0]["Delegacion"].ToString();
+                            TxtCP.Text = Productos.Rows[0]["CodigoPostal"].ToString();
+                            TxtNE.Text = Productos.Rows[0]["NoExterior"].ToString();
+                            TxtTelefono.Text = Productos.Rows[0]["Telefono"].ToString();
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+
+                    op = 3;
+                }
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar) && e.KeyChar != '.')
+                e.Handled = true;
+        }
+
+        private int EncontrarIDMax()
+        {
+            int Idp = 0;
+
+            DataTable Productos = new DataTable();
+            using (SqlConnection conexion = Conexion.Conectar())
+            {
+                SqlCommand cmdSelect;
+                SqlDataAdapter adapterLibros = new SqlDataAdapter();
+
+                string sentencia = "select MAX(IDCliente) as id from Clientes";
+                cmdSelect = new SqlCommand(sentencia, conexion);
+
+                try
+                {
+                    adapterLibros.SelectCommand = cmdSelect;
+                    conexion.Open();
+                    adapterLibros.Fill(Productos);
+
+                    string temporal = Productos.Rows[0]["id"].ToString();
+
+                    if (temporal == "")
+                        Idp = 1;
+                    else
+                        Idp = (Int32)Productos.Rows[0]["id"];
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            return Idp;
+        }
+
+        private bool ValidaCamposBuscar()
+        {
+            bool valido = true;
+            if (textBox1.Text.Length <= 0)
+            {
+                errorProvider1.SetError(textBox1, "Campo no puede estar en blanco");
+                valido = false;
+            }
+            return valido;
         }
     }
 }

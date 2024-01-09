@@ -51,7 +51,7 @@
             this.PanelFormSecundario.Location = new System.Drawing.Point(0, 83);
             this.PanelFormSecundario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelFormSecundario.Name = "PanelFormSecundario";
-            this.PanelFormSecundario.Size = new System.Drawing.Size(1212, 630);
+            this.PanelFormSecundario.Size = new System.Drawing.Size(1259, 630);
             this.PanelFormSecundario.TabIndex = 6;
             // 
             // PanelBotones
@@ -69,7 +69,7 @@
             this.PanelBotones.Location = new System.Drawing.Point(0, 0);
             this.PanelBotones.Margin = new System.Windows.Forms.Padding(2);
             this.PanelBotones.Name = "PanelBotones";
-            this.PanelBotones.Size = new System.Drawing.Size(1212, 83);
+            this.PanelBotones.Size = new System.Drawing.Size(1259, 83);
             this.PanelBotones.TabIndex = 5;
             // 
             // BtnSalir
@@ -82,7 +82,7 @@
             this.BtnSalir.IconColor = System.Drawing.Color.White;
             this.BtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.Location = new System.Drawing.Point(928, 0);
+            this.BtnSalir.Location = new System.Drawing.Point(975, 0);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(114, 83);
             this.BtnSalir.TabIndex = 6;
@@ -122,7 +122,7 @@
             this.BtnHome.IconColor = System.Drawing.Color.White;
             this.BtnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnHome.Location = new System.Drawing.Point(1042, 0);
+            this.BtnHome.Location = new System.Drawing.Point(1089, 0);
             this.BtnHome.Name = "BtnHome";
             this.BtnHome.Size = new System.Drawing.Size(170, 83);
             this.BtnHome.TabIndex = 4;
@@ -221,7 +221,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(1212, 713);
+            this.ClientSize = new System.Drawing.Size(1259, 713);
             this.Controls.Add(this.PanelFormSecundario);
             this.Controls.Add(this.PanelBotones);
             this.Margin = new System.Windows.Forms.Padding(2);
